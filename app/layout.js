@@ -1,21 +1,61 @@
 import './globals.css'
+import Link from 'next/link'
 
 export const metadata = {
   title: 'Tusenbruk — A Thousand Uses',
-  description: 'A private community for those who use, love, and trade the objects that carry their stories.',
+  description: 'Stories about the things we use, love, and live with. Watches. Cars. Pens. Cameras. Boats.',
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Barlow+Condensed:wght@600;700;800&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body>{children}</body>
+      <body>
+        {/* TOPBAR */}
+        <div className="topbar">
+          <div className="topbar-left">Tusenbruk · A Thousand Uses</div>
+          <div className="topbar-right">
+            <Link href="/admin">Write</Link>
+          </div>
+        </div>
+
+        {/* NAV */}
+        <nav className="site-nav">
+          <div className="nav-inner">
+            <div>
+              <Link href="/" className="wordmark">TUSEN<em>B</em>RUK</Link>
+              <div className="wordmark-sub">A Thousand Uses</div>
+            </div>
+            <ul className="nav-links">
+              <li><Link href="/">Stories</Link></li>
+              <li><Link href="/?category=watches">Watches</Link></li>
+              <li><Link href="/?category=cars">Cars</Link></li>
+              <li><Link href="/?category=pens">Pens</Link></li>
+              <li><Link href="/?category=cameras">Cameras</Link></li>
+              <li><Link href="/?category=boats">Boats</Link></li>
+            </ul>
+          </div>
+        </nav>
+
+        {children}
+
+        {/* FOOTER */}
+        <footer className="site-footer">
+          <div className="footer-inner">
+            <div>
+              <div className="footer-brand">TUSEN<em>B</em>RUK</div>
+              <div className="footer-tag">
+                Stories about the things we use, love, and live with.
+                Things worn beautifully by living.
+              </div>
+              <div className="footer-copy">© 2026 Tusenbruk</div>
+            </div>
+            <div className="footer-links">
+              <Link href="/">Stories</Link>
+              <Link href="/admin">Write</Link>
+            </div>
+          </div>
+        </footer>
+      </body>
     </html>
   )
 }
