@@ -54,13 +54,22 @@ export default async function Home({ searchParams }) {
           </Link>
         ))}
         <Link href="/shop" className="cat-pill">
-          ◈ Shop
+          \u25C8 Shop
         </Link>
       </div>
 
       {/* LEAD STORY */}
       {leadPost && (
         <div className="lead-story">
+          {leadPost.cover_image && (
+            <Link href={`/post/${leadPost.slug}`} className="lead-image-link">
+              <img
+                src={leadPost.cover_image}
+                alt={leadPost.title}
+                className="lead-image"
+              />
+            </Link>
+          )}
           <div className="lead-story-inner">
             <div className="lead-meta">
               <span className="post-card-category">
@@ -106,7 +115,7 @@ export default async function Home({ searchParams }) {
                 <div className="section-header">
                   <h3 className="section-title">{cat.icon} {cat.name}</h3>
                   <Link href={`/?category=${cat.slug}`} className="section-see-all">
-                    All {cat.name} →
+                    All {cat.name} \u2192
                   </Link>
                 </div>
                 <div className="section-posts">
@@ -137,7 +146,17 @@ export default async function Home({ searchParams }) {
 function PostCard({ post, categories }) {
   const author = post.authors || {}
   return (
-    <article className="post-card">
+    <article className={`post-card ${post.cover_image ? 'post-card-has-image' : ''}`}>
+      {post.cover_image && (
+        <Link href={`/post/${post.slug}`} className="post-card-image-link">
+          <img
+            src={post.cover_image}
+            alt={post.title}
+            className="post-card-image"
+            loading="lazy"
+          />
+        </Link>
+      )}
       <div className="post-card-body">
         <div className="post-card-meta">
           <span className="post-card-category">
@@ -175,4 +194,3 @@ function PostCard({ post, categories }) {
     </article>
   )
 }
-
