@@ -17,6 +17,8 @@ export default function AdminPage() {
   const [mode, setMode] = useState('list') // 'list' | 'write' | 'author'
   const [saving, setSaving] = useState(false)
   const [message, setMessage] = useState('')
+  const [editingPostId, setEditingPostId] = useState(null)
+  const [editingAuthorId, setEditingAuthorId] = useState(null)
 
   // Post form state
   const [title, setTitle] = useState('')
@@ -60,23 +62,27 @@ export default function AdminPage() {
       .substring(0, 80)
   }
 
+  // ── POST: save (create or update) ──
   async function savePost(e) {
     e.preventDefault()
     setSaving(true)
     setMessage('')
+    const payload = {
+      title, slug: slug || autoSlug(title), excerpt, body, category,
+      author_id: authorId, published,
+      published_at: published ? new Date().toISOString() : null,
+      reading_time: Math.max(1, Math.ceil(body.split(/\s+/).length / 250)),
+    }
     try {
-      const res = await fetch('/api/posts', {
-        method: 'POST',
+      const url = editingPostId ? `/api/posts/${editingPostId}` : '/api/posts'
+      const method = editingPostId ? 'PUT' : 'POST'
+      const res = await fetch(url, {
+        method,
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          title, slug: slug || autoSlug(title), excerpt, body, category,
-          author_id: authorId, published,
-          published_at: published ? new Date().toISOString() : null,
-          reading_time: Math.max(1, Math.ceil(body.split(/\s+/).length / 250)),
-        }),
+        body: JSON.stringify(payload),
       })
       if (res.ok) {
-        setMessage('Post saved.')
+        setMessage(editingPostId ? 'Post updated.' : 'Post saved.')
         resetPostForm()
         setMode('list')
         loadData()
@@ -90,25 +96,59 @@ export default function AdminPage() {
     setSaving(false)
   }
 
+  // ── POST: edit ──
+  function editPost(post) {
+    setEditingPostId(post.id)
+    setTitle(post.title || '')
+    setSlug(post.slug || '')
+    setExcerpt(post.excerpt || '')
+    setBody(post.body || '')
+    setCategory(post.category || 'watches')
+    setAuthorId(post.author_id || '')
+    setPublished(post.published || false)
+    setMode('write')
+  }
+
+  // ── POST: delete ──
+  async function deletePost(post) {
+    if (!confirm(`Delete "${post.title}"? This cannot be undone.`)) return
+    try {
+      const res = await fetch(`/api/posts/${post.id}`, { method: 'DELETE' })
+      if (res.ok) {
+        setMessage('Post deleted.')
+        loadData()
+      } else {
+        const err = await res.json()
+        setMessage(`Error: ${err.error || 'Failed to delete'}`)
+      }
+    } catch (e) {
+      setMessage(`Error: ${e.message}`)
+    }
+  }
+
+  // ── AUTHOR: save (create or update) ──
   async function saveAuthor(e) {
     e.preventDefault()
     setSaving(true)
     setMessage('')
+    const payload = {
+      name: authorName,
+      slug: authorSlug || autoSlug(authorName),
+      bio: authorBio,
+      location: authorLocation,
+      avatar_letter: authorLetter || authorName.charAt(0).toUpperCase(),
+      avatar_color: authorColor,
+    }
     try {
-      const res = await fetch('/api/authors', {
-        method: 'POST',
+      const url = editingAuthorId ? `/api/authors/${editingAuthorId}` : '/api/authors'
+      const method = editingAuthorId ? 'PUT' : 'POST'
+      const res = await fetch(url, {
+        method,
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: authorName,
-          slug: authorSlug || autoSlug(authorName),
-          bio: authorBio,
-          location: authorLocation,
-          avatar_letter: authorLetter || authorName.charAt(0).toUpperCase(),
-          avatar_color: authorColor,
-        }),
+        body: JSON.stringify(payload),
       })
       if (res.ok) {
-        setMessage('Author created.')
+        setMessage(editingAuthorId ? 'Pen name updated.' : 'Pen name created.')
         resetAuthorForm()
         setMode('list')
         loadData()
@@ -122,15 +162,61 @@ export default function AdminPage() {
     setSaving(false)
   }
 
+  // ── AUTHOR: edit ──
+  function editAuthor(a) {
+    setEditingAuthorId(a.id)
+    setAuthorName(a.name || '')
+    setAuthorSlug(a.slug || '')
+    setAuthorBio(a.bio || '')
+    setAuthorLocation(a.location || '')
+    setAuthorLetter(a.avatar_letter || '')
+    setAuthorColor(a.avatar_color || '#2d5a7b')
+    setMode('author')
+  }
+
+  // ── AUTHOR: delete ──
+  async function deleteAuthor(a) {
+    if (!confirm(`Delete pen name "${a.name}"? Any posts by this author will lose their author.`)) return
+    try {
+      const res = await fetch(`/api/authors/${a.id}`, { method: 'DELETE' })
+      if (res.ok) {
+        setMessage('Pen name deleted.')
+        loadData()
+      } else {
+        const err = await res.json()
+        setMessage(`Error: ${err.error || 'Failed to delete'}`)
+      }
+    } catch (e) {
+      setMessage(`Error: ${e.message}`)
+    }
+  }
+
   function resetPostForm() {
     setTitle(''); setSlug(''); setExcerpt(''); setBody('')
     setCategory('watches'); setAuthorId(''); setPublished(false)
+    setEditingPostId(null)
   }
 
   function resetAuthorForm() {
     setAuthorName(''); setAuthorSlug(''); setAuthorBio('')
     setAuthorLocation(''); setAuthorLetter(''); setAuthorColor('#2d5a7b')
+    setEditingAuthorId(null)
   }
+
+  const actionBtn = {
+    fontFamily: 'var(--sans)',
+    fontSize: 10,
+    fontWeight: 500,
+    letterSpacing: '0.05em',
+    textTransform: 'uppercase',
+    padding: '4px 10px',
+    border: '1px solid var(--rule)',
+    background: 'var(--white)',
+    color: 'var(--mid)',
+    cursor: 'pointer',
+    transition: 'all .15s',
+  }
+  const deleteBtn = { ...actionBtn, color: '#991b1b', borderColor: '#fecaca' }
 
   return (
     <div className="admin-wrap">
@@ -157,19 +243,19 @@ export default function AdminPage() {
       <div className="btn-row" style={{ marginTop: 0, marginBottom: 32 }}>
         <button
           className={mode === 'list' ? 'btn btn-primary' : 'btn btn-secondary'}
-          onClick={() => setMode('list')}
+          onClick={() => { setMode('list'); resetPostForm(); resetAuthorForm() }}
         >
           All Posts
         </button>
         <button
           className={mode === 'write' ? 'btn btn-primary' : 'btn btn-secondary'}
-          onClick={() => setMode('write')}
+          onClick={() => { resetPostForm(); setMode('write') }}
         >
           New Post
         </button>
         <button
           className={mode === 'author' ? 'btn btn-primary' : 'btn btn-secondary'}
-          onClick={() => setMode('author')}
+          onClick={() => { resetAuthorForm(); setMode('author') }}
         >
           New Pen Name
         </button>
@@ -193,8 +279,10 @@ export default function AdminPage() {
                   {post.published ? 'Published' : 'Draft'}
                 </span>
               </div>
-              <div className="admin-post-item-meta">
-                {post.category}
+              <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+                <span className="admin-post-item-meta">{post.category}</span>
+                <button style={actionBtn} onClick={() => editPost(post)}>Edit</button>
+                <button style={deleteBtn} onClick={() => deletePost(post)}>Delete</button>
               </div>
             </div>
           ))}
@@ -209,7 +297,11 @@ export default function AdminPage() {
                   <div className="admin-post-item-title">
                     <Link href={`/author/${a.slug}`}>{a.name}</Link>
                   </div>
-                  <div className="admin-post-item-meta">{a.location}</div>
+                  <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+                    <span className="admin-post-item-meta">{a.location}</span>
+                    <button style={actionBtn} onClick={() => editAuthor(a)}>Edit</button>
+                    <button style={deleteBtn} onClick={() => deleteAuthor(a)}>Delete</button>
+                  </div>
                 </div>
               ))}
             </>
@@ -220,12 +312,17 @@ export default function AdminPage() {
       {/* WRITE MODE */}
       {mode === 'write' && (
         <form onSubmit={savePost}>
+          {editingPostId && (
+            <div style={{ marginBottom: 16, fontFamily: 'var(--sans)', fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--red)' }}>
+              Editing Post
+            </div>
+          )}
           <div className="form-group">
             <label className="form-label">Title</label>
             <input
               className="form-input"
               value={title}
-              onChange={e => { setTitle(e.target.value); if (!slug) setSlug(autoSlug(e.target.value)) }}
+              onChange={e => { setTitle(e.target.value); if (!editingPostId && !slug) setSlug(autoSlug(e.target.value)) }}
               placeholder="Submariner. 30 Years. Every Country I've Been To."
               required
             />
@@ -285,7 +382,7 @@ export default function AdminPage() {
           </div>
           <div className="btn-row">
             <button type="submit" className="btn btn-primary" disabled={saving}>
-              {saving ? 'Saving...' : 'Save Post'}
+              {saving ? 'Saving...' : editingPostId ? 'Update Post' : 'Save Post'}
             </button>
             <button type="button" className="btn btn-secondary" onClick={() => { resetPostForm(); setMode('list') }}>
               Cancel
@@ -297,12 +394,17 @@ export default function AdminPage() {
       {/* AUTHOR MODE */}
       {mode === 'author' && (
         <form onSubmit={saveAuthor}>
+          {editingAuthorId && (
+            <div style={{ marginBottom: 16, fontFamily: 'var(--sans)', fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--red)' }}>
+              Editing Pen Name
+            </div>
+          )}
           <div className="form-group">
             <label className="form-label">Pen Name</label>
             <input
               className="form-input"
               value={authorName}
-              onChange={e => { setAuthorName(e.target.value); if (!authorSlug) setAuthorSlug(autoSlug(e.target.value)) }}
+              onChange={e => { setAuthorName(e.target.value); if (!editingAuthorId && !authorSlug) setAuthorSlug(autoSlug(e.target.value)) }}
               placeholder="Marcus Lindqvist"
               required
             />
@@ -361,7 +463,7 @@ export default function AdminPage() {
           </div>
           <div className="btn-row">
             <button type="submit" className="btn btn-primary" disabled={saving}>
-              {saving ? 'Saving...' : 'Create Pen Name'}
+              {saving ? 'Saving...' : editingAuthorId ? 'Update Pen Name' : 'Create Pen Name'}
             </button>
             <button type="button" className="btn btn-secondary" onClick={() => { resetAuthorForm(); setMode('list') }}>
               Cancel
