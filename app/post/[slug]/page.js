@@ -14,11 +14,19 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { slug } = await params
   const post = await getPostBySlug(slug)
-  if (!post) return { title: 'Not Found — Tusenbruk' }
+  if (!post) return { title: 'Not Found \u2014 Tusenbruk' }
   return {
-    title: `${post.title} — Tusenbruk`,
+    title: `${post.title} \u2014 Tusenbruk`,
     description: post.excerpt,
+    openGraph: post.cover_image ? { images: [{ url: post.cover_image }] } : undefined,
   }
+}
+
+// Split markdown body into sections at ## headings for editorial image interleaving
+function splitBodySections(body) {
+  if (!body) return ['']
+  const parts = body.split(/(?=^## )/m)
+  return parts.filter(p => p.trim())
 }
 
 export default async function PostPage({ params }) {
@@ -30,7 +38,7 @@ export default async function PostPage({ params }) {
       <div className="post-header" style={{ paddingBottom: 80 }}>
         <h1>Post not found</h1>
         <p style={{ color: 'var(--muted)', marginTop: 16 }}>
-          <Link href="/" style={{ color: 'var(--red)' }}>← Back to stories</Link>
+          <Link href="/" style={{ color: 'var(--red)' }}>\u2190 Back to stories</Link>
         </p>
       </div>
     )
@@ -39,15 +47,25 @@ export default async function PostPage({ params }) {
   const author = post.authors || {}
   const categories = getCategories()
   const cat = categories.find(c => c.slug === post.category)
+  const images = post.images || []
+  const coverImage = post.cover_image || null
 
-  // Render markdown body to HTML
-  const bodyHtml = marked(post.body || '', {
-    gfm: true,
-    breaks: false,
-  })
+  // Split body into sections and interleave images
+  const sections = splitBodySections(post.body)
 
   return (
     <>
+      {/* COVER IMAGE — full bleed */}
+      {coverImage && (
+        <div className="post-cover">
+          <img
+            src={coverImage}
+            alt={post.title}
+            className="post-cover-img"
+          />
+        </div>
+      )}
+
       <div className="post-header">
         <div className="post-header-meta">
           <span className="post-card-category">
@@ -83,14 +101,42 @@ export default async function PostPage({ params }) {
         </div>
       </div>
 
-      <div
-        className="post-body"
-        dangerouslySetInnerHTML={{ __html: bodyHtml }}
-      />
+      {/* EDITORIAL BODY — sections interleaved with images */}
+      <div className="post-editorial">
+        {sections.map((section, i) => {
+          const sectionHtml = marked(section, { gfm: true, breaks: false })
+          // Place image after each section (except possibly the last)
+          const image = images[i] || null
+
+          return (
+            <div key={i}>
+              <div
+                className="post-body"
+                dangerouslySetInnerHTML={{ __html: sectionHtml }}
+              />
+
+              {image && (
+                <figure className={`post-figure ${image.position === 'wide' ? 'post-figure-wide' : 'post-figure-inline'}`}>
+                  <img
+                    src={image.url}
+                    alt={image.caption || ''}
+                    loading="lazy"
+                  />
+                  {image.caption && (
+                    <figcaption className="post-figure-caption">
+                      {image.caption}
+                    </figcaption>
+                  )}
+                </figure>
+              )}
+            </div>
+          )
+        })}
+      </div>
 
       <div style={{ maxWidth: 'var(--max-w-narrow)', margin: '0 auto', padding: '0 24px 80px' }}>
         <Link href="/" style={{ fontFamily: 'var(--sans)', fontSize: 12, fontWeight: 500, letterSpacing: '0.05em', textTransform: 'uppercase', color: 'var(--red)' }}>
-          ← All Stories
+          \u2190 All Stories
         </Link>
       </div>
     </>
