@@ -57,3 +57,25 @@ create policy "Authenticated users can update authors"
 
 create policy "Authenticated users can manage posts"
   on public.posts for all using (auth.role() = 'authenticated');
+
+-- Shop Items (affiliate links)
+create table if not exists public.shop_items (
+  id uuid primary key default gen_random_uuid(),
+  name text not null,
+  note text,
+  category text not null check (category in ('watches','cars','pens','cameras','boats')),
+  price text,
+  url text not null,
+  active boolean default true,
+  sort_order int default 0,
+  created_at timestamptz default now()
+);
+
+create index if not exists idx_shop_items_category on public.shop_items(category);
+alter table public.shop_items enable row level security;
+
+create policy "Shop items are viewable by everyone"
+  on public.shop_items for select using (true);
+
+create policy "Anyone can manage shop items"
+  on public.shop_items for all using (true);

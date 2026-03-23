@@ -14,11 +14,13 @@ const CATEGORIES = [
 export default function AdminPage() {
   const [authors, setAuthors] = useState([])
   const [posts, setPosts] = useState([])
-  const [mode, setMode] = useState('list') // 'list' | 'write' | 'author'
+  const [shopItems, setShopItems] = useState([])
+  const [mode, setMode] = useState('list') // 'list' | 'write' | 'author' | 'shop'
   const [saving, setSaving] = useState(false)
   const [message, setMessage] = useState('')
   const [editingPostId, setEditingPostId] = useState(null)
   const [editingAuthorId, setEditingAuthorId] = useState(null)
+  const [editingShopId, setEditingShopId] = useState(null)
 
   // Post form state
   const [title, setTitle] = useState('')
@@ -28,6 +30,14 @@ export default function AdminPage() {
   const [category, setCategory] = useState('watches')
   const [authorId, setAuthorId] = useState('')
   const [published, setPublished] = useState(false)
+
+  // Shop form state
+  const [shopName, setShopName] = useState('')
+  const [shopNote, setShopNote] = useState('')
+  const [shopCategory, setShopCategory] = useState('watches')
+  const [shopPrice, setShopPrice] = useState('')
+  const [shopUrl, setShopUrl] = useState('')
+  const [shopOrder, setShopOrder] = useState(0)
 
   // Author form state
   const [authorName, setAuthorName] = useState('')
@@ -43,12 +53,14 @@ export default function AdminPage() {
 
   async function loadData() {
     try {
-      const [authorsRes, postsRes] = await Promise.all([
+      const [authorsRes, postsRes, shopRes] = await Promise.all([
         fetch('/api/authors'),
         fetch('/api/posts'),
+        fetch('/api/shop'),
       ])
       if (authorsRes.ok) setAuthors(await authorsRes.json())
       if (postsRes.ok) setPosts(await postsRes.json())
+      if (shopRes.ok) setShopItems(await shopRes.json())
     } catch (e) {
       console.error('Failed to load data:', e)
     }
@@ -191,6 +203,57 @@ export default function AdminPage() {
     }
   }
 
+  // ── SHOP: save ──
+  async function saveShopItem(e) {
+    e.preventDefault()
+    setSaving(true)
+    setMessage('')
+    const payload = {
+      name: shopName, note: shopNote, category: shopCategory,
+      price: shopPrice, url: shopUrl, active: true, sort_order: shopOrder,
+    }
+    try {
+      const url = editingShopId ? `/api/shop/${editingShopId}` : '/api/shop'
+      const method = editingShopId ? 'PUT' : 'POST'
+      const res = await fetch(url, { method, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+      if (res.ok) {
+        setMessage(editingShopId ? 'Shop item updated.' : 'Shop item added.')
+        resetShopForm()
+        setMode('list')
+        loadData()
+      } else {
+        const err = await res.json()
+        setMessage(`Error: ${err.error || 'Failed to save'}`)
+      }
+    } catch (e) { setMessage(`Error: ${e.message}`) }
+    setSaving(false)
+  }
+
+  function editShopItem(item) {
+    setEditingShopId(item.id)
+    setShopName(item.name || '')
+    setShopNote(item.note || '')
+    setShopCategory(item.category || 'watches')
+    setShopPrice(item.price || '')
+    setShopUrl(item.url || '')
+    setShopOrder(item.sort_order || 0)
+    setMode('shop')
+  }
+
+  async function deleteShopItem(item) {
+    if (!confirm(`Delete "${item.name}" from the shop?`)) return
+    try {
+      const res = await fetch(`/api/shop/${item.id}`, { method: 'DELETE' })
+      if (res.ok) { setMessage('Shop item deleted.'); loadData() }
+      else { const err = await res.json(); setMessage(`Error: ${err.error || 'Failed'}`) }
+    } catch (e) { setMessage(`Error: ${e.message}`) }
+  }
+
+  function resetShopForm() {
+    setShopName(''); setShopNote(''); setShopCategory('watches')
+    setShopPrice(''); setShopUrl(''); setShopOrder(0); setEditingShopId(null)
+  }
+
   function resetPostForm() {
     setTitle(''); setSlug(''); setExcerpt(''); setBody('')
     setCategory('watches'); setAuthorId(''); setPublished(false)
@@ -259,6 +322,12 @@ export default function AdminPage() {
         >
           New Pen Name
         </button>
+        <button
+          className={mode === 'shop' ? 'btn btn-primary' : 'btn btn-secondary'}
+          onClick={() => { resetShopForm(); setMode('shop') }}
+        >
+          Add Shop Item
+        </button>
       </div>
 
       {/* LIST MODE */}
@@ -301,6 +370,27 @@ export default function AdminPage() {
                     <span className="admin-post-item-meta">{a.location}</span>
                     <button style={actionBtn} onClick={() => editAuthor(a)}>Edit</button>
                     <button style={deleteBtn} onClick={() => deleteAuthor(a)}>Delete</button>
+                  </div>
+                </div>
+              ))}
+            </>
+          )}
+
+          {shopItems.length > 0 && (
+            <>
+              <div style={{ marginTop: 40, marginBottom: 16, fontFamily: 'var(--sans)', fontSize: 11, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)' }}>
+                Shop Items
+              </div>
+              {shopItems.map(item => (
+                <div key={item.id} className="admin-post-item">
+                  <div>
+                    <span className="admin-post-item-title">{item.name}</span>
+                    {item.price && <span className="admin-post-item-meta" style={{ marginLeft: 8 }}>{item.price}</span>}
+                  </div>
+                  <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+                    <span className="admin-post-item-meta">{item.category}</span>
+                    <button style={actionBtn} onClick={() => editShopItem(item)}>Edit</button>
+                    <button style={deleteBtn} onClick={() => deleteShopItem(item)}>Delete</button>
                   </div>
                 </div>
               ))}
@@ -468,6 +558,50 @@ export default function AdminPage() {
             <button type="button" className="btn btn-secondary" onClick={() => { resetAuthorForm(); setMode('list') }}>
               Cancel
             </button>
+          </div>
+        </form>
+      )}
+      {/* SHOP MODE */}
+      {mode === 'shop' && (
+        <form onSubmit={saveShopItem}>
+          {editingShopId && (
+            <div style={{ marginBottom: 16, fontFamily: 'var(--sans)', fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--red)' }}>
+              Editing Shop Item
+            </div>
+          )}
+          <div className="form-group">
+            <label className="form-label">Product Name</label>
+            <input className="form-input" value={shopName} onChange={e => setShopName(e.target.value)} placeholder="Rolex Submariner Date 126610LN" required />
+          </div>
+          <div className="form-row">
+            <div className="form-group">
+              <label className="form-label">Category</label>
+              <select className="form-select" value={shopCategory} onChange={e => setShopCategory(e.target.value)}>
+                {CATEGORIES.map(c => <option key={c.slug} value={c.slug}>{c.name}</option>)}
+              </select>
+            </div>
+            <div className="form-group">
+              <label className="form-label">Price</label>
+              <input className="form-input" value={shopPrice} onChange={e => setShopPrice(e.target.value)} placeholder="AUD 15,350" />
+            </div>
+          </div>
+          <div className="form-group">
+            <label className="form-label">Affiliate / Product URL</label>
+            <input className="form-input" value={shopUrl} onChange={e => setShopUrl(e.target.value)} placeholder="https://..." required />
+          </div>
+          <div className="form-group">
+            <label className="form-label">Editorial Note</label>
+            <textarea className="form-textarea" value={shopNote} onChange={e => setShopNote(e.target.value)} placeholder="Why we recommend this. Keep it short, opinionated, honest." style={{ minHeight: 120 }} />
+          </div>
+          <div className="form-group">
+            <label className="form-label">Sort Order (lower = first)</label>
+            <input className="form-input" type="number" value={shopOrder} onChange={e => setShopOrder(parseInt(e.target.value) || 0)} />
+          </div>
+          <div className="btn-row">
+            <button type="submit" className="btn btn-primary" disabled={saving}>
+              {saving ? 'Saving...' : editingShopId ? 'Update Item' : 'Add to Shop'}
+            </button>
+            <button type="button" className="btn btn-secondary" onClick={() => { resetShopForm(); setMode('list') }}>Cancel</button>
           </div>
         </form>
       )}

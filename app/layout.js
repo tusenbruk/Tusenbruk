@@ -32,6 +32,7 @@ export default function RootLayout({ children }) {
               <li><Link href="/?category=pens">Pens</Link></li>
               <li><Link href="/?category=cameras">Cameras</Link></li>
               <li><Link href="/?category=boats">Boats</Link></li>
+              <li><Link href="/shop">Shop</Link></li>
             </ul>
           </div>
         </nav>
@@ -51,6 +52,7 @@ export default function RootLayout({ children }) {
             </div>
             <div className="footer-links">
               <Link href="/">Stories</Link>
+              <Link href="/shop">Shop</Link>
               <Link href="/admin">Write</Link>
             </div>
           </div>
