@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { getShopItems, getCategories } from '@/lib/posts'
 
+export const dynamic = 'force-dynamic'
+
 export const metadata = {
   title: 'The Shop — Tusenbruk',
   description: 'Curated things we use and recommend. Watches, cars, pens, cameras, boats.',

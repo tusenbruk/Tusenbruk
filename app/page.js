@@ -2,6 +2,8 @@ import Link from 'next/link'
 import { getAllPosts, getPostsByCategory, getCategories } from '@/lib/posts'
 import { format } from 'date-fns'
 
+export const dynamic = 'force-dynamic'
+
 export default async function Home({ searchParams }) {
   const params = await searchParams
   const category = params?.category || null

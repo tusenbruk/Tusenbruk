@@ -2,6 +2,8 @@ import Link from 'next/link'
 import { getAuthorBySlug, getPostsByAuthor, getAllAuthors, getCategories } from '@/lib/posts'
 import { format } from 'date-fns'
 
+export const dynamic = 'force-dynamic'
+
 export async function generateStaticParams() {
   const authors = await getAllAuthors()
   return authors.map(a => ({ slug: a.slug }))

@@ -3,6 +3,8 @@ import { getPostBySlug, getAllPosts, getCategories } from '@/lib/posts'
 import { format } from 'date-fns'
 import { marked } from 'marked'
 
+export const dynamic = 'force-dynamic'
+
 // Generate static params for demo data
 export async function generateStaticParams() {
   const posts = await getAllPosts()
