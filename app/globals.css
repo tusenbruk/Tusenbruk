@@ -133,7 +133,7 @@ img { max-width: 100%; display: block; }
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 80px 48px 60px;
-  border-bottom: 1px solid var(---rule);
+  border-bottom: 1px solid var(--rule);
 }
 .hero-eyebrow {
   font-family: var(--sans);
@@ -164,7 +164,7 @@ img { max-width: 100%; display: block; }
   max-width: 580px;
 }
 
-/* ─── CATEGORY PILLS ───────────────────────── */
+/* ─── CATEGORY PILLS ──────────────────────── */
 .category-bar {
   max-width: var(--max-w);
   margin: 0 auto;
@@ -196,11 +196,11 @@ img { max-width: 100%; display: block; }
   border-color: var(--ink);
 }
 
-/* ─── POST CARDS (LIST) ───────────────────────── */
+/* ─── POST CARDS (LIST) ───────────────────── */
 .posts-grid {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 40px 48px;;
+  padding: 40px 48px;
 }
 .post-card {
   display: grid;
@@ -300,4 +300,640 @@ img { max-width: 100%; display: block; }
   padding-top: 4px;
 }
 
-/* ─── SINGLE POST ���H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H���6�fW"��vR*�BgV��&�VVB�W&�����7B�6�fW"��v�GF��S����ֆV�v�C�Sc����fW&f��s���FFV㰢&6�w&�V�C�f"���6�Ʋ���Т��7B�6�fW"֖�r��v�GF��S���V�v�C�Sc����&�V7B�f�C�6�fW#���&�V7B��6�F���6V�FW#��F�7���&��6���Р���7BֆVFW"�����v�GF��f"������r��'&�r����&v��WF�FF��s�C��#G���Т��7BֆVFW"��WF��F�7���f�W���Ɩv�֗FV�3�6V�FW#��v�'����&v���&�GF�Ӣg���Т��7BֆVFW"���f��B�f֖Ǔ�f"���F�7�����f��B�6��S�C'���f��B�vV�v�C�S��Ɩ�RֆV�v�C��#��6���#�f"��֖沓���&v���&�GF�Ӣg���Т��7BֆVFW"�W�6W'B��f��B�f֖Ǔ�f"���6W&�b���f��B�6��S�����f��B�7G��S��FƖ3��Ɩ�RֆV�v�C��cS��6���#�f"���֖B����&v���&�GF�Ӣ#G���Т��7BֆVFW"�WF��"��F�7���f�W���Ɩv�֗FV�3�6V�FW#��v����FF��r�&�GF�Ӣ3'���&�&FW"�&�GF�Ӣ�6�ƖBf"���'V�R���Т��7BֆVFW"�WF��"֖�f���f��B�f֖Ǔ�f"���6�2���f��B�6��S�'���Т��7BֆVFW"�WF��"֖�f�7G&��r�f��B�vV�v�C�c�Т��7BֆVFW"�WF��"֖�f�7��6���#�f"����WFVB��Р��VF�F�&��&�G�w&W"����7B�VF�F�&����FF��r�&�GF�ӢC���Р���7B&�G�(	B&�6R����7B�&�G������v�GF��f"������r��'&�r����&v��WF�FF��s�C�#G���Т��7B�&�G��f�'7B�6���B��FF��r�F��C���Т��7B�&�G���f��B�f֖Ǔ�f"���6W&�b���f��B�6��S�w���Ɩ�RֆV�v�C�ヰ�6���#�f"��֖沓���&v���&�GF�Ӣ#G���Т��7B�&�G��"��f��B�f֖Ǔ�f"���F�7�����f��B�6��S�#g���f��B�vV�v�C�S��6���#�f"��֖沓���&v��C��g���Т��7B�&�G��#�f�'7B�6���B���&v���F����Т��7B�&�G��2��f��B�f֖Ǔ�f"���6�2���f��B�6��S�G���f��B�vV�v�C�c���WGFW"�76��s���VӰ�FW�B�G&�6f�&ӢWW&66S��6���#�f"���֖B����&v��C�'���Т��7B�&�G�V��f��B�7G��S��FƖ3�Т��7B�&�G�7G&��r�f��B�vV�v�C�s�Т��7B�&�G�&��6�V�FR��&�&FW"��VgC�7�6�ƖBf"���&VB���FF��r��VgC�#����&v��3'���f��B�7G��S��FƖ3��6���#�f"���֖B���Т��7B�&�G��"��&�&FW#����S��&�&FW"�F���6�ƖBf"���'V�R����&v��C����Р��)H)H)HTD�D�$��d�uU$U2���F�2���7G2�)H)H)H)H����7B�f�wW&R���&v��C����Т��7B�f�wW&R��r��v�GF��S��F�7���&��6����&�V7B�f�C�6�fW#��Т��7B�f�wW&R�6F�����f��B�f֖Ǔ�f"���6�2���f��B�6��S�'���f��B�vV�v�C�C���WGFW"�76��s��&VӰ�6���#�f"����WFVB���Ɩ�RֆV�v�C��S�����v�GF��f"������r��'&�r����&v��'�WF���FF��s�#G���Р����Ɩ�Rf�wW&R(	B6��F��VBv�F���FW�B6��V������7B�f�wW&R֖�Ɩ�R�����v�GF��f"������r��'&�r����&v����VgC�WF��&v���&�v�C�WF�FF��s�#G���Т��7B�f�wW&R֖�Ɩ�R��r��7V7B�&F��B�3��Т��7B�f�wW&R֖�Ɩ�R��7B�f�wW&R�6F�����FF��s���Р��v�FRf�wW&R(	B'&V�2�WB�bFW�B6��V������7B�f�wW&R�v�FR�����v�GF���c����&v����VgC�WF��&v���&�v�C�WF�Т��7B�f�wW&R�v�FR��r��7V7B�&F��b����Р��)H)H)HUD��"tR)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H���WF��"ֆVFW"�����v�GF��f"������r��'&�r����&v��WF�FF��s�c�#G�3'���F�7���f�W���Ɩv�֗FV�3�f�W��7F'C��v�#���&�&FW"�&�GF�Ӣ�6�ƖBf"���'V�R���Т�WF��"�fF"��r��v�GF��cG����V�v�C�cG���&�&FW"�&F�W3�SS��F�7���f�W���Ɩv�֗FV�3�6V�FW#���W7F�g��6��FV�C�6V�FW#��f��B�f֖Ǔ�f"���6�2���f��B�6��S�#'���f��B�vV�v�C�c��6���#�6ffc��f�W��6�&�波��Т�WF��"ֆVFW"���f��B�f֖Ǔ�f"���F�7�����f��B�6��S�3'���f��B�vV�v�C�S���&v���&�GF�ӢG���Т�WF��"ֆVFW"���6F�����f��B�f֖Ǔ�f"���6�2���f��B�6��S����f��B�vV�v�C�S���WGFW"�76��s���VӰ�FW�B�G&�6f�&ӢWW&66S��6���#�f"����WFVB����&v���&�GF�Ӣ����Т�WF��"ֆVFW"�&����f��B�f֖Ǔ�f"���6W&�b���f��B�6��S�W���Ɩ�RֆV�v�C��cS��6���#�f"���֖B���Т�WF��"��7G2�����v�GF��f"������r��'&�r����&v��WF�FF��s�3'�#G�����Т�WF��"��7G2��&V���f��B�f֖Ǔ�f"���6�2���f��B�6��S����f��B�vV�v�C�c���WGFW"�76��s��&VӰ�FW�B�G&�6f�&ӢWW&66S��6���#�f"����WFVB����&v���&�GF�Ӣ#G���Р��)H)H)HDԔ�)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H���F֖��w&�����v�GF��f"������r��'&�r����&v��WF�FF��s�C��#G�����Т�F֖��w&���f��B�f֖Ǔ�f"���F�7�����f��B�6��S�3'���f��B�vV�v�C�S���&v���&�GF�Ӣ����Т�F֖��FW62��f��B�f֖Ǔ�f"���6W&�b���f��B�6��S�W���6���#�f"���֖B����&v���&�GF�Ӣ3'���Т�f�&��w&�W���&v���&�GF�Ӣ#���Т�f�&���&V���F�7���&��6���f��B�f֖Ǔ�f"���6�2���f��B�6��S����f��B�vV�v�C�c���WGFW"�76��s��VӰ�FW�B�G&�6f�&ӢWW&66S��6���#�f"���֖B����&v���&�GF�Ӣg���Т�f�&�֖�WB���f�&��6V�V7B���f�&��FW�F&V��v�GF��S��f��B�f֖Ǔ�f"���6W&�b���f��B�6��S�W���FF��s��G���&�&FW#��6�ƖBf"���'V�R���&6�w&�V�C�f"���v��FR���6���#�f"��֖沓���WFƖ�S����S��G&�6�F���&�&FW"�6���"�W3��Т�f�&�֖�WC�f�7W2���f�&��6V�V7C�f�7W2���f�&��FW�F&V�f�7W2��&�&FW"�6���#�f"��֖沓��Т�f�&��FW�F&V��֖�ֆV�v�C�C���Ɩ�RֆV�v�C��s��&W6��S�fW'F�6ð�Т�f�&��&�r��F�7���w&�C��w&�B�FV��FR�6��V��3�g"g#��v�g���Т�'F���f��B�f֖Ǔ�f"���6�2���f��B�6��S����f��B�vV�v�C�c���WGFW"�76��s��VӰ�FW�B�G&�6f�&ӢWW&66S��FF��s�'�#����&�&FW#����S��7W'6�#����FW#��G&�6�F������W3��Т�'F��&��'���&6�w&�V�C�f"��֖沓��6���#�f"���v��FR���Т�'F��&��'����fW"�&6�w&�V�C�f"���&VB��Т�'F��6V6��F'���&6�w&�V�C�f"���6�Ʋ���6���#�f"��֖沓��&�&FW#��6�ƖBf"���'V�R���Т�'F��6V6��F'����fW"�&6�w&�V�C�f"���Ɩv�B��Т�'F��&�r��F�7���f�W���v�'����&v���F��#G���Т�F֖���7B�Ɨ7B���&v���F��C���Т�F֖���7B֗FV���F�7���f�W����W7F�g��6��FV�C�76R�&WGvVV㰢Ɩv�֗FV�3�6V�FW#��FF��s�g���&�&FW"�&�GF�Ӣ�6�ƖBf"���'V�R���Т�F֖���7B֗FV��F�F�R��f��B�f֖Ǔ�f"���6W&�b���f��B�6��S�W���6���#�f"��֖沓��Т�F֖���7B֗FV���WF��f��B�f֖Ǔ�f"���6�2���f��B�6��S����6���#�f"����WFVB���FW�B�G&�6f�&ӢWW&66S���WGFW"�76��s��VVӰ�Т�7FGW2�&FvR��F�7�����Ɩ�R�&��6���f��B�f֖Ǔ�f"���6�2���f��B�6��S�����f��B�vV�v�C�c���WGFW"�76��s��VӰ�FW�B�G&�6f�&ӢWW&66S��FF��s�'������&v����VgC�����Т�7FGW2�V&Ɨ6�VB�&6�w&�V�C�6S�cVS��6���#�3&SvC3#�Т�7FGW2�G&gB�&6�w&�V�C�6ffc6S�6���#�6ScS�Р��)H)H)H�TB5D�%�)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H����VB�7F�'���&�&FW"�&�GF�Ӣ�6�ƖBf"���'V�R���&6�w&�V�C�f"���6�Ʋ���Т��VB֖�vR�Ɩ���F�7���&��6����fW&f��s���FFV㰢��ֆV�v�C�C����Т��VB֖�vR��v�GF��S���V�v�C�C�����&�V7B�f�C�6�fW#���&�V7B��6�F���6V�FW#��F�7���&��6���G&�6�F���G&�6f�&��G2V6S��Т��VB֖�vR�Ɩ泦��fW"��VB֖�vR��G&�6f�&Ӣ66�R��"���Т��VB�7F�'�֖��W"�����v�GF��f"������r����&v��WF�FF��s�C��C��S'���Т��VB��WF��F�7���f�W���Ɩv�֗FV�3�6V�FW#��v�'����&v���&�GF�Ӣg���Т��VB�F�F�R��f��B�f֖Ǔ�f"���F�7�����f��B�6��S�3����f��B�vV�v�C�S��Ɩ�RֆV�v�C��#��6���#�f"��֖沓���&v���&�GF�Ӣ'���Т��VB�F�F�R���fW"�6���#�f"���&VB�F���Т��VB�W�6W'B��f��B�f֖Ǔ�f"���6W&�b���f��B�6��S�w���Ɩ�RֆV�v�C��s��6���#�f"���֖B������v�GF��cC����&v���&�GF�Ӣ#���Т��VB�WF��"��F�7���f�W���Ɩv�֗FV�3�6V�FW#��v����Т��VB�WF��"֖�f���F�7���f�W���f�W��F�&V7F���6��V�㰢v����Т��VB�&VF��r�F��R��f��B�f֖Ǔ�f"���6�2���f��B�6��S����6���#�f"����WFVB����WGFW"�76��s��VVӰ�Р��)H)H)H�t���R4T5D���2)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H����v���R�6V7F���2�����v�GF��f"������r����&v��WF�FF��s�C��C���Т��v���R�6V7F�����FF��s�3'���&�&FW"�&�GF�Ӣ�6�ƖBf"���'V�R���Т��v���R�6V7F����7B�6���B�&�&FW"�&�GF�Ӣ���S�Т�6V7F���ֆVFW"��F�7���f�W����W7F�g��6��FV�C�76R�&WGvVV㰢Ɩv�֗FV�3�6V�FW#���&v���&�GF�Ӣ#G���Т�6V7F����F�F�R��f��B�f֖Ǔ�f"���6�2���f��B�6��S�'���f��B�vV�v�C�c���WGFW"�76��s��&VӰ�FW�B�G&�6f�&ӢWW&66S��6���#�f"��֖沓��Т�6V7F����6VR�����f��B�f֖Ǔ�f"���6�2���f��B�6��S����f��B�vV�v�C�S���WGFW"�76��s��VVӰ�6���#�f"���&VB���G&�6�F���6���"�W3��Т�6V7F����6VR��æ��fW"�6���#�f"���&VB�F���Т�6V7F�����7G2��F�7���f�W���f�W��F�&V7F���6��V�㰧Т�6V7F�����7G2��7B�6&B��FF��s�#G���&�&FW"�&�GF�Ӣ�6�ƖBf"���'V�R���Т�6V7F�����7G2��7B�6&C�f�'7B�6���B��FF��r�F����Т�6V7F�����7G2��7B�6&C��7B�6���B��&�&FW"�&�GF�Ӣ���S��Р��)H)H)H4��)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H���6��ֆVFW"�����v�GF��f"������r����&v��WF�FF��s�c�C��C���&�&FW"�&�GF�Ӣ�6�ƖBf"���'V�R���Т�6���F�F�R��f��B�f֖Ǔ�f"���F�7�����f��B�6��S�C'���f��B�vV�v�C�S��Ɩ�RֆV�v�C��#��6���#�f"��֖沓���&v���&�GF�Ӣ'���Т�6��֖�G&���f��B�f֖Ǔ�f"���6W&�b���f��B�6��S�g���Ɩ�RֆV�v�C��s��6���#�f"���֖B������v�GF��Sc���Т�6���6V7F���2�����v�GF��f"������r����&v��WF�FF��s�C��c���Т�6���6V7F�����FF��s�3'���&�&FW"�&�GF�Ӣ�6�ƖBf"���'V�R���Т�6���6V7F����7B�6���B�&�&FW"�&�GF�Ӣ���S�Т�6���w&�B��F�7���w&�C��w&�B�FV��FR�6��V��3�&WVB�WF��f����֖����3��g"����v�#���Т�6���6&B��F�7���&��6���FF��s�#G���&�&FW#��6�ƖBf"���'V�R���&6�w&�V�C�f"���v��FR���G&�6�F������'3��FW�B�FV6�&F������S��6���#���W&�C��Т�6���6&C���fW"��&�&FW"�6���#�f"��֖沓��&6�w&�V�C�f"���6�Ʋ���Т�6���6&B�F���F�7���f�W����W7F�g��6��FV�C�76R�&WGvVV㰢Ɩv�֗FV�3�6V�FW#���&v���&�GF�Ӣ'���Т�6���6&B�6FVv�'���f��B�f֖Ǔ�f"���6�2���f��B�6��S����f��B�vV�v�C�c���WGFW"�76��s��VӰ�FW�B�G&�6f�&ӢWW&66S��6���#�f"����WFVB���Т�6���6&B�&�6R��f��B�f֖Ǔ�f"���6�2���f��B�6��S�7���f��B�vV�v�C�c��6���#�f"��֖沓��Т�6���6&B���R��f��B�f֖Ǔ�f"���F�7�����f��B�6��S�#���f��B�vV�v�C�S��Ɩ�RֆV�v�C��3��6���#�f"��֖沓���&v���&�GF�Ӣ����Т�6���6&B���FR��f��B�f֖Ǔ�f"���6W&�b���f��B�6��S�G���Ɩ�RֆV�v�C��c��6���#�f"���֖B����&v���&�GF�Ӣg���Т�6���6&B�7F��f��B�f֖Ǔ�f"���6�2���f��B�6��S����f��B�vV�v�C�c���WGFW"�76��s���VӰ�FW�B�G&�6f�&ӢWW&66S��6���#�f"���&VB���Т�6���6&C���fW"�6���6&B�7F�6���#�f"���&VB�F���Р��)H)H)Hd��DU")H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H���6�FR�f��FW"��&�&FW"�F���6�ƖBf"���'V�R���FF��s�C�C�������v�GF��f"������r����&v��WF�Т�f��FW"֖��W"��F�7���f�W����W7F�g��6��FV�C�76R�&WGvVV㰢Ɩv�֗FV�3�f�W��7F'C��Т�f��FW"�'&�B��f��B�f֖Ǔ�f"���6�2���f��B�6��S�g���f��B�vV�v�C�c���WGFW"�76��s��VVӰ�FW�B�G&�6f�&ӢWW&66S���&v���&�GF�Ӣg���Т�f��FW"�'&�BV���6���#�f"���&VB���f��B�7G��S���&�ð�Т�f��FW"�Fr��f��B�f֖Ǔ�f"���6W&�b���f��B�6��S�7���6���#�f"����WFVB������v�GF��3C���Ɩ�RֆV�v�C��S��Т�f��FW"�6����f��B�f֖Ǔ�f"���6�2���f��B�6��S����6���#�f"����WFVB����WGFW"�76��s��VVӰ��&v���F��#G���Т�f��FW"�Ɩ�2��F�7���f�W���v�#G���Т�f��FW"�Ɩ�2��f��B�f֖Ǔ�f"���6�2���f��B�6��S����f��B�vV�v�C�S���WGFW"�76��s��VVӰ�FW�B�G&�6f�&ӢWW&66S��6���#�f"���֖B���G&�6�F���6���"�W3��Т�f��FW"�Ɩ�2���fW"�6���#�f"��֖沓�Р��)H)H)H$U5��4�dR)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H)H���VF�����v�GF��sc������F�&"�FF��s�w�#��Т�6�FR��b�FF��s�#��Т��b�Ɩ�2�v�g��Т�W&��FF��s�C��#�C��Т�W&���f��B�6��S�3g��Т�6FVv�'��&"�FF��s�g�#��Т��7G2�w&�B�FF��s�#G�#��Т��7B�6&B�w&�B�FV��FR�6��V��3�g#�v����Т��7B�6&Bֆ2֖�vR�w&�B�FV��FR�6��V��3�g#�Т��7B�6&B֖�vR�v�GF��S��V�v�C�#��Т��7B�6�fW"֖�r��V�v�C�#���Т��7BֆVFW"�FF��s�3'�#��Т��7BֆVFW"��f��B�6��S�3��Т��7B�&�G��FF��s�3'�#��Т��7B�f�wW&R��&v��3'��Т��7B�f�wW&R֖�Ɩ�R�FF��s�#��Т��7B�f�wW&R�v�FR��r�7V7B�&F��2�#�Т��7B�f�wW&R�6F����FF��s�#��Т��VB֖�vR��V�v�C�#���Т�WF��"ֆVFW"�FF��s�C�#�#G��Т�WF��"��7G2�FF��s�#G�#�c��Т�F֖��w&�FF��s�3'�#�c��Т�f�&��&�r�w&�B�FV��FR�6��V��3�g#�Т��VB�7F�'�֖��W"�FF��s�3'�#�3g��Т��VB�F�F�R�f��B�6��S�#���Т��v���R�6V7F���2�FF��s�#�3'��Т�6V7F�����7G2�w&�B�FV��FR�6��V��3�g#�Т�6��ֆVFW"�FF��s�C�#�3'��Т�6���F�F�R�f��B�6��S�3��Т�6���6V7F���2�FF��s�#�C��Т�6���w&�B�w&�B�FV��FR�6��V��3�g#�Т�6�FR�f��FW"�FF��s�3'�#��Т�f��FW"֖��W"�f�W��F�&V7F���6��V��v�#G��Ч�
+/* ─── SINGLE POST ─────────────────────────── */
+
+/* Cover image — full bleed hero */
+.post-cover {
+  width: 100%;
+  max-height: 560px;
+  overflow: hidden;
+  background: var(--chalk);
+}
+.post-cover-img {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.post-header {
+  max-width: var(--max-w-narrow);
+  margin: 0 auto;
+  padding: 48px 24px 0;
+}
+.post-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.post-header h1 {
+  font-family: var(--display);
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+.post-header-excerpt {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.65;
+  color: var(--mid);
+  margin-bottom: 24px;
+}
+.post-header-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--rule);
+}
+.post-header-author-info {
+  font-family: var(--sans);
+  font-size: 12px;
+}
+.post-header-author-info strong { font-weight: 600; }
+.post-header-author-info span { color: var(--muted); }
+
+/* Editorial body wrapper */
+.post-editorial {
+  padding-bottom: 40px;
+}
+
+/* Post body — prose */
+.post-body {
+  max-width: var(--max-w-narrow);
+  margin: 0 auto;
+  padding: 40px 24px 0;
+}
+.post-body:first-child {
+  padding-top: 40px;
+}
+.post-body p {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+.post-body h2 {
+  font-family: var(--display);
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--ink);
+  margin: 48px 0 16px;
+}
+.post-body h2:first-child {
+  margin-top: 0;
+}
+.post-body h3 {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin: 40px 0 12px;
+}
+.post-body em { font-style: italic; }
+.post-body strong { font-weight: 700; }
+.post-body blockquote {
+  border-left: 3px solid var(--red);
+  padding-left: 20px;
+  margin: 32px 0;
+  font-style: italic;
+  color: var(--mid);
+}
+.post-body hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 48px 0;
+}
+
+/* ─── EDITORIAL FIGURES (photos in posts) ──── */
+.post-figure {
+  margin: 48px 0;
+}
+.post-figure img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.post-figure-caption {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  line-height: 1.5;
+  max-width: var(--max-w-narrow);
+  margin: 12px auto 0;
+  padding: 0 24px;
+}
+
+/* Inline figure — contained within text column */
+.post-figure-inline {
+  max-width: var(--max-w-narrow);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 24px;
+}
+.post-figure-inline img {
+  aspect-ratio: 4 / 3;
+}
+.post-figure-inline .post-figure-caption {
+  padding: 0;
+}
+
+/* Wide figure — breaks out of text column */
+.post-figure-wide {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.post-figure-wide img {
+  aspect-ratio: 16 / 9;
+}
+
+/* ─── AUTHOR PAGE ─────────────────────────── */
+.author-header {
+  max-width: var(--max-w-narrow);
+  margin: 0 auto;
+  padding: 60px 24px 32px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  border-bottom: 1px solid var(--rule);
+}
+.author-avatar-lg {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--sans);
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  flex-shrink: 0;
+}
+.author-header h1 {
+  font-family: var(--display);
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.author-header-location {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.author-header-bio {
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--mid);
+}
+.author-posts {
+  max-width: var(--max-w-narrow);
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+}
+.author-posts-label {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+/* ─── ADMIN ───────────────────────────────── */
+.admin-wrap {
+  max-width: var(--max-w-narrow);
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+.admin-wrap h1 {
+  font-family: var(--display);
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.admin-desc {
+  font-family: var(--serif);
+  font-size: 15px;
+  color: var(--mid);
+  margin-bottom: 32px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-label {
+  display: block;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 6px;
+}
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  font-family: var(--serif);
+  font-size: 15px;
+  padding: 10px 14px;
+  border: 1px solid var(--rule);
+  background: var(--white);
+  color: var(--ink);
+  outline: none;
+  transition: border-color .15s;
+}
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--ink);
+}
+.form-textarea {
+  min-height: 400px;
+  line-height: 1.7;
+  resize: vertical;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.btn {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  border: none;
+  cursor: pointer;
+  transition: all .15s;
+}
+.btn-primary {
+  background: var(--ink);
+  color: var(--white);
+}
+.btn-primary:hover { background: var(--red); }
+.btn-secondary {
+  background: var(--chalk);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+}
+.btn-secondary:hover { background: var(--light); }
+.btn-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+.admin-post-list {
+  margin-top: 40px;
+}
+.admin-post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.admin-post-item-title {
+  font-family: var(--serif);
+  font-size: 15px;
+  color: var(--ink);
+}
+.admin-post-item-meta {
+  font-family: var(--sans);
+  font-size: 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.status-badge {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  margin-left: 8px;
+}
+.status-published { background: #e8f5e9; color: #2e7d32; }
+.status-draft { background: #fff3e0; color: #e65100; }
+
+/* ─── LEAD STORY ──────────────────────────── */
+.lead-story {
+  border-bottom: 1px solid var(--rule);
+  background: var(--chalk);
+}
+.lead-image-link {
+  display: block;
+  overflow: hidden;
+  max-height: 480px;
+}
+.lead-image {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.lead-image-link:hover .lead-image {
+  transform: scale(1.02);
+}
+.lead-story-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 48px 48px 52px;
+}
+.lead-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.lead-title {
+  font-family: var(--display);
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.lead-title a:hover { color: var(--red-dk); }
+.lead-excerpt {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--mid);
+  max-width: 640px;
+  margin-bottom: 20px;
+}
+.lead-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lead-author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.lead-reading-time {
+  font-family: var(--sans);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+/* ─── MAGAZINE SECTIONS ───────────────────── */
+.magazine-sections {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 48px 40px;
+}
+.magazine-section {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.magazine-section:last-child { border-bottom: none; }
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.section-title {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.section-see-all {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--red);
+  transition: color .15s;
+}
+.section-see-all:hover { color: var(--red-dk); }
+.section-posts {
+  display: flex;
+  flex-direction: column;
+}
+.section-posts .post-card {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.section-posts .post-card:first-child {
+  padding-top: 0;
+}
+.section-posts .post-card:last-child {
+  border-bottom: none;
+}
+
+/* ─── SHOP ────────────────────────────────── */
+.shop-header {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 60px 48px 40px;
+  border-bottom: 1px solid var(--rule);
+}
+.shop-title {
+  font-family: var(--display);
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.shop-intro {
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--mid);
+  max-width: 560px;
+}
+.shop-sections {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 48px 60px;
+}
+.shop-section {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.shop-section:last-child { border-bottom: none; }
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.shop-card {
+  display: block;
+  padding: 24px;
+  border: 1px solid var(--rule);
+  background: var(--white);
+  transition: all .2s;
+  text-decoration: none;
+  color: inherit;
+}
+.shop-card:hover {
+  border-color: var(--ink);
+  background: var(--chalk);
+}
+.shop-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.shop-card-category {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.shop-card-price {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.shop-card-name {
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.shop-card-note {
+  font-family: var(--serif);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--mid);
+  margin-bottom: 16px;
+}
+.shop-card-cta {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+.shop-card:hover .shop-card-cta { color: var(--red-dk); }
+
+/* ─── FOOTER ──────────────────────────────── */
+.site-footer {
+  border-top: 1px solid var(--rule);
+  padding: 40px 48px;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer-brand {
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.footer-brand em {
+  color: var(--red);
+  font-style: normal;
+}
+.footer-tag {
+  font-family: var(--serif);
+  font-size: 13px;
+  color: var(--muted);
+  max-width: 340px;
+  line-height: 1.5;
+}
+.footer-copy {
+  font-family: var(--sans);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  margin-top: 24px;
+}
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+.footer-links a {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--mid);
+  transition: color .15s;
+}
+.footer-links a:hover { color: var(--ink); }
+
+/* ─── RESPONSIVE ──────────────────────────── */
+@media (max-width: 768px) {
+  .topbar { padding: 7px 20px; }
+  .site-nav { padding: 0 20px; }
+  .nav-links { gap: 16px; }
+  .hero { padding: 48px 20px 40px; }
+  .hero h1 { font-size: 36px; }
+  .category-bar { padding: 16px 20px; }
+  .posts-grid { padding: 24px 20px; }
+  .post-card { grid-template-columns: 1fr; gap: 8px; }
+  .post-card-has-image { grid-template-columns: 1fr; }
+  .post-card-image { width: 100%; height: 200px; }
+  .post-cover-img { height: 280px; }
+  .post-header { padding: 32px 20px 0; }
+  .post-header h1 { font-size: 30px; }
+  .post-body { padding: 32px 20px 0; }
+  .post-figure { margin: 32px 0; }
+  .post-figure-inline { padding: 0 20px; }
+  .post-figure-wide img { aspect-ratio: 3 / 2; }
+  .post-figure-caption { padding: 0 20px; }
+  .lead-image { height: 280px; }
+  .author-header { padding: 40px 20px 24px; }
+  .author-posts { padding: 24px 20px 60px; }
+  .admin-wrap { padding: 32px 20px 60px; }
+  .form-row { grid-template-columns: 1fr; }
+  .lead-story-inner { padding: 32px 20px 36px; }
+  .lead-title { font-size: 28px; }
+  .magazine-sections { padding: 0 20px 32px; }
+  .section-posts { grid-template-columns: 1fr; }
+  .shop-header { padding: 40px 20px 32px; }
+  .shop-title { font-size: 30px; }
+  .shop-sections { padding: 0 20px 40px; }
+  .shop-grid { grid-template-columns: 1fr; }
+  .site-footer { padding: 32px 20px; }
+  .footer-inner { flex-direction: column; gap: 24px; }
+}
