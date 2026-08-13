@@ -33,6 +33,10 @@ export const metadata: Metadata = {
       "A publication about the relationship between a person and the objects they use. Not reviews. Portraits.",
     type: "website",
     siteName: "Tusenbruk",
+    images: [{ url: "/og.png", width: 1200, height: 630 }],
+  },
+  alternates: {
+    types: { "application/rss+xml": "/feed.xml" },
   },
 };
 
