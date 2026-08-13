@@ -6,9 +6,10 @@ out/
 next-env.d.ts
 
 # source material — stays local, not in the deployed repo
-_archive/
-photos/
-content-source/
+# (anchored to the repo root so public/photos still gets committed)
+/_archive/
+/photos/
+/content-source/
 
 # os
 .DS_Store
