@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440">
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&amp;family=Cormorant+Garamond:ital,wght@0,300;1,300&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="440" fill="#F5F0E8"/>
+
+  <!-- Outer border rule -->
+  <rect x="32" y="28" width="736" height="384" rx="2" fill="none" stroke="#C8B89A" stroke-width="0.75"/>
+
+  <!-- Double rule — top -->
+  <line x1="72" y1="94" x2="728" y2="94" stroke="#1A1209" stroke-width="1.25"/>
+  <line x1="72" y1="99" x2="728" y2="99" stroke="#1A1209" stroke-width="0.35"/>
+
+  <!-- Primary wordmark -->
+  <text
+    x="400"
+    y="224"
+    text-anchor="middle"
+    font-family="'Playfair Display', 'Didot', 'Georgia', 'Times New Roman', serif"
+    font-size="88"
+    font-weight="400"
+    letter-spacing="14"
+    fill="#1A1209">TUSENBRUK</text>
+
+  <!-- Double rule — bottom -->
+  <line x1="72" y1="248" x2="728" y2="248" stroke="#1A1209" stroke-width="0.35"/>
+  <line x1="72" y1="253" x2="728" y2="253" stroke="#1A1209" stroke-width="1.25"/>
+
+  <!-- Category line -->
+  <text
+    x="400"
+    y="295"
+    text-anchor="middle"
+    font-family="'Cormorant Garamond', 'Garamond', 'Georgia', serif"
+    font-size="13"
+    font-weight="300"
+    letter-spacing="5"
+    fill="#6B5A3E">WATCHES · CAMERAS · PENS &amp; WRITING · CARS · LUGGAGE</text>
+
+  <!-- Hairline separator -->
+  <line x1="240" y1="314" x2="560" y2="314" stroke="#C8B89A" stroke-width="0.5"/>
+
+  <!-- Tagline -->
+  <text
+    x="400"
+    y="340"
+    text-anchor="middle"
+    font-family="'Cormorant Garamond', 'Garamond', 'Georgia', serif"
+    font-size="15.5"
+    font-weight="300"
+    font-style="italic"
+    letter-spacing="1"
+    fill="#3A2C1A">Earn the wear.</text>
+
+  <!-- Founding mark -->
+  <text
+    x="400"
+    y="392"
+    text-anchor="middle"
+    font-family="'Cormorant Garamond', 'Garamond', 'Georgia', serif"
+    font-size="9.5"
+    font-weight="300"
+    letter-spacing="4"
+    fill="#B0A08A">TUSENBRUK · THOUSAND USES</text>
+
+</svg>

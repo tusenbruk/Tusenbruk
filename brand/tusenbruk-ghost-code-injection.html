@@ -1,0 +1,323 @@
+<!-- ============================================================
+     TUSENBRUK — Ghost Code Injection (Site Header)
+     Paste this entire block into:
+     Ghost Admin → Settings → Code injection → Site Header
+     ============================================================ -->
+
+<!-- Google Fonts: Playfair Display (400, 600) + Source Serif 4 (300) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Source+Serif+4:wght@300&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   TUSENBRUK STYLE OVERRIDE
+   Ryan Welker Personal Brand — v1.0 · March 2026
+   ============================================================ */
+
+/* ----- PALETTE (CSS custom properties) ----- */
+:root {
+  --tb-ink:    #1a1814;
+  --tb-navy:   #1c2b40;
+  --tb-red:    #8c2418;
+  --tb-denim:  #3a5a7a;
+  --tb-khaki:  #b8a882;
+  --tb-mid:    #8c8880;
+  --tb-rule:   #d8d4cc;
+  --tb-canvas: #f5f3ee;
+
+  /* Override Ghost accent */
+  --ghost-accent-color: #1c2b40 !important;
+}
+
+/* ----- GLOBAL SURFACE ----- */
+body,
+html {
+  background-color: var(--tb-canvas) !important;
+  color: var(--tb-ink) !important;
+}
+
+/* ----- TYPOGRAPHY: DISPLAY / HEADINGS ----- */
+h1, h2, h3,
+.post-card-title,
+.article-title,
+.gh-article-title,
+.site-title,
+.post-full-title,
+.tag-header,
+.author-header {
+  font-family: 'Playfair Display', 'Times New Roman', serif !important;
+  font-weight: 600 !important;
+  color: var(--tb-navy) !important;
+  letter-spacing: -0.01em;
+  text-transform: none !important;
+}
+
+h1,
+.article-title,
+.gh-article-title,
+.post-full-title {
+  font-size: clamp(28px, 4vw, 32px) !important;
+}
+
+h2,
+.post-card-title {
+  font-size: clamp(22px, 3vw, 28px) !important;
+}
+
+h3 {
+  font-family: 'Playfair Display', 'Times New Roman', serif !important;
+  font-weight: 400 !important;
+  font-size: clamp(15px, 2vw, 18px) !important;
+}
+
+/* ----- TYPOGRAPHY: BODY ----- */
+body,
+p,
+.post-content,
+.gh-content,
+.post-full-content,
+.article-body,
+.gh-article-excerpt,
+.post-card-excerpt,
+blockquote {
+  font-family: 'Source Serif 4', Georgia, serif !important;
+  font-weight: 300 !important;
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+  color: var(--tb-ink) !important;
+}
+
+/* Bump up post body slightly for readability on content pages */
+.gh-content p,
+.post-full-content p,
+.article-body p {
+  font-size: 15px !important;
+  line-height: 1.75 !important;
+}
+
+/* ----- TYPOGRAPHY: LABELS / TAGS / CAPTIONS ----- */
+.post-card-tags,
+.post-tag,
+.tag-name,
+.gh-article-tag,
+.post-card-meta,
+figcaption,
+.post-full-meta,
+.article-tag,
+.kg-card figcaption {
+  font-family: 'Source Serif 4', Georgia, serif !important;
+  font-weight: 300 !important;
+  font-size: 10px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.15em !important;
+  color: var(--tb-mid) !important;
+}
+
+/* ----- LINKS ----- */
+a {
+  color: var(--tb-denim) !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--tb-navy) !important;
+}
+
+/* Nav links keep ink color */
+.site-nav a,
+.gh-head a,
+.gh-navigation a,
+nav a {
+  color: var(--tb-ink) !important;
+}
+
+.site-nav a:hover,
+.gh-head a:hover,
+.gh-navigation a:hover,
+nav a:hover {
+  color: var(--tb-navy) !important;
+}
+
+/* ----- HEADER / NAVIGATION ----- */
+.site-header,
+.gh-head,
+.gh-navigation,
+header {
+  background-color: var(--tb-canvas) !important;
+  border-bottom: 2px solid var(--tb-ink) !important;
+}
+
+.site-title,
+.gh-head-logo,
+.gh-navigation-logo {
+  font-family: 'Playfair Display', 'Times New Roman', serif !important;
+  font-weight: 600 !important;
+  color: var(--tb-navy) !important;
+}
+
+/* ----- DIVIDERS / RULES ----- */
+hr,
+.post-card + .post-card,
+.gh-card + .gh-card {
+  border-color: var(--tb-rule) !important;
+}
+
+hr {
+  border: none !important;
+  border-top: 2px solid var(--tb-ink) !important;
+  margin: 2rem 0 !important;
+}
+
+/* ----- POST CARDS (index / tag pages) ----- */
+.post-card,
+.gh-card {
+  background-color: var(--tb-canvas) !important;
+  border-bottom: 1px solid var(--tb-rule) !important;
+}
+
+/* ----- BUTTONS / CTA ----- */
+.gh-btn,
+.gh-portal-btn,
+button[data-portal],
+.subscribe-form button,
+.gh-post-upgrade-cta .gh-btn {
+  background-color: var(--tb-navy) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 0 !important;
+  font-family: 'Source Serif 4', Georgia, serif !important;
+  font-weight: 300 !important;
+  font-size: 10px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.15em !important;
+  padding: 12px 24px !important;
+}
+
+.gh-btn:hover,
+.gh-portal-btn:hover,
+button[data-portal]:hover,
+.subscribe-form button:hover {
+  background-color: var(--tb-ink) !important;
+}
+
+/* ----- CTA / UPGRADE BANNERS ----- */
+.gh-post-upgrade-cta {
+  background-color: var(--tb-navy) !important;
+  border-radius: 0 !important;
+}
+
+.gh-post-upgrade-cta-content {
+  color: #fff !important;
+  font-family: 'Source Serif 4', Georgia, serif !important;
+}
+
+/* ----- BLOCKQUOTES ----- */
+blockquote {
+  border-left: 2px solid var(--tb-navy) !important;
+  padding-left: 1.5rem !important;
+  color: var(--tb-mid) !important;
+  font-style: italic !important;
+}
+
+/* ----- FOOTER ----- */
+.site-footer,
+footer,
+.gh-foot {
+  background-color: var(--tb-ink) !important;
+  color: var(--tb-rule) !important;
+  border-top: 2px solid var(--tb-navy) !important;
+}
+
+.site-footer a,
+footer a,
+.gh-foot a {
+  color: var(--tb-khaki) !important;
+}
+
+.site-footer a:hover,
+footer a:hover,
+.gh-foot a:hover {
+  color: #fff !important;
+}
+
+/* ----- IMAGES ----- */
+.post-card-image,
+.gh-card-image,
+.kg-image-card img,
+.post-full-image img {
+  border-radius: 0 !important;
+}
+
+/* ----- SECONDARY TEXT (dates, authors, reading time) ----- */
+.post-card-byline-content,
+.post-full-byline-content,
+.article-byline,
+.gh-article-meta,
+time,
+.reading-time {
+  font-family: 'Source Serif 4', Georgia, serif !important;
+  font-weight: 300 !important;
+  font-size: 10px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.15em !important;
+  color: var(--tb-mid) !important;
+}
+
+/* ----- TABLES (spec tables in posts) ----- */
+table {
+  font-family: 'Source Serif 4', Georgia, serif !important;
+  font-weight: 300 !important;
+  font-size: 13px !important;
+  border-collapse: collapse !important;
+  width: 100% !important;
+}
+
+th {
+  font-family: 'Source Serif 4', Georgia, serif !important;
+  font-weight: 300 !important;
+  font-size: 10px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.15em !important;
+  color: var(--tb-mid) !important;
+  border-bottom: 2px solid var(--tb-ink) !important;
+  text-align: left !important;
+  padding: 8px 12px !important;
+}
+
+td {
+  border-bottom: 1px solid var(--tb-rule) !important;
+  padding: 8px 12px !important;
+  color: var(--tb-ink) !important;
+}
+
+/* ----- ACCENT STROKE (selective use of Red) ----- */
+/* Use sparingly — add class .tb-accent to any element in Ghost editor */
+.tb-accent {
+  border-left: 2px solid var(--tb-red) !important;
+  padding-left: 1rem;
+}
+
+/* ----- SUBSCRIBE / PORTAL FORM ----- */
+.subscribe-form,
+.gh-subscribe {
+  background-color: var(--tb-canvas) !important;
+}
+
+.subscribe-form input,
+.gh-subscribe input {
+  font-family: 'Source Serif 4', Georgia, serif !important;
+  font-weight: 300 !important;
+  border: 1px solid var(--tb-rule) !important;
+  border-radius: 0 !important;
+  background: #fff !important;
+  color: var(--tb-ink) !important;
+}
+
+/* ----- CLEAN-UP: remove any remaining sans-serif leaks ----- */
+*:not(code):not(pre):not(.kg-code-card *) {
+  font-family: inherit !important;
+}
+
+</style>
