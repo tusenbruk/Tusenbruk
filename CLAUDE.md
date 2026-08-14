@@ -50,6 +50,11 @@ Body in markdown. First paragraph gets a drop cap automatically.
 - `featured: true` pins it as the homepage lead (otherwise newest wins).
 - `object` is the catalogue name — it groups pieces in `/register` and appears on the
   homepage drawer's flip cards. Reuse the exact string when writing about the same object again.
+- `kind: study` marks a catalogue study — an object-history piece with no owner, written from
+  the public record and free-licensed photos (attribution in `photoCaption`). Studies exist so
+  an object can enter the register before its portrait; the portrait uses the same `object`
+  string and a different slug. Portraits (the default) still require Ryan's source material —
+  the no-invented-experience rule is absolute either way.
 - 18 migrated drafts already sit in `content/` waiting to be finished — each holds an
   interview brief; fill it with real detail and a session drafts the piece.
 

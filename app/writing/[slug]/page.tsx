@@ -60,6 +60,7 @@ export default function PostPage({ params }: { params: { slug: string } }) {
       <div className="post-meta">
         {formatDate(post.date)}
         {post.place ? ` · ${post.place}` : ""}
+        {post.kind === "study" ? " · Catalogue study" : ""}
       </div>
       <div className="post-rule" />
       {post.photo && (

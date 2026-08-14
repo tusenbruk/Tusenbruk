@@ -12,6 +12,7 @@ export interface Post {
   date: string; // ISO yyyy-mm-dd
   summary: string;
   object?: string; // catalogue name, e.g. "Leica Q2" — groups pieces in the register
+  kind?: "portrait" | "study"; // studies are object histories with no owner; portraits are the default
   photo?: string; // path under /public, e.g. /photos/defender-90.jpg
   photoCaption?: string;
   place?: string; // dateline location, e.g. "Sydney, Australia"
@@ -45,6 +46,7 @@ function parsePost(plate: PlateKey, filename: string): Post {
     date: toISODate(data.date),
     summary: data.summary ?? "",
     object: typeof data.object === "string" ? data.object : undefined,
+    kind: data.kind === "study" ? "study" : "portrait",
     photo: typeof data.photo === "string" ? data.photo : undefined,
     photoCaption: typeof data.photoCaption === "string" ? data.photoCaption : undefined,
     place: typeof data.place === "string" ? data.place : undefined,
