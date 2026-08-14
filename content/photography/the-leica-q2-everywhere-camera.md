@@ -1,9 +1,10 @@
 ---
 title: "The Leica Q2: Everywhere Camera"
 slug: the-leica-q2-everywhere-camera
+object: "Leica Q2"
 plate: photography
 date: 2026-03-27
-summary: "The Summilux lens catches light the way a good bartender catches your eye — without effort, without fuss. Twenty-eight millimetres. Wide enough to hold a street corner. Tight enough, once you crop into that 47-megapixel file, to pull a…"
+summary: "A Q2 that lives in New York and works everywhere else — jungles, deserts, four continents, one lens, and a lens cap that will not stay on."
 photo: /photos/img_1789.jpg
 ---
 
@@ -28,13 +29,11 @@ This camera has seen weather. Humidity that fogs the viewfinder. Dust that finds
 
 None of it has broken it. The magnesium body shrugs off contact. The Summilux 28mm f/1.7 stays sharp. The autofocus still locks in low light that would send a phone hunting.
 
-It rides in a bag with no case. No protective wrap. Camera, strap, and whatever else fits around it. That’s the trust this thing earns — the willingness to treat a Leica like a tool instead of a trophy.
+It rides in a bag with no case. No protective wrap. Camera, strap, and whatever else fits around it.
 
 ## The marks so far
 
 The bottom plate carries the deepest scratches — from being set on stone walls, restaurant tables, taxi seats. The top plate has a nick near the shutter button that came from somewhere forgotten. The strap lugs show brass where the black paint has worn through.
-
-Every mark maps to a place. That’s the point.
 
 ## What grates
 
@@ -48,18 +47,15 @@ And the lens cap. The metal lens cap is beautiful and useless. It falls off in b
 
 The image quality at f/1.7 in fading light. The heft — 718 grams that sit in the hand like a river stone. The mechanical feel of the aperture ring, each click precise and deliberate. The EVF that’s good enough to make you forget you’re not looking through glass.
 
-And the simplicity. One lens. One body. No decisions about what to bring. The Q2 is the camera you grab when you’re walking out the door and don’t want to think about gear.
-
-It is, in the truest sense, an everyday carry. Not because it’s small — it isn’t, really — but because it earns its place in the bag every single time.
+And the simplicity. One lens. One body. No decisions about what to bring. It goes in the bag on the way out the door, and the door does not wait.
 
 ## At a glance
 
-ItemDetails
-
-ModelLeica Q2
-Years produced2019–2023
-SensorFull-frame CMOS
-Megapixels47.3 MP
-Lens mountFixed — Summilux 28mm f/1.7 ASPH.
-Shutter / ISO range30s–1/40,000s / ISO 50–50,000
-Notable quirkThe lens cap. Always the lens cap.
+| Item | Details |
+|---|---|
+| Model | Leica Q2 |
+| Years produced | 2019–2023 |
+| Sensor | Full-frame CMOS, 47.3 MP |
+| Lens | Fixed — Summilux 28mm f/1.7 ASPH. |
+| Shutter / ISO range | 30s–1/40,000s / ISO 50–50,000 |
+| Notable quirk | The lens cap. Always the lens cap. |

@@ -235,3 +235,164 @@ strong { font-weight: 400; }
   text-transform: uppercase;
   color: var(--faint);
 }
+
+/* ---------- Homepage lead with artwork ---------- */
+.lead-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 48px);
+  align-items: center;
+}
+@media (max-width: 720px) { .lead-grid { grid-template-columns: 1fr; } }
+.lead-art img { display: block; width: 100%; height: auto; }
+
+/* ---------- Secondaries with thumbnails ---------- */
+.secondaries { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 720px) { .secondaries { grid-template-columns: 1fr; } }
+.sec-thumb { display: block; margin-bottom: 12px; overflow: hidden; }
+.sec-thumb img {
+  display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.sec-card:hover .sec-thumb img { transform: scale(1.025); }
+
+/* ---------- The drawer — photographs that turn over ---------- */
+.drawer-head { display: flex; justify-content: space-between; align-items: baseline; }
+.drawer-hint {
+  font-family: var(--font-jost), sans-serif; font-weight: 300; font-size: 9px;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--faint);
+}
+.mosaic {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: clamp(10px, 1.6vw, 18px); margin-top: 16px;
+}
+@media (max-width: 900px) { .mosaic { grid-template-columns: repeat(2, 1fr); } }
+.tile { display: block; perspective: 900px; }
+.tile-inner {
+  position: relative; display: block; aspect-ratio: 4 / 3;
+  transform-style: preserve-3d; transition: transform 0.55s cubic-bezier(0.2, 0.7, 0.25, 1);
+}
+.tile:hover .tile-inner, .tile:focus-visible .tile-inner { transform: rotateY(180deg); }
+.tile-front, .tile-back {
+  position: absolute; inset: 0; display: block; backface-visibility: hidden;
+}
+.tile-front img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tile-back {
+  transform: rotateY(180deg);
+  background: var(--plate-white);
+  border: 1px solid var(--ultramarine);
+  display: flex; flex-direction: column; align-items: flex-start; justify-content: center;
+  gap: 7px; padding: 14px 16px;
+}
+.tile-obj {
+  font-family: var(--font-jost), sans-serif; font-weight: 300; font-size: 9px;
+  letter-spacing: 0.22em; text-transform: uppercase; color: var(--faint);
+}
+.tile-name {
+  font-family: var(--font-jost), sans-serif; font-weight: 400;
+  font-size: clamp(12px, 1.4vw, 14px); letter-spacing: 0.06em;
+  color: var(--ultramarine); line-height: 1.35;
+}
+.tile-square { width: 7px; height: 7px; background: var(--specimen-red); margin-top: 4px; }
+
+/* ---------- Notes + spot illustration ---------- */
+.notes-grid { display: flex; justify-content: space-between; gap: 32px; align-items: flex-start; }
+.spot { flex-shrink: 0; text-align: center; padding-top: 4px; }
+.spot-caption {
+  font-family: var(--font-jost), sans-serif; font-weight: 300; font-size: 8px;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--faint); margin-top: 6px;
+}
+@media (max-width: 640px) { .spot { display: none; } }
+
+/* ---------- The register ---------- */
+.reg-row {
+  display: flex; gap: clamp(14px, 3vw, 28px); align-items: baseline;
+  padding: 18px 0; border-bottom: 1px solid var(--rule-soft);
+}
+.reg-row:last-child { border-bottom: 0; }
+.reg-no {
+  font-family: var(--font-jost), sans-serif; font-weight: 300; font-size: 10px;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--specimen-red);
+  flex-shrink: 0; width: 70px; font-variant-numeric: tabular-nums;
+}
+.reg-body { flex: 1; }
+.reg-name {
+  font-family: var(--font-jost), sans-serif; font-weight: 400; font-size: 16px;
+  letter-spacing: 0.05em; color: var(--ultramarine);
+}
+.reg-pieces { margin-top: 5px; display: flex; flex-direction: column; gap: 3px; }
+.reg-piece { font-size: 14px; font-weight: 300; }
+.reg-piece:hover { color: var(--specimen-red); }
+.reg-date {
+  font-family: var(--font-jost), sans-serif; font-weight: 300; font-size: 9px;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--faint);
+}
+.reg-plate { flex-shrink: 0; }
+@media (max-width: 560px) { .reg-plate { display: none; } }
+
+/* ---------- The archive ---------- */
+.arch-search { margin-bottom: 10px; }
+.arch-search input {
+  width: 100%; border: 0; border-bottom: 1px solid var(--rule-soft);
+  padding: 10px 2px; font-family: var(--font-newsreader), Georgia, serif;
+  font-size: 16px; font-weight: 300; color: var(--deep-ink); background: transparent;
+  outline: none; border-radius: 0; -webkit-appearance: none;
+}
+.arch-search input:focus { border-bottom-color: var(--ultramarine); }
+.arch-search input::placeholder { color: var(--faint); font-style: italic; }
+.arch-count {
+  font-family: var(--font-jost), sans-serif; font-weight: 300; font-size: 9px;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--faint); margin-top: 8px;
+}
+.arch-year { margin-top: 26px; }
+.arch-year-head {
+  font-family: var(--font-jost), sans-serif; font-weight: 400; font-size: 12px;
+  letter-spacing: 0.24em; color: var(--ultramarine); margin-bottom: 8px;
+  font-variant-numeric: tabular-nums;
+}
+.arch-line {
+  display: flex; gap: 16px; align-items: baseline; padding: 7px 0;
+  border-bottom: 1px solid var(--rule-softer);
+}
+.arch-line:hover .arch-title { color: var(--specimen-red); }
+.arch-date {
+  font-family: var(--font-jost), sans-serif; font-weight: 300; font-size: 9px;
+  letter-spacing: 0.14em; color: var(--faint); flex-shrink: 0; width: 52px;
+  font-variant-numeric: tabular-nums;
+}
+.arch-plate { flex-shrink: 0; width: 38px; }
+.arch-title { font-size: 15px; font-weight: 300; color: var(--deep-ink); }
+.arch-empty { font-style: italic; color: var(--muted); margin-top: 24px; }
+
+/* ---------- The photograph wall ---------- */
+.photo-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: clamp(12px, 2vw, 22px);
+}
+@media (max-width: 820px) { .photo-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .photo-grid { grid-template-columns: 1fr; } }
+.photo-cell { display: block; }
+.photo-cell img {
+  width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;
+  transition: opacity 0.3s ease;
+}
+.photo-cell:hover img { opacity: 0.92; }
+.photo-cell-caption {
+  font-family: var(--font-jost), sans-serif; font-weight: 300; font-size: 8.5px;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--faint); margin-top: 7px;
+}
+.photo-cell:hover .photo-cell-caption { color: var(--specimen-red); }
+
+/* ---------- Table styling for At a glance ---------- */
+.post-body table { border-collapse: collapse; margin: 0 0 18px; width: 100%; }
+.post-body th {
+  font-family: var(--font-jost), sans-serif; font-weight: 400; font-size: 10px;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--ultramarine);
+  text-align: left; padding: 8px 18px 8px 0; border-bottom: 1px solid var(--ultramarine);
+}
+.post-body td {
+  font-size: 14px; font-weight: 300; padding: 8px 18px 8px 0;
+  border-bottom: 1px solid var(--rule-softer); vertical-align: top;
+}
+.post-body tr td:first-child {
+  font-family: var(--font-jost), sans-serif; font-size: 10px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--muted); white-space: nowrap; padding-top: 10px;
+}

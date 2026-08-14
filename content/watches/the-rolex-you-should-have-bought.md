@@ -1,9 +1,10 @@
 ---
 title: "The Rolex you should have bought"
 slug: the-rolex-you-should-have-bought
+object: "Rolex GMT-Master II 116710LN"
 plate: watches
 date: 2026-03-24
-summary: "The bezel clicks with a certainty that borders on smugness. Forty millimetres, black ceramic, a second time zone you'll use more than you planned. The Rolex GMT-Master II 116710LN does not announce itself. It settles in. The owner bought…"
+summary: "A GMT-Master II bought the year his son was born, worn through sixteen years of departure lounges, and already spoken for."
 photo: /photos/l1050770.jpg
 ---
 
@@ -35,35 +36,19 @@ The cyclops lens over the date divides opinion. Functional, yes. Elegant, no. Af
 
 ---
 
-He'll give it to his son when the boy is old enough. Not a pristine object in a velvet box. A watch with a history already inside it — scratches from his father's life, and room for more. The best things don't arrive complete. They arrive ready.
+He'll give it to his son when the boy is old enough. Not a pristine object in a velvet box. A watch with a history already inside it — scratches from his father's life, and room for more.
 
 ---
 
 ## At a glance
 
-Item
-Details
-
-Reference
-116710LN
-
-Years made
-2007–2019
-
-Case size
-40 mm
-
-Thickness
-~12.1 mm
-
-Movement
-Cal. 3186, automatic, 50-hour power reserve
-
-Water resistance
-100 m
-
-Dial / bezel
-Black dial, black Cerachrom ceramic bezel
-
-Bracelet / strap
-Oyster, 904L steel
+| Item | Details |
+|---|---|
+| Reference | 116710LN |
+| Years made | 2007–2019 |
+| Case size | 40 mm |
+| Thickness | ~12.1 mm |
+| Movement | Cal. 3186, automatic, 50-hour power reserve |
+| Water resistance | 100 m |
+| Dial / bezel | Black dial, black Cerachrom ceramic bezel |
+| Bracelet | Oyster, 904L steel |

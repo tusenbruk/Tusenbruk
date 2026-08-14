@@ -11,6 +11,7 @@ export interface Post {
   title: string;
   date: string; // ISO yyyy-mm-dd
   summary: string;
+  object?: string; // catalogue name, e.g. "Leica Q2" — groups pieces in the register
   photo?: string; // path under /public, e.g. /photos/defender-90.jpg
   photoCaption?: string;
   place?: string; // dateline location, e.g. "Sydney, Australia"
@@ -43,6 +44,7 @@ function parsePost(plate: PlateKey, filename: string): Post {
     title: data.title ?? "Untitled",
     date: toISODate(data.date),
     summary: data.summary ?? "",
+    object: typeof data.object === "string" ? data.object : undefined,
     photo: typeof data.photo === "string" ? data.photo : undefined,
     photoCaption: typeof data.photoCaption === "string" ? data.photoCaption : undefined,
     place: typeof data.place === "string" ? data.place : undefined,
@@ -96,16 +98,67 @@ export function getNotes(): Note[] {
   return notes.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-export function readingTime(body: string): number {
-  return Math.max(1, Math.round(body.split(/\s+/).length / 220));
+export interface Photo {
+  src: string;
+  caption?: string;
+  slug: string; // post it belongs to
+  title: string;
+  date: string;
 }
 
-export function formatDate(iso: string): string {
-  const d = new Date(iso + "T00:00:00");
-  return d.toLocaleDateString("en-AU", { day: "numeric", month: "long", year: "numeric" });
+// Every photograph on the site: each post's lead photo plus any images in the body.
+export function getAllPhotos(): Photo[] {
+  const photos: Photo[] = [];
+  for (const p of getAllPosts()) {
+    if (p.photo) {
+      photos.push({ src: p.photo, caption: p.photoCaption, slug: p.slug, title: p.title, date: p.date });
+    }
+    const re = /!\[([^\]]*)\]\(([^)\s]+)\)/g;
+    let m: RegExpExecArray | null;
+    while ((m = re.exec(p.body))) {
+      if (m[2] !== p.photo) {
+        photos.push({ src: m[2], caption: m[1] || undefined, slug: p.slug, title: p.title, date: p.date });
+      }
+    }
+  }
+  return photos;
 }
 
-export function formatDateShort(iso: string): string {
-  const d = new Date(iso + "T00:00:00");
-  return d.toLocaleDateString("en-AU", { day: "2-digit", month: "short" }).toUpperCase().replace(".", "");
+export interface RegisterEntry {
+  number: number; // Obj. 001 …
+  object: string;
+  plate: PlateKey;
+  posts: Post[]; // newest first
+  firstDate: string;
 }
+
+// The register: every object written about, numbered in order of first appearance.
+export function getRegister(): RegisterEntry[] {
+  const byObject = new Map<string, Post[]>();
+  for (const p of getAllPosts()) {
+    const key = p.object ?? p.title;
+    byObject.set(key, [...(byObject.get(key) ?? []), p]);
+  }
+  const entries = [...byObject.entries()].map(([object, posts]) => ({
+    object,
+    posts,
+    plate: posts[0].plate,
+    firstDate: posts[posts.length - 1].date,
+  }));
+  entries.sort((a, b) => (a.firstDate < b.firstDate ? -1 : 1));
+  return entries.map((e, i) => ({ ...e, number: i + 1 }));
+}
+
+// Posts grouped by year, newest year first, for the archive.
+export function getArchive(): { year: string; posts: Post[] }[] {
+  const byYear = new Map<string, Post[]>();
+  for (const p of getAllPosts()) {
+    const y = p.date.slice(0, 4);
+    byYear.set(y, [...(byYear.get(y) ?? []), p]);
+  }
+  return [...byYear.entries()]
+    .sort((a, b) => (a[0] < b[0] ? 1 : -1))
+    .map(([year, posts]) => ({ year, posts }));
+}
+
+export { readingTime, formatDate, formatDateShort } from "./format";

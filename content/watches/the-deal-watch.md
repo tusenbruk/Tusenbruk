@@ -1,6 +1,7 @@
 ---
 title: "The deal watch"
 slug: the-deal-watch
+object: "Panerai Luminor 8 Giorni PAM914"
 plate: watches
 date: 2026-03-24
 summary: "A Panerai PAM914 bought to mark a deal that went sideways. Four years later, it goes to construction sites, swims, runs, and gains a few minutes a day. The scuffs are the story."
@@ -21,7 +22,7 @@ The owner reaches for it the way a boxer reaches for tape. Not for beauty. For r
 
 The polished case picks up marks the way a work truck picks up mud. Hairlines run across the lugs. The crown guard has a scratch that lines up with the way he grips it to lock the lever. These aren't blemishes. They're timestamps.
 
-Collectors call the dial markings "fauxtina" — aged-looking lume on a modern watch. It works. The sandwich dial glows green in the dark with the confidence of an older design. It harks back to a time when tool watches looked like tools and men wore them without apology.
+Collectors call the dial markings "fauxtina" — aged-looking lume on a modern watch. It works. The sandwich dial glows green in the dark with the confidence of an older design.
 
 Three hundred metres of water resistance backs up the promise. The P.5000 movement ticks away inside, hand-wound, with an eight-day power reserve. Wind it Sunday night and forget it until the following weekend. The small seconds at nine keeps its own quiet count.
 
@@ -37,35 +38,19 @@ The lever-lock crown guard is satisfying to operate but adds bulk. Shirt cuffs c
 
 ---
 
-A Panerai 914 won't win a timekeeping competition. It won't slide under a French cuff. It will show up to every hard day you have and look better for it. The scuffs are the story. The watch doesn't care about being pretty — and neither does the person wearing it.
+A Panerai 914 won't win a timekeeping competition. It won't slide under a French cuff. It shows up to the hard days and looks better for them. The scuffs are the story.
 
 ---
 
 ## At a glance
 
-Item
-Details
-
-Reference
-PAM00914
-
-Years made
-2018–present
-
-Case size
-44 mm
-
-Thickness
-~15.6 mm
-
-Movement
-P.5000, hand-wound, 8-day power reserve
-
-Water resistance
-300 m
-
-Dial / bezel
-Black sandwich dial, fauxtina lume
-
-Strap
-Leather (rubber option available)
+| Item | Details |
+|---|---|
+| Reference | PAM00914 |
+| Years made | 2018–present |
+| Case size | 44 mm |
+| Thickness | ~15.6 mm |
+| Movement | P.5000, hand-wound, 8-day power reserve |
+| Water resistance | 300 m |
+| Dial | Black sandwich dial, fauxtina lume |
+| Strap | Leather (rubber option available) |

@@ -1,6 +1,7 @@
 ---
 title: "First, World Car - Defender"
 slug: garden-shed
+object: "Land Rover Defender 90 Td4"
 plate: motoring
 date: 2026-03-25
 summary: "A white Defender 90 in the Blue Mountains, and the case for cars that get better with use."
@@ -29,7 +30,7 @@ Every mark adds something. A new Defender looks like a press car. A used one loo
 
 ## What stays
 
-The driving position. You sit high and upright, with the bonnet spread out flat in front of you like a kitchen table. You can see every corner of the car. You know where you are on the road. In an era of sloping dashboards and invisible nose-lines, this feels like a minor act of rebellion.
+The driving position. You sit high and upright, with the bonnet spread out flat in front of you like a kitchen table. You can see every corner of the car. You know where you are on the road.
 
 The sound. The diesel clatter at idle, the turbo whistle under load, the wind noise above 80 that makes the kids shout from the back seat. It is never quiet, and that is part of the deal.
 
@@ -45,12 +46,23 @@ The fuel economy is what you would expect from a vehicle with the aerodynamics o
 
 ## A book for the glovebox
 
-Ben Fogle wrote a book called *Land Rover* that belongs in the door pocket of every Defender. It is not a workshop manual or a model history. It is a collection of stories from people who have built their lives around these vehicles — soldiers, farmers, aid workers, adventurers, and the quietly obsessed. The spirit of that book is the spirit of Tusenbruk: the object matters because of what it has done, not what it cost.
+Ben Fogle wrote a book called *Land Rover* that lives in this one's door pocket. It is not a workshop manual or a model history. It is a collection of stories from people who have built their lives around these vehicles — soldiers, farmers, aid workers, adventurers, and the quietly obsessed.
 
 ## The thousand uses
 
-A Defender 90 does not improve with age the way wine does, by sitting still. It improves the way a leather belt does — by being worn every day, by bending to the shape of the life it serves. The rubs and dings are not damage. They are evidence.
+A Defender 90 does not improve with age the way wine does, by sitting still. It improves the way a leather belt does — by being worn every day, by bending to the shape of the life it serves.
 
-Drive it. Scratch it. Hose it down. Take it to school and to the fire trail and to the servo at six in the morning. It will not let you down, and it will look better for it.
+This one goes to school and to the fire trail and to the servo at six in the morning. It gets scratched. It gets hosed down. The brown shadow in the wheel arches gets a little more permanent.
 
-**At a glance**ItemDetailsModel / generationLand Rover Defender 90, Td4Year2010Engine2.4L TDCi diesel (Ford-derived)TransmissionAutomatic (aftermarket conversion)DrivePermanent 4WD, dual-range transfer caseColourFuji WhiteNotable additionsBoost alloys, BFG All-Terrain T/A, Safari Equippers roof rack, Melville & Moon spare coverLivesBlue Mountains, NSW
+## At a glance
+
+| Item | Details |
+|---|---|
+| Model / generation | Land Rover Defender 90, Td4 |
+| Year | 2010 |
+| Engine | 2.4L TDCi diesel (Ford-derived) |
+| Transmission | Automatic (aftermarket conversion) |
+| Drive | Permanent 4WD, dual-range transfer case |
+| Colour | Fuji White |
+| Notable additions | Boost alloys, BFG All-Terrain T/A, Safari Equippers roof rack, Melville & Moon spare cover |
+| Lives | Blue Mountains, NSW |

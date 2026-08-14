@@ -33,6 +33,7 @@ Create `content/<plate>/<slug>.md`:
 ---
 title: "The case that was never polished"
 slug: the-case-that-was-never-polished
+object: "Rolex GMT-Master II 116710LN"
 plate: watches
 date: 2026-08-13
 summary: "One or two sentences for the homepage and index."
@@ -47,7 +48,26 @@ Body in markdown. First paragraph gets a drop cap automatically.
 
 - `draft: true` keeps it out of the build entirely. Remove the line to publish.
 - `featured: true` pins it as the homepage lead (otherwise newest wins).
-- 18 migrated drafts already sit in `content/` waiting to be finished.
+- `object` is the catalogue name — it groups pieces in `/register` and appears on the
+  homepage drawer's flip cards. Reuse the exact string when writing about the same object again.
+- 18 migrated drafts already sit in `content/` waiting to be finished — each holds an
+  interview brief; fill it with real detail and a session drafts the piece.
+
+## After adding or editing a post
+
+```bash
+python3 scripts/make_cards.py     # regenerate share cards (public/cards/<slug>.jpg) — commit them
+python3 agent/x_distributor.py    # draft an X post into agent/drafts/<slug>.txt (never auto-posts)
+```
+
+Vercel never runs Python; cards must be generated locally and committed.
+
+## Sections (all static, all derived from frontmatter)
+
+- `/register` — every object, numbered by first appearance (`object` field groups pieces)
+- `/archive` — one line per piece, with client-side search (full text via /search-index.json)
+- `/photographs` — every photo on the site, linking to its piece
+- Homepage drawer — photo mosaic; tiles flip to a catalogue card, no titles shown
 
 ## Adding photos
 
@@ -60,6 +80,10 @@ sips -s format jpeg -s formatOptions 78 --resampleWidth 1600 "photos/<dir>/<file
 
 Then reference as `/photos/<name>.jpg` in frontmatter or markdown body. Never commit an original—
 keep the repo lean.
+
+Captions live in metadata: `photoCaption` in frontmatter for the lead photo (place, time, camera,
+film — "Pentecost River, 6.40am. Leica M6, Portra 400."). Ryan hands over caption details in any
+loose form; normalize them into the frontmatter.
 
 Photography rule: object in use, or after use. Never on white. Never arranged. The scratch is visible.
 

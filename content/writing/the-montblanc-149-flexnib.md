@@ -1,6 +1,7 @@
 ---
 title: "The Montblanc 149 Flexnib"
 slug: the-montblanc-149-flexnib
+object: "Montblanc Meisterstück 149 Flexnib"
 plate: writing
 date: 2026-03-25
 summary: "Five years of daily use. Ink on the nib, ink on the fingers, and a flex that turns a goals journal into something worth keeping."
@@ -40,23 +41,25 @@ This doesn't affect the writing. It does affect your fingers. Touch the nib by a
 
 ## Challenges
 
-The piston-fill mechanism needs a bottle of ink, and bottles don't love carry-on bags. On the rare occasion it runs dry on the road, a Montblanc boutique will usually top it off for free — even though he bought it from an authorised dealer. Tusenbruk likes to support smaller dealers as a matter of policy, and this pen came from one.
+The piston-fill mechanism needs a bottle of ink, and bottles don't love carry-on bags. On the rare occasion it runs dry on the road, a Montblanc boutique will usually top it off for free — even though he bought it from a smaller authorised dealer, which is where this one came from.
 
-And the price is daunting a first, but quickly forgoten. The Flexnib commands a premium over the standard 149, which already commands a premium over reason. You need to take the long-term view on this pen as a member of the family, where cost isn't such a factor over time.
+And the price. The Flexnib commands a premium over the standard 149, which already commands a premium over reason. Daunting at first, he says, and forgotten somewhere around the second bottle of ink.
 
 ## A thousand uses
 
-The owner calls it the best version of the 149, and we're inclined to agree. The flex nib gives the pen a voice the standard model doesn't have. It turns a daily journal into something worth rereading. If you write by hand and mean it, this is the pen.
+The owner calls it the best version of the 149. The flex nib gives the pen a voice the standard model doesn't have. It turns a daily journal into something worth rereading.
 
 ---
 
 ## At a glance
 
-**Model**Montblanc Meisterstück 149 Flexnib
-**Years produced**2019–present (Flexnib variant)
-**Body**Black precious resin, gold-coated trim
-**Nib**18K gold, flex
-**Fill system**Piston converter
-**Weight**~32 g (uncapped)
-**Length**~147 mm capped
-**Notable quirk**Nib runs perpetually inked — handle accordingly
+| Item | Details |
+|---|---|
+| Model | Montblanc Meisterstück 149 Flexnib |
+| Years produced | 2019–present (Flexnib variant) |
+| Body | Black precious resin, gold-coated trim |
+| Nib | 18K gold, flex |
+| Fill system | Piston |
+| Weight | ~32 g (uncapped) |
+| Length | ~147 mm capped |
+| Notable quirk | Nib runs perpetually inked — handle accordingly |
