@@ -32,9 +32,25 @@ export const metadata: Metadata = {
     title: "Tusenbruk — Earn the wear",
     description:
       "A publication about the relationship between a person and the objects they use. Not reviews. Portraits.",
+    url: "https://tusenbruk.com",
     type: "website",
     siteName: "Tusenbruk",
-    images: [{ url: "/og.png", width: 1200, height: 630 }],
+    locale: "en_AU",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Tusenbruk — Earn the wear",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tusenbruk — Earn the wear",
+    description:
+      "Portraits of people, seen through the things they use.",
+    images: [{ url: "/og.png", alt: "Tusenbruk — Earn the wear" }],
   },
   alternates: {
     types: { "application/rss+xml": "/feed.xml" },

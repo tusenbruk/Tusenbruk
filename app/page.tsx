@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   getAllPosts,
   getFeatured,
@@ -11,7 +12,6 @@ import {
 } from "@/lib/content";
 import { getPlate, plateLabel } from "@/lib/plates";
 import PlateLabel from "@/components/PlateLabel";
-import TankSpot from "@/components/TankSpot";
 
 export default function Home() {
   const featured = getFeatured();
@@ -66,7 +66,13 @@ export default function Home() {
           </div>
           {featured.photo && (
             <Link href={`/writing/${featured.slug}`} className="lead-art">
-              <img src={featured.photo} alt={featured.photoCaption ?? featured.title} />
+              <Image
+                src={featured.photo}
+                alt={featured.photoAlt ?? featured.title}
+                fill
+                priority
+                sizes="(max-width: 720px) calc(100vw - 40px), 440px"
+              />
             </Link>
           )}
         </section>
@@ -79,7 +85,12 @@ export default function Home() {
           <div key={p.slug} className="sec-card">
             {p.photo && (
               <Link href={`/writing/${p.slug}`} className="sec-thumb">
-                <img src={p.photo} alt={p.title} loading="lazy" />
+                <Image
+                  src={p.photo}
+                  alt={p.photoAlt ?? p.title}
+                  fill
+                  sizes="(max-width: 720px) calc(100vw - 40px), 283px"
+                />
               </Link>
             )}
             <PlateLabel plate={p.plate} />
@@ -97,7 +108,10 @@ export default function Home() {
           <section>
             <div className="drawer-head">
               <div className="plate red">The drawer</div>
-              <div className="drawer-hint">Turn one over.</div>
+              <div className="drawer-hint">
+                <span className="drawer-hint-hover">Turn one over.</span>
+                <span className="drawer-hint-touch">Objects on record.</span>
+              </div>
             </div>
             <div className="mosaic">
               {drawer.slice(0, 8).map((ph, i) => {
@@ -107,7 +121,12 @@ export default function Home() {
                   <Link key={`${ph.src}-${i}`} href={`/writing/${ph.slug}`} className="tile">
                     <span className="tile-inner">
                       <span className="tile-front">
-                        <img src={ph.src} alt="" loading="lazy" />
+                        <Image
+                          src={ph.src}
+                          alt={ph.alt}
+                          fill
+                          sizes="(max-width: 720px) calc(50vw - 25px), (max-width: 900px) calc(50vw - 45px), 219px"
+                        />
                       </span>
                       <span className="tile-back">
                         <span className={`plate ${plate?.color ?? "green"}`}>
@@ -131,17 +150,14 @@ export default function Home() {
       {notes.length > 0 && (
         <>
           <hr className="hr-soft" />
-          <section className="notes-grid">
-            <div>
-              <div className="plate red">Notes</div>
-              {notes.map((n) => (
-                <div key={n.slug} className="note-line">
-                  <span className="note-date">{formatDateShort(n.date)}</span>
-                  <span>{n.body}</span>
-                </div>
-              ))}
-            </div>
-            <TankSpot />
+          <section className="notes-section">
+            <div className="plate red">Notes</div>
+            {notes.map((n) => (
+              <div key={n.slug} className="note-line">
+                <span className="note-date">{formatDateShort(n.date)}</span>
+                <span>{n.body}</span>
+              </div>
+            ))}
           </section>
         </>
       )}

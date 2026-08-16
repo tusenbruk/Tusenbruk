@@ -4,6 +4,7 @@ slug: blue-paper
 object: "Smythson Panama A5"
 plate: writing
 kind: study
+draft: true
 date: 2026-08-14
 summary: "Smythson's Panama notebook has been made of pale blue featherweight paper since 1908. The cover is lambskin. The idea is that the cover outlives everything you write in it."
 photo: /photos/smythson-bond-street.jpg

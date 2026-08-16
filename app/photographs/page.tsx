@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { getAllPhotos } from "@/lib/content";
 
@@ -20,7 +21,14 @@ export default function PhotographsPage() {
       <div className="photo-grid">
         {photos.map((ph, i) => (
           <Link key={`${ph.src}-${i}`} href={`/writing/${ph.slug}`} className="photo-cell">
-            <img src={ph.src} alt={ph.caption ?? ph.title} loading="lazy" />
+            <span className="photo-cell-frame">
+              <Image
+                src={ph.src}
+                alt={ph.alt}
+                fill
+                sizes="(max-width: 520px) calc(100vw - 40px), (max-width: 820px) calc(50vw - 30px), 320px"
+              />
+            </span>
             <div className="photo-cell-caption">{ph.caption ?? ph.title}</div>
           </Link>
         ))}

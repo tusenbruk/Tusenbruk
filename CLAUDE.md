@@ -3,6 +3,9 @@
 Tusenbruk is a publication about the relationship between a person and the objects they use —
 watches, cameras, pens, cars, luggage. Not reviews. Portraits. Tagline: *Earn the wear.*
 
+Before material editorial, design or architecture work, read `DECISIONS.md`. Append an entry when a
+change establishes or reverses a durable decision; include the reason, verification and rollback.
+
 ## Stack
 
 - Next.js 14 (App Router) + TypeScript, statically generated. No CMS, no database, no subscriptions.
@@ -38,7 +41,9 @@ plate: watches
 date: 2026-08-13
 summary: "One or two sentences for the homepage and index."
 photo: /photos/my-lead-photo.jpg
+photoAlt: "A scratched watch clasp resting against a workbench edge."
 photoCaption: "Pentecost River, 6.40am. Leica M6, Portra 400."
+subject: "A Sydney builder"
 place: "Sydney, Australia"
 draft: true
 ---
@@ -47,14 +52,14 @@ Body in markdown. First paragraph gets a drop cap automatically.
 ```
 
 - `draft: true` keeps it out of the build entirely. Remove the line to publish.
-- `featured: true` pins it as the homepage lead (otherwise newest wins).
+- Exactly one published portrait carries `featured: true`; the build fails if it is missing or
+  duplicated.
 - `object` is the catalogue name — it groups pieces in `/register` and appears on the
   homepage drawer's flip cards. Reuse the exact string when writing about the same object again.
-- `kind: study` marks a catalogue study — an object-history piece with no owner, written from
-  the public record and free-licensed photos (attribution in `photoCaption`). Studies exist so
-  an object can enter the register before its portrait; the portrait uses the same `object`
-  string and a different slug. Portraits (the default) still require Ryan's source material —
-  the no-invented-experience rule is absolute either way.
+- `subject` is required for every published portrait. It can be a consented name, initials or a
+  descriptive identity. `photoAlt` is required whenever `photo` is present.
+- Ownerless catalogue studies may remain as `draft: true` research dossiers, but are never a
+  publishable article type. `kind: field-note` is reserved for witnessed, observational scenes.
 - 18 migrated drafts already sit in `content/` waiting to be finished — each holds an
   interview brief; fill it with real detail and a session drafts the piece.
 
@@ -62,17 +67,21 @@ Body in markdown. First paragraph gets a drop cap automatically.
 
 ```bash
 python3 scripts/make_cards.py     # regenerate share cards (public/cards/<slug>.jpg) — commit them
-python3 agent/x_distributor.py    # draft an X post into agent/drafts/<slug>.txt (never auto-posts)
+npm run social:assets             # regenerate Instagram carousel, Story, caption and alt-text packs
+npm run validate:social           # check every queued asset and its dimensions
+python3 agent/x_distributor.py    # legacy X draft; never posts automatically
 ```
 
-Vercel never runs Python; cards must be generated locally and committed.
+Vercel never runs Python; cards and social packs must be generated locally and committed. Social
+approval lives in `social/queue.json`. A `hold` is a hard stop and must never be bypassed by an
+automated publisher.
 
 ## Sections (all static, all derived from frontmatter)
 
 - `/register` — every object, numbered by first appearance (`object` field groups pieces)
 - `/archive` — one line per piece, with client-side search (full text via /search-index.json)
 - `/photographs` — every photo on the site, linking to its piece
-- Homepage drawer — photo mosaic; tiles flip to a catalogue card, no titles shown
+- Homepage drawer — photo mosaic; tiles flip on hover and show a persistent catalogue card on touch
 
 ## Adding photos
 
@@ -108,7 +117,7 @@ The homepage shows the last four.
 
 ## Pages
 
-`content/pages/about.md` and `content/pages/kit.md`.
+`content/pages/about.md`. Buying guides and price-led recommendation pages are out of scope.
 
 ## Voice — hard guardrails
 

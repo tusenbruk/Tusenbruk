@@ -34,6 +34,16 @@ export default function RegisterPage() {
                     </Link>
                   ))}
                 </div>
+                {e.details && (
+                  <dl className="reg-details">
+                    {Object.entries(e.details).map(([label, value]) => (
+                      <div key={label} className="reg-detail">
+                        <dt>{label}</dt>
+                        <dd>{value}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                )}
               </div>
               <div className={`plate ${plate?.color ?? "green"} reg-plate`}>
                 {plate ? `Pl. ${plate.numeral} — ${plate.name}` : ""}

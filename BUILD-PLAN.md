@@ -1,5 +1,9 @@
 # Tusenbruk — Build Plan
 
+> Historical launch plan. For current editorial, identity and architecture decisions, read
+> `DECISIONS.md` and `CLAUDE.md`; they supersede conflicting typography, navigation and catalogue-
+> study guidance below.
+
 Hand this, plus `AGENTS.md` and `source/`, to Claude Code. It mirrors the proven CoCCuLiNi /
 Touchdown Tennessee build, adapted to Tusenbruk's voice and content model.
 

@@ -11,10 +11,13 @@ export interface Post {
   title: string;
   date: string; // ISO yyyy-mm-dd
   summary: string;
+  subject?: string; // named, initialled or descriptive; required for published portraits
   object?: string; // catalogue name, e.g. "Leica Q2" — groups pieces in the register
-  kind?: "portrait" | "study"; // studies are object histories with no owner; portraits are the default
+  kind: "portrait" | "field-note" | "study";
   photo?: string; // path under /public, e.g. /photos/defender-90.jpg
+  photoAlt?: string;
   photoCaption?: string;
+  details?: Record<string, string>; // technical record shown in /register, never in article prose
   place?: string; // dateline location, e.g. "Sydney, Australia"
   featured?: boolean;
   draft?: boolean;
@@ -45,10 +48,16 @@ function parsePost(plate: PlateKey, filename: string): Post {
     title: data.title ?? "Untitled",
     date: toISODate(data.date),
     summary: data.summary ?? "",
+    subject: typeof data.subject === "string" ? data.subject : undefined,
     object: typeof data.object === "string" ? data.object : undefined,
-    kind: data.kind === "study" ? "study" : "portrait",
+    kind: data.kind === "field-note" ? "field-note" : data.kind === "study" ? "study" : "portrait",
     photo: typeof data.photo === "string" ? data.photo : undefined,
+    photoAlt: typeof data.photoAlt === "string" ? data.photoAlt : undefined,
     photoCaption: typeof data.photoCaption === "string" ? data.photoCaption : undefined,
+    details:
+      data.details && typeof data.details === "object"
+        ? Object.fromEntries(Object.entries(data.details).map(([key, value]) => [key, String(value)]))
+        : undefined,
     place: typeof data.place === "string" ? data.place : undefined,
     featured: Boolean(data.featured),
     draft: Boolean(data.draft),
@@ -102,6 +111,7 @@ export function getNotes(): Note[] {
 
 export interface Photo {
   src: string;
+  alt: string;
   caption?: string;
   slug: string; // post it belongs to
   title: string;
@@ -113,13 +123,27 @@ export function getAllPhotos(): Photo[] {
   const photos: Photo[] = [];
   for (const p of getAllPosts()) {
     if (p.photo) {
-      photos.push({ src: p.photo, caption: p.photoCaption, slug: p.slug, title: p.title, date: p.date });
+      photos.push({
+        src: p.photo,
+        alt: p.photoAlt ?? p.title,
+        caption: p.photoCaption,
+        slug: p.slug,
+        title: p.title,
+        date: p.date,
+      });
     }
     const re = /!\[([^\]]*)\]\(([^)\s]+)\)/g;
     let m: RegExpExecArray | null;
     while ((m = re.exec(p.body))) {
       if (m[2] !== p.photo) {
-        photos.push({ src: m[2], caption: m[1] || undefined, slug: p.slug, title: p.title, date: p.date });
+        photos.push({
+          src: m[2],
+          alt: m[1] || p.title,
+          caption: m[1] || undefined,
+          slug: p.slug,
+          title: p.title,
+          date: p.date,
+        });
       }
     }
   }
@@ -132,6 +156,7 @@ export interface RegisterEntry {
   plate: PlateKey;
   posts: Post[]; // newest first
   firstDate: string;
+  details?: Record<string, string>;
 }
 
 // The register: every object written about, numbered in order of first appearance.
@@ -146,6 +171,7 @@ export function getRegister(): RegisterEntry[] {
     posts,
     plate: posts[0].plate,
     firstDate: posts[posts.length - 1].date,
+    details: posts.find((post) => post.details)?.details,
   }));
   entries.sort((a, b) => (a.firstDate < b.firstDate ? -1 : 1));
   return entries.map((e, i) => ({ ...e, number: i + 1 }));

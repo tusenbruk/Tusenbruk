@@ -4,6 +4,7 @@ slug: the-short-lived-sea-dweller
 object: "Rolex Sea-Dweller 4000 116600"
 plate: watches
 kind: study
+draft: true
 date: 2026-08-14
 summary: "The reference 116600 lasted three years in the catalogue — a tool watch built for a job almost nobody has, killed for being exactly that."
 photo: /photos/seadweller-16600.jpg

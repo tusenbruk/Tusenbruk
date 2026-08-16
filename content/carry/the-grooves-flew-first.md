@@ -4,6 +4,7 @@ slug: the-grooves-flew-first
 object: "Rimowa Classic Flight"
 plate: carry
 kind: study
+draft: true
 date: 2026-08-14
 summary: "Rimowa's Classic Flight is a 1937 idea still in production — aluminium, rivets, leather handles, and a groove pattern borrowed from an aeroplane's skin."
 photo: /photos/rimowa-classicflight-lock.jpg

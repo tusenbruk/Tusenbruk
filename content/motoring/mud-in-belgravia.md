@@ -3,9 +3,11 @@ title: "Mud in Belgravia"
 slug: mud-in-belgravia
 object: "Land Rovers, assorted"
 plate: motoring
+kind: field-note
 date: 2026-08-14
 summary: "One Sunday in May, the diplomatic parking of Belgrave Square filled with Land Rovers — snorkels, roof tents, Spanish licence plates and seventy years of the same idea."
 photo: /photos/belgrave-defenders.jpg
+photoAlt: "A row of mud-marked Land Rover Defenders parked nose-in beside the railings of Belgrave Square."
 photoCaption: "Belgrave Square, London, 18 May 2025. Nose-in against the garden railings."
 place: "London, England"
 ---

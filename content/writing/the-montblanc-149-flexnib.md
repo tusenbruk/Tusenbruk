@@ -2,10 +2,20 @@
 title: "The Montblanc 149 Flexnib"
 slug: the-montblanc-149-flexnib
 object: "Montblanc Meisterstück 149 Flexnib"
+subject: "A Sydney journal keeper"
 plate: writing
 date: 2026-03-25
 summary: "Five years of daily use. Ink on the nib, ink on the fingers, and a flex that turns a goals journal into something worth keeping."
 photo: /photos/l1011050.jpg
+photoAlt: "A Montblanc 149 fountain pen resting diagonally across a page of handwritten cursive, its gold cap band catching the light."
+details:
+  Model: "Montblanc Meisterstück 149 Flexnib"
+  Introduced: "2019"
+  Body: "Black resin, gold-coated trim"
+  Nib: "18K gold flex nib"
+  Fill system: "Piston"
+  Weight: "Approximately 32 g uncapped"
+  Quirk: "The nib remains visibly inked"
 ---
 
 The cap unscrews with a quarter turn and the nib catches the light before it touches paper. There's ink on the gold — there's always ink on the gold. The first stroke lays down wet and dark, wider than you expected, and the room gets a little quieter.
@@ -47,19 +57,4 @@ And the price. The Flexnib commands a premium over the standard 149, which alrea
 
 ## A thousand uses
 
-The owner calls it the best version of the 149. The flex nib gives the pen a voice the standard model doesn't have. It turns a daily journal into something worth rereading.
-
----
-
-## At a glance
-
-| Item | Details |
-|---|---|
-| Model | Montblanc Meisterstück 149 Flexnib |
-| Years produced | 2019–present (Flexnib variant) |
-| Body | Black precious resin, gold-coated trim |
-| Nib | 18K gold, flex |
-| Fill system | Piston |
-| Weight | ~32 g (uncapped) |
-| Length | ~147 mm capped |
-| Notable quirk | Nib runs perpetually inked — handle accordingly |
+The flex nib turns a daily journal into something worth rereading.

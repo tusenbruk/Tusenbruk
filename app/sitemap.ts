@@ -18,7 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/photographs` },
     { url: `${BASE}/archive` },
     { url: `${BASE}/notes` },
-    { url: `${BASE}/kit` },
     { url: `${BASE}/about` },
     ...plates,
     ...posts,

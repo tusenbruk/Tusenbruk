@@ -11,8 +11,10 @@ watches, cameras, pens, notebooks, folios, attachés, cars, luggage. Not reviews
 | Folder / file | What's in it |
 |---|---|
 | `AGENTS.md` | Build brief for Claude Code — read first. The stack, guardrails, milestones. |
+| `DECISIONS.md` | Shared, append-only rationale and rollback log for Ryan, Claude and Codex. |
 | `BUILD-PLAN.md` | Full build plan: site map, content model, design system, agent spec, launch steps. |
 | `editorial/` | **The spine.** Editorial constitution + the voice skill. The standard every piece meets. |
+| `social/` | Instagram profile specification, human approval queue, generated carousels, Stories and caption packs. Nothing auto-posts. |
 | `brand/` | Logos (svg + hero + primary png) and the old Ghost CSS — now the **design spec** (palette + type). |
 | `content-source/` | The raw content to seed the new site (see below). |
 | `content-source/ghost-export/` | **The Ghost export — 26 posts (6 published, 20 drafts).** The real article archive. |

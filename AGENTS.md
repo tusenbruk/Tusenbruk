@@ -11,9 +11,10 @@ a Python agent that drafts in the house voice. Lift that structure directly and 
 ## Read order
 
 1. This file — stack, guardrails, milestones.
-2. `source/tusenbruk-editorial-constitution.md` — **the spine. Read before any content logic.**
+2. `editorial/tusenbruk-editorial-constitution.md` — **the spine. Read before any content logic.**
 3. The `tusenbruk-editorial-voice` skill (installed) — the voice in operational detail.
 4. `BUILD-PLAN.md` (this folder) — site map, content model, design system, agent spec, launch steps.
+5. `DECISIONS.md` — shared rationale, verification and rollback history for Claude and Codex.
 
 ## The reference build
 
@@ -48,8 +49,8 @@ same shape with a different beat. The pattern:
 
 ## First milestone
 
-A clean, well-designed prototype rendering the Tusenbruk brand (Playfair Display + Source Serif 4,
-the canvas/ink/navy palette) with the **5 existing pieces** seeded as Markdown — *before* any paid
+A clean, well-designed prototype rendering the Tusenbruk brand (Jost + Newsreader,
+the plate-white/ultramarine/specimen-red palette) with the existing portraits seeded as Markdown — *before* any paid
 agent run. Then stand up the drafting agent in draft-only mode, review against the Three Tests, and
 only then schedule it.
 

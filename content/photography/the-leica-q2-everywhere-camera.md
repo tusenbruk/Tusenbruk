@@ -2,10 +2,19 @@
 title: "The Leica Q2: Everywhere Camera"
 slug: the-leica-q2-everywhere-camera
 object: "Leica Q2"
+subject: "A New York traveller"
 plate: photography
 date: 2026-03-27
 summary: "A Q2 that lives in New York and works everywhere else — jungles, deserts, four continents, one lens, and a lens cap that will not stay on."
 photo: /photos/img_1789.jpg
+photoAlt: "A well-used black Leica Q2 handed across a café table."
+details:
+  Model: "Leica Q2"
+  Years produced: "2019–2023"
+  Sensor: "Full-frame CMOS, 47.3 MP"
+  Lens: "Fixed Summilux 28mm f/1.7 ASPH."
+  Shutter / ISO: "30s–1/40,000s / ISO 50–50,000"
+  Quirk: "The metal lens cap rarely stays on"
 ---
 
 The Summilux lens catches light the way a good bartender catches your eye — without effort, without fuss. Twenty-eight millimetres. Wide enough to hold a street corner. Tight enough, once you crop into that 47-megapixel file, to pull a face from across the room.
@@ -19,9 +28,6 @@ This Q2 lives in New York. It has been dragged through jungles, baked in deserts
 An iPhone, mostly. Not in any dramatic way — the phone still shoots the quick stuff, the notes-to-self, the kid holding a menu. But for the moments that matter, the Q2 earns the extra weight. The difference between the two isn’t resolution. It’s that the Leica makes you stop and compose. The iPhone lets you get away with not trying.
 
 The 28mm focal length sounds wide until you live with it. It holds a cafe table and the person across from it. It holds a hotel lobby. A jungle canopy. A souk at dusk. And when the scene is too big or the subject too far, the crop modes — 35, 50, 75 — pull from that massive sensor without embarrassment.
-
-![Handed off at the cafe. Shot on iPhone 15 Pro.](/photos/img_1789.jpg)
-*Handed off at the cafe. Shot on iPhone 15 Pro.*
 
 ## Jungles, deserts, cities
 
@@ -48,14 +54,3 @@ And the lens cap. The metal lens cap is beautiful and useless. It falls off in b
 The image quality at f/1.7 in fading light. The heft — 718 grams that sit in the hand like a river stone. The mechanical feel of the aperture ring, each click precise and deliberate. The EVF that’s good enough to make you forget you’re not looking through glass.
 
 And the simplicity. One lens. One body. No decisions about what to bring. It goes in the bag on the way out the door, and the door does not wait.
-
-## At a glance
-
-| Item | Details |
-|---|---|
-| Model | Leica Q2 |
-| Years produced | 2019–2023 |
-| Sensor | Full-frame CMOS, 47.3 MP |
-| Lens | Fixed — Summilux 28mm f/1.7 ASPH. |
-| Shutter / ISO range | 30s–1/40,000s / ISO 50–50,000 |
-| Notable quirk | The lens cap. Always the lens cap. |

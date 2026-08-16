@@ -4,6 +4,7 @@ slug: the-grandmasters-chronograph
 object: "Audemars Piguet Royal Oak Chronograph 25860ST"
 plate: watches
 kind: study
+draft: true
 date: 2026-08-14
 summary: "The blue-dial Royal Oak chronograph collectors named after Garry Kasparov — and a white-dial sibling photographed with the tag still on."
 photo: /photos/royal-oak-chrono-boxed.jpg

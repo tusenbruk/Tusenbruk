@@ -2,10 +2,20 @@
 title: "First, World Car - Defender"
 slug: garden-shed
 object: "Land Rover Defender 90 Td4"
+subject: "A Blue Mountains driver and parent"
 plate: motoring
 date: 2026-03-25
 summary: "A white Defender 90 in the Blue Mountains, and the case for cars that get better with use."
 photo: /photos/l1010017.jpg
+photoAlt: "A white Land Rover Defender 90 parked outside after use."
+details:
+  Model: "Land Rover Defender 90 Td4"
+  Year: "2010"
+  Engine: "2.4L TDCi diesel"
+  Transmission: "Automatic conversion"
+  Drive: "Permanent 4WD, dual-range transfer case"
+  Colour: "Fuji White"
+  Lives: "Blue Mountains, NSW"
 ---
 
 The door shuts with a clank that belongs to a toolbox, not a car. The steering wheel sits close and upright. The wipers sweep at a pace that suggests they have other things on their mind. None of this is a complaint.
@@ -53,16 +63,3 @@ Ben Fogle wrote a book called *Land Rover* that lives in this one's door pocket.
 A Defender 90 does not improve with age the way wine does, by sitting still. It improves the way a leather belt does — by being worn every day, by bending to the shape of the life it serves.
 
 This one goes to school and to the fire trail and to the servo at six in the morning. It gets scratched. It gets hosed down. The brown shadow in the wheel arches gets a little more permanent.
-
-## At a glance
-
-| Item | Details |
-|---|---|
-| Model / generation | Land Rover Defender 90, Td4 |
-| Year | 2010 |
-| Engine | 2.4L TDCi diesel (Ford-derived) |
-| Transmission | Automatic (aftermarket conversion) |
-| Drive | Permanent 4WD, dual-range transfer case |
-| Colour | Fuji White |
-| Notable additions | Boost alloys, BFG All-Terrain T/A, Safari Equippers roof rack, Melville & Moon spare cover |
-| Lives | Blue Mountains, NSW |

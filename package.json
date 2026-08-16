@@ -5,9 +5,14 @@
   "description": "Tusenbruk — the art of using things well crafted.",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npm run validate:content",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "validate:content": "node scripts/validate_content.mjs",
+    "social:assets": "python3 scripts/make_social_assets.py",
+    "validate:social": "python3 scripts/make_social_assets.py --check",
+    "validate:metadata": "python3 scripts/strip_metadata.py --check public/photos public/illustrations public/cards social/output social/brand"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

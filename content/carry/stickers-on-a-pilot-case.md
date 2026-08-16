@@ -4,6 +4,7 @@ slug: stickers-on-a-pilot-case
 object: "Rimowa Pilot"
 plate: carry
 kind: study
+draft: true
 date: 2026-08-14
 summary: "The cockpit case that civilians adopted, and one photographed example that has stopped pretending to be luggage."
 photo: /photos/rimowa-pilot-stickers.jpg

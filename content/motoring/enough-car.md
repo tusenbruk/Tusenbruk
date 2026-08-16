@@ -2,10 +2,12 @@
 title: "Enough Car"
 slug: enough-car
 object: "Porsche 911 Carrera (992)"
+subject: "A Sydney driver who chose the base model"
 plate: motoring
 date: 2026-03-25
 summary: "An Aventurine Green 992 Carrera and the case for the base model."
 photo: /photos/l1010755.jpg
+photoAlt: "An Aventurine Green Porsche 911 Carrera parked outdoors after regular use."
 ---
 
 The flat-six settles into a hum at 80 on the M1, and the thought arrives again: this is more car than anyone needs. The owner knows this. He chose it anyway — and chose the least of it.

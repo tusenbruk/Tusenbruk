@@ -1,0 +1,68 @@
+{
+  "manifesto": {
+    "status": "ready",
+    "caption": "Tusenbruk begins after the wanting.\n\nPortraits of people, seen through the things they use. Craft matters. Use is the proof.\n\nEarn the wear.\n\n#Tusenbruk #ObjectsInUse",
+    "slides": [
+      ["TUSENBRUK", "AFTER THE WANTING"],
+      ["NOT REVIEWS", "Portraits of people, seen through the things they use."],
+      ["CRAFT MATTERS", "Use is the proof."],
+      ["THE EVIDENCE", "The scratch. The repair. The irritation that stays because the rest still works."],
+      ["A THOUSAND USES", "Earn the wear."]
+    ]
+  },
+  "posts": [
+    {
+      "slug": "the-rolex-you-should-have-bought",
+      "status": "draft",
+      "hook": "One link on the bracelet has a screw that backs itself out every few months. He tightens it. It loosens again. They have an understanding.",
+      "caption": "One link on the bracelet has a screw that backs itself out every few months. He tightens it. It loosens again. They have an understanding.\n\nThe GMT-Master II he bought the year his son was born has already been promised to him.\n\nRead “The Rolex you should have bought” at the link in bio.\n\n#RolexGMTMasterII #Tusenbruk",
+      "alt": "A scratched steel Rolex GMT-Master II worn on its owner’s wrist.",
+      "focal_point": [0.56, 0.48]
+    },
+    {
+      "slug": "the-leica-q2-everywhere-camera",
+      "status": "draft",
+      "hook": "The metal lens cap is beautiful and useless. It falls off in bags. It falls off in pockets.",
+      "caption": "The metal lens cap is beautiful and useless. It falls off in bags. It falls off in pockets.\n\nThis Q2 lives in New York and works everywhere else: jungles, deserts, four continents and one lens.\n\nRead “The Leica Q2: Everywhere Camera” at the link in bio.\n\n#LeicaQ2 #Tusenbruk",
+      "alt": "A well-used black Leica Q2 handed across a café table.",
+      "focal_point": [0.5, 0.48]
+    },
+    {
+      "slug": "the-montblanc-149-flexnib",
+      "status": "draft",
+      "hook": "There is ink on the gold. There is always ink on the gold.",
+      "caption": "There is ink on the gold. There is always ink on the gold.\n\nFor five years this Montblanc 149 has come out first thing in the morning for the same goals journal. Touch the nib carelessly and the evidence stays on your fingers.\n\nRead “The Montblanc 149 Flexnib” at the link in bio.\n\n#Montblanc149 #FountainPen #Tusenbruk",
+      "alt": "A Montblanc 149 fountain pen resting across a page of handwritten cursive.",
+      "focal_point": [0.55, 0.5]
+    },
+    {
+      "slug": "garden-shed",
+      "status": "draft",
+      "hook": "The heater takes fifteen minutes to mean anything in a Katoomba winter.",
+      "caption": "The heater takes fifteen minutes to mean anything in a Katoomba winter. The turning circle requires planning. The brown shadow in the wheel arches has stopped responding to persuasion.\n\nThe white Defender still does the school run, the fire trail and the six o’clock trip to the servo.\n\nRead “First, World Car — Defender” at the link in bio.\n\n#Defender90 #LandRover #Tusenbruk",
+      "alt": "A white Land Rover Defender 90 parked outside in the Blue Mountains.",
+      "focal_point": [0.5, 0.52]
+    },
+    {
+      "slug": "enough-car",
+      "status": "draft",
+      "hook": "The older cars aged like leather. These age like a laptop.",
+      "caption": "“The older cars aged like leather. These age like a laptop.”\n\nAn Aventurine Green base Carrera, driven every day and parked in the sun. Somewhere ahead of it is its first proper mark.\n\nRead “Enough Car” at the link in bio.\n\n#Porsche911 #Tusenbruk",
+      "alt": "An Aventurine Green Porsche 911 Carrera parked outdoors after regular use.",
+      "focal_point": [0.5, 0.52]
+    },
+    {
+      "slug": "mud-in-belgravia",
+      "status": "draft",
+      "hook": "The sign says Diplomatic cars only. Beneath it is a Series III with its windscreen folded flat.",
+      "caption": "The sign says Diplomatic cars only. Beneath it is a Series III with its windscreen folded flat. Nobody moves it on.\n\nOne Sunday in May, Belgrave Square belonged to Land Rovers. The Series III left last.\n\nRead “Mud in Belgravia” at the link in bio.\n\n#LandRover #Belgravia #Tusenbruk",
+      "alt": "A row of mud-marked Land Rovers parked beside the railings of Belgrave Square.",
+      "focal_point": [0.5, 0.5]
+    },
+    {
+      "slug": "the-deal-watch",
+      "status": "hold",
+      "reason": "Do not promote until a real, unarranged photograph from use is supplied and the owner confirms the remaining lived details."
+    }
+  ]
+}
