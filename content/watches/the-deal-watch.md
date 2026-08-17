@@ -15,28 +15,24 @@ details:
   Dial: "Black sandwich dial"
 ---
 
-The crown guard locks with a clack that means business. Forty-four millimetres of polished steel. The Panerai Luminor 8 Giorni sits on the wrist like a handshake — firm, deliberate, not trying to be liked.
+The crown guard closes with a clack. The Panerai Luminor 8 Giorni is 44 millimetres of polished steel.
 
-The owner bought it in Brisbane in 2022. A deal had closed — the kind that calls for a marker, something to hold the moment. He chose a Panerai PAM914, the 8 Giorni, with its eight-day power reserve and hand-wound movement. A watch that demands attention the way a good contract demands reading.
+The owner bought it in Brisbane in 2022 after a deal closed. He chose the hand-wound PAM914, with its eight-day power reserve, to mark the occasion.
 
-The deal soured. What was meant to be a celebration became years of frustration — calls, lawyers, sleepless nights. The watch stayed on the wrist through all of it.
+The deal soured. Calls and lawyers followed. The watch stayed on his wrist.
 
-It became something else. Not a trophy. A reminder. The watch now marks endurance, not victory. It goes to construction sites, into the ocean and through school runs. The 914 comes along.
-
-The owner reaches for it the way a boxer reaches for tape. Not for beauty. For readiness.
+The watch no longer marks the event its owner expected. He still wears it to construction sites, into the ocean and on school runs.
 
 ---
 
-The polished case picks up marks the way a work truck picks up mud. Hairlines run across the lugs.
+Hairlines run across the polished lugs.
 
-Collectors call the dial markings "fauxtina" — aged-looking lume on a modern watch. It works. The sandwich dial glows green in the dark with the confidence of an older design.
+Collectors call the aged-looking lume "fauxtina". The sandwich dial glows green in the dark.
 
-Three hundred metres of water resistance backs up the promise. The P.5000 movement ticks away inside, hand-wound, with an eight-day power reserve. Wind it Sunday night and forget it until the following weekend.
+The P.5000 movement is hand-wound and carries an eight-day reserve. Wind it on Sunday and it runs until the following weekend.
 
-The 44mm case wears heavy. That weight registers — at a desk, shaking hands. You know it's there. That's the point.
+The 44mm case is heavy enough to register at a desk or while shaking hands.
 
 ---
 
-The watch gains a few minutes a day. Like its owner, it runs a little fast. You learn to set it back every week or accept that you're always early.
-
-A Panerai 914 won't win a timekeeping competition.
+The watch gains a few minutes a day. Its owner sets it back each week.

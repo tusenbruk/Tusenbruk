@@ -283,3 +283,43 @@ staged Panerai image from the public grid.
 
 Restore individual posts from Instagram's archive. Revert the avatar or bio in Edit Profile. Do not
 change queue statuses without also recording what was restored or unpublished.
+
+## 2026-08-17 — the pleasure of use and the anti-synthetic pass
+
+**Decision**
+
+- Replace “Earn the wear” with “The pleasure of use” as the public tagline. Keep “Use is the proof”
+  as an editorial principle and “A thousand uses” as the meaning behind the name.
+- Make `editorial/tusenbruk-editorial-voice/SKILL.md` the canonical, editable skill source and
+  generate the portable `.skill` archive from it.
+- Add an explicit anti-synthetic editing pass: no product personification, prestige metaphors,
+  slogan stacks, generic revelations, repeated review headings, unsupported universals or tidy
+  morals.
+- Apply that pass to all seven published pieces and the About page without adding lived detail.
+- Archive the first manifesto post and replace it with the corrected five-slide version.
+
+**Why**
+
+“Earn” made wear sound like a test. Tusenbruk is interested in the ordinary pleasure of continuing
+to use something. The published articles had also begun to share a visible generated scaffold:
+“What stays”, “What grates”, “The thousand uses”, followed by an explained conclusion. Repetition
+was weakening otherwise useful human details.
+
+**Files**
+
+The canonical voice skill and its packager under `editorial/` and `scripts/`; the constitution,
+About page, published Markdown, global metadata, footer, share-card generator, social profile and
+queue, brand SVGs and generated cards.
+
+**Verification**
+
+- The canonical skill passes `quick_validate.py` and the `.skill` archive builds from it.
+- Content, social and metadata validation pass; the production build generates all 29 pages.
+- The public Instagram profile shows the new bio and one corrected manifesto post at
+  `https://www.instagram.com/tusenbruk/p/DcHz30ZEpZf/`.
+- The previous manifesto is archived, not deleted.
+
+**Rollback**
+
+Revert this implementation commit and reinstall the prior `.skill` archive. The old manifesto can
+be restored from Instagram's archive, but doing so would also restore the retired tagline.

@@ -13,7 +13,8 @@ watches, cameras, pens, notebooks, folios, attachés, cars, luggage. Not reviews
 | `AGENTS.md` | Build brief for Claude Code — read first. The stack, guardrails, milestones. |
 | `DECISIONS.md` | Shared, append-only rationale and rollback log for Ryan, Claude and Codex. |
 | `BUILD-PLAN.md` | Full build plan: site map, content model, design system, agent spec, launch steps. |
-| `editorial/` | **The spine.** Editorial constitution + the voice skill. The standard every piece meets. |
+| `editorial/` | **The spine.** Editorial constitution + canonical voice skill source and packaged `.skill` archive. |
+| `.claude/skills/` | Generated project-level skill used automatically by Claude Code; refresh with `python3 scripts/package_editorial_skill.py`. |
 | `social/` | Instagram profile specification, human approval queue, generated carousels, Stories and caption packs. Nothing auto-posts. |
 | `brand/` | Logos (svg + hero + primary png) and the old Ghost CSS — now the **design spec** (palette + type). |
 | `content-source/` | The raw content to seed the new site (see below). |
@@ -49,4 +50,4 @@ attaché, Filson briefcase, Hermès planner, Smythson notebook.
 `.DS_Store` files. Took the folder from ~620 MB to ~200 MB. Nothing with unique content was deleted —
 old code and themes were archived, not removed.
 
-_Earn the wear._
+_The pleasure of use._

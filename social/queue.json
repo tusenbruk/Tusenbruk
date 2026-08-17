@@ -2,22 +2,23 @@
   "manifesto": {
     "status": "published",
     "publishedAt": "2026-08-17",
-    "instagramUrl": "https://www.instagram.com/tusenbruk/p/DcHvmiLH5aH/",
-    "caption": "Tusenbruk begins after the wanting.\n\nPortraits of people, seen through the things they use. Craft matters. Use is the proof.\n\nEarn the wear.\n\n#Tusenbruk #ObjectsInUse",
+    "instagramUrl": "https://www.instagram.com/tusenbruk/p/DcHz30ZEpZf/",
+    "archivedPredecessor": "https://www.instagram.com/tusenbruk/p/DcHvmiLH5aH/",
+    "caption": "Tusenbruk begins after the wanting.\n\nPortraits of people, seen through the things they use. Craft matters. Use is the proof.\n\nThe pleasure of use.\n\n#Tusenbruk #ObjectsInUse",
     "slides": [
       ["TUSENBRUK", "AFTER THE WANTING"],
       ["NOT REVIEWS", "Portraits of people, seen through the things they use."],
       ["CRAFT MATTERS", "Use is the proof."],
       ["THE EVIDENCE", "The scratch. The repair. The irritation that stays because the rest still works."],
-      ["A THOUSAND USES", "Earn the wear."]
+      ["A THOUSAND USES", "The pleasure of use."]
     ]
   },
   "posts": [
     {
       "slug": "the-rolex-you-should-have-bought",
       "status": "draft",
-      "hook": "One link on the bracelet has a screw that backs itself out every few months. He tightens it. It loosens again. They have an understanding.",
-      "caption": "One link on the bracelet has a screw that backs itself out every few months. He tightens it. It loosens again. They have an understanding.\n\nThe GMT-Master II he bought the year his son was born has already been promised to him.\n\nRead “The Rolex you should have bought” at the link in bio.\n\n#RolexGMTMasterII #Tusenbruk",
+      "hook": "One link on the bracelet has a screw that backs itself out every few months. He tightens it and carries on.",
+      "caption": "One link on the bracelet has a screw that backs itself out every few months. He tightens it and carries on.\n\nThe GMT-Master II he bought the year his son was born has already been promised to him.\n\nRead “The Rolex you should have bought” at the link in bio.\n\n#RolexGMTMasterII #Tusenbruk",
       "alt": "A scratched steel Rolex GMT-Master II worn on its owner’s wrist.",
       "focal_point": [0.56, 0.48]
     },
@@ -41,7 +42,7 @@
       "slug": "garden-shed",
       "status": "draft",
       "hook": "The heater takes fifteen minutes to mean anything in a Katoomba winter.",
-      "caption": "The heater takes fifteen minutes to mean anything in a Katoomba winter. The turning circle requires planning. The brown shadow in the wheel arches has stopped responding to persuasion.\n\nThe white Defender still does the school run, the fire trail and the six o’clock trip to the servo.\n\nRead “First, World Car — Defender” at the link in bio.\n\n#Defender90 #LandRover #Tusenbruk",
+      "caption": "The heater takes fifteen minutes to mean anything in a Katoomba winter. Three-point turns become five-point turns. The brown shadow remains in the wheel arches.\n\nThe white Defender still does the school run, the fire trail and the six o’clock trip to the servo.\n\nRead “First, World Car — Defender” at the link in bio.\n\n#Defender90 #LandRover #Tusenbruk",
       "alt": "A white Land Rover Defender 90 parked outside in the Blue Mountains.",
       "focal_point": [0.5, 0.52]
     },

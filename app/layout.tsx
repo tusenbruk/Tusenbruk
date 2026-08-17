@@ -22,14 +22,14 @@ const newsreader = Newsreader({
 
 export const metadata: Metadata = {
   title: {
-    default: "Tusenbruk — Earn the wear",
+    default: "Tusenbruk — The pleasure of use",
     template: "%s · Tusenbruk",
   },
   description:
     "A publication about the relationship between a person and the objects they use — watches, cameras, pens, cars, luggage. Not reviews. Portraits.",
   metadataBase: new URL("https://tusenbruk.com"),
   openGraph: {
-    title: "Tusenbruk — Earn the wear",
+    title: "Tusenbruk — The pleasure of use",
     description:
       "A publication about the relationship between a person and the objects they use. Not reviews. Portraits.",
     url: "https://tusenbruk.com",
@@ -41,16 +41,16 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Tusenbruk — Earn the wear",
+        alt: "Tusenbruk — The pleasure of use",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tusenbruk — Earn the wear",
+    title: "Tusenbruk — The pleasure of use",
     description:
       "Portraits of people, seen through the things they use.",
-    images: [{ url: "/og.png", alt: "Tusenbruk — Earn the wear" }],
+    images: [{ url: "/og.png", alt: "Tusenbruk — The pleasure of use" }],
   },
   alternates: {
     types: { "application/rss+xml": "/feed.xml" },

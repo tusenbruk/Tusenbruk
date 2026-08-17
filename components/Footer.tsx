@@ -17,7 +17,7 @@ export default function Footer() {
           <a href="https://www.instagram.com/tusenbruk/" rel="me">
             Instagram
           </a>
-          <div>Earn the wear</div>
+          <div>The pleasure of use</div>
         </div>
       </div>
     </footer>

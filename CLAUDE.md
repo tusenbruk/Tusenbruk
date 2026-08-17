@@ -1,10 +1,15 @@
 # Tusenbruk — working guide for Claude Code
 
 Tusenbruk is a publication about the relationship between a person and the objects they use —
-watches, cameras, pens, cars, luggage. Not reviews. Portraits. Tagline: *Earn the wear.*
+watches, cameras, pens, cars, luggage. Not reviews. Portraits. Tagline: *The pleasure of use.*
 
 Before material editorial, design or architecture work, read `DECISIONS.md`. Append an entry when a
 change establishes or reverses a durable decision; include the reason, verification and rollback.
+
+For editorial work, read `editorial/tusenbruk-editorial-voice/SKILL.md`. It is canonical. After
+changing it, run `python3 scripts/package_editorial_skill.py` and reinstall the resulting
+`editorial/tusenbruk-editorial-voice.skill` in Cowork if needed. The same command refreshes the
+project-level `.claude/skills/tusenbruk-editorial-voice/SKILL.md` used by Claude Code.
 
 ## Stack
 

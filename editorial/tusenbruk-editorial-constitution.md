@@ -87,4 +87,4 @@ A Tusenbruk photograph shows the object in use, or after use. Never on a white b
 
 ---
 
-*Earn the wear.*
+*The pleasure of use.*

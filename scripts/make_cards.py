@@ -145,6 +145,24 @@ def draw_text_card(dr, title, plate_label):
     dr.rectangle([start, y, start + sq, y + sq], fill=RED)
     tracked(dr, (start + sq + 16, y - 6), brand, brand_f, 5, MUTED)
 
+def make_site_card():
+    card = Image.new("RGB", (W, H), (247, 245, 239))
+    dr = ImageDraw.Draw(card)
+    dr.rectangle([120, 150, W - 120, 151], fill=ULTRA)
+    dr.rectangle([120, 480, W - 120, 481], fill=ULTRA)
+
+    brand_f = ImageFont.truetype(HELV, 64)
+    tag_f = ImageFont.truetype(HELV, 22)
+    tracked(dr, (0, 250), "TUSENBRUK", brand_f, 18, ULTRA, centre_x=W / 2)
+
+    tag = "THE PLEASURE OF USE"
+    tag_w = line_width(dr, tag, tag_f, 8)
+    square = 10
+    start = (W - (square + 18 + tag_w)) / 2
+    dr.rectangle([start, 372, start + square, 372 + square], fill=RED)
+    tracked(dr, (start + square + 18, 364), tag, tag_f, 8, MUTED)
+    card.save(os.path.join(PUBLIC, "og.png"), "PNG", optimize=True)
+
 made = 0
 for plate_dir in sorted(os.listdir(CONTENT)):
     full = os.path.join(CONTENT, plate_dir)
@@ -172,3 +190,5 @@ for plate_dir in sorted(os.listdir(CONTENT)):
         made += 1
         print(f"card: {slug}")
 print(f"{made} cards")
+make_site_card()
+print("card: og")

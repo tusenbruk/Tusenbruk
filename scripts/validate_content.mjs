@@ -8,6 +8,15 @@ const plates = ["photography", "watches", "motoring", "writing", "carry", "trave
 const errors = [];
 const slugs = new Map();
 const published = [];
+const syntheticPatterns = [
+  [/^##\s+What stays\s*$/im, 'template heading "What stays"'],
+  [/^##\s+What grates\s*$/im, 'template heading "What grates"'],
+  [/^##\s+(?:The\s+)?thousand uses\s*$/im, 'template heading "The thousand uses"'],
+  [/\b(?:the|this) (?:camera|watch|car|pen|object) (?:does not|doesn't) care\b/i, "product personification"],
+  [/\b(?:that|this) is the (?:whole )?point\b/i, 'generic conclusion "that is the point"'],
+  [/\bin the truest sense\b/i, 'generic conclusion "in the truest sense"'],
+  [/\bthe room (?:gets|goes|becomes) (?:a little )?quieter\b/i, "cinematic stage direction"],
+];
 
 function error(file, message) {
   errors.push(`${path.relative(root, file)}: ${message}`);
@@ -42,6 +51,9 @@ for (const plate of plates) {
     if (data.photo && !data.photoAlt) error(file, "lead photographs require photoAlt");
     if (/^##\s+At a glance\s*$/im.test(content)) {
       error(file, "technical tables belong in frontmatter details and the Register");
+    }
+    for (const [pattern, label] of syntheticPatterns) {
+      if (pattern.test(content)) error(file, `synthetic prose marker: ${label}`);
     }
 
     checkAsset(file, data.photo);

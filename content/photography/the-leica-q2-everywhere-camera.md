@@ -5,7 +5,7 @@ object: "Leica Q2"
 subject: "A New York traveller"
 plate: photography
 date: 2026-03-27
-summary: "A Q2 that lives in New York and works everywhere else — jungles, deserts, four continents, one lens, and a lens cap that will not stay on."
+summary: "A Q2 carried from New York across four continents, usually without a case, and a metal lens cap that will not stay on."
 photo: /photos/img_1789.jpg
 photoAlt: "A well-used black Leica Q2 handed across a café table."
 details:
@@ -17,40 +17,38 @@ details:
   Quirk: "The metal lens cap rarely stays on"
 ---
 
-The Summilux lens catches light the way a good bartender catches your eye — without effort, without fuss. Twenty-eight millimetres. Wide enough to hold a street corner. Tight enough, once you crop into that 47-megapixel file, to pull a face from across the room.
-
-This Q2 lives in New York. It has been dragged through jungles, baked in deserts, and shoved into overstuffed bags on four continents. The leatherette is worn smooth where a thumb sits. The red dot has dulled. The camera does not care.
+This Q2 lives in New York and has travelled on four continents. It has been carried through jungles and deserts, usually in an overstuffed bag without a case. The leatherette is smooth where its owner's thumb rests. The red dot has dulled.
 
 “You get used to the durability pretty quickly,” its owner says. “Then you stop thinking about it altogether.”
 
-## What it replaced
+## The phone stays
 
-An iPhone, mostly. Not in any dramatic way — the phone still shoots the quick stuff, the notes-to-self, the kid holding a menu. But for the moments that matter, the Q2 earns the extra weight. The difference between the two isn’t resolution. It’s that the Leica makes you stop and compose. The iPhone lets you get away with not trying.
+An iPhone still handles the quick photographs: notes to self, a child holding a menu. The Q2 comes out when its owner is prepared to stop and compose.
 
-The 28mm focal length sounds wide until you live with it. It holds a cafe table and the person across from it. It holds a hotel lobby. A jungle canopy. A souk at dusk. And when the scene is too big or the subject too far, the crop modes — 35, 50, 75 — pull from that massive sensor without embarrassment.
+The fixed 28mm lens takes in a cafe table and the person across from it. The 35, 50 and 75mm crop modes cover the occasions when it takes in too much.
 
-## Jungles, deserts, cities
+## Four continents
 
-This camera has seen weather. Humidity that fogs the viewfinder. Dust that finds its way into the lens cap thread. Heat that makes the body warm to the touch before you’ve taken a single frame.
+Humidity has fogged the viewfinder. Dust has reached the lens-cap thread. In desert heat, the body is warm before the first frame.
 
-None of it has broken it. The magnesium body shrugs off contact. The Summilux 28mm f/1.7 stays sharp. The autofocus still locks in low light that would send a phone hunting.
+None of it has stopped the camera working.
 
-It rides in a bag with no case. No protective wrap. Camera, strap, and whatever else fits around it.
+It rides in a bag with no protective wrap: camera, strap and whatever fits around it.
 
-## The marks so far
+## Where it shows
 
 The bottom plate carries the deepest scratches — from being set on stone walls, restaurant tables, taxi seats. The top plate has a nick near the shutter button that came from somewhere forgotten. The strap lugs show brass where the black paint has worn through.
 
-## What grates
+## The lens cap
 
-The battery life is honest but short. Two batteries minimum for a full day. Three if you’re shooting video or chimping the EVF.
+Two batteries are needed for a full day. Three if video or frequent checking of the viewfinder is involved.
 
-The menu system is Leica’s usual exercise in stubbornness — functional but never intuitive. You learn it the way you learn a stick shift: muscle memory replaces logic.
+The menu is functional but not intuitive. Eventually, muscle memory takes over.
 
-And the lens cap. The metal lens cap is beautiful and useless. It falls off in bags. It falls off in pockets. Most Q2 owners lose the original within a year and replace it with a friction-fit aftermarket cap that stays put. Leica knows this. Leica does not fix this.
+The metal lens cap is beautiful and useless. It falls off in bags and pockets. This owner replaced it with a friction-fit cap that stays put.
 
-## What stays
+## Out the door
 
-The image quality at f/1.7 in fading light. The heft — 718 grams that sit in the hand like a river stone. The mechanical feel of the aperture ring, each click precise and deliberate. The EVF that’s good enough to make you forget you’re not looking through glass.
+At f/1.7 it works in fading light. At 718 grams it has enough weight to settle in the hand. The aperture ring moves in distinct clicks.
 
-And the simplicity. One lens. One body. No decisions about what to bring. It goes in the bag on the way out the door, and the door does not wait.
+One fixed lens means there is nothing to choose before leaving. The Q2 goes in the bag.

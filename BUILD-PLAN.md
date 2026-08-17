@@ -175,7 +175,7 @@ python tusenbruk-agent.py --once rolex-gmt-...     # a single assignment
 | **Editor** | Set the home lede, de-dupe, commit, deploy |
 | **Distributor** | Auto-post new pieces to Instagram / X (the IG captions show the format) |
 
-The **Verifier** is what makes "earn the wear" structural rather than aspirational.
+The **Verifier** is what makes "use is the proof" structural rather than aspirational.
 
 ### Guardrails (in code / prompts)
 

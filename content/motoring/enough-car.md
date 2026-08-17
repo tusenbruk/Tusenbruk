@@ -5,43 +5,43 @@ object: "Porsche 911 Carrera (992)"
 subject: "A Sydney driver who chose the base model"
 plate: motoring
 date: 2026-03-25
-summary: "An Aventurine Green 992 Carrera and the case for the base model."
+summary: "An Aventurine Green base Carrera driven every day, parked in the sun and still waiting for its first proper mark."
 photo: /photos/l1010755.jpg
 photoAlt: "An Aventurine Green Porsche 911 Carrera parked outdoors after regular use."
 ---
 
-The flat-six settles into a hum at 80 on the M1, and the thought arrives again: this is more car than anyone needs. The owner knows this. He chose it anyway — and chose the least of it.
+At 80 on the M1, the flat-six settles into a hum. Its owner chose the base Carrera.
 
 “People think the base Carrera is some kind of compromise,” he says. “It isn’t. It’s the 911 that still makes sense.”
 
-## What stays
+## The shape
 
-The shape holds. Sixty years of refinement haven’t broken the silhouette — low nose, rising roofline, hips that widen just enough at the rear. In Aventurine Green, parked against Sydney sandstone, the 992 earns its proportions. The paint shifts between grey-green and bottle-green depending on the light. It photographs darker than it looks in person.
+The 992 keeps the 911 outline: low nose, rising roofline and a wider rear. In Aventurine Green, the paint shifts from grey-green to bottle-green with the light. It photographs darker than it looks in person.
 
-The flat-six still sits behind you. The steering still weights up the way only a rear-engined car can. Push it into a corner on Old Pacific Highway and the rear axle reminds you it’s there — not dangerously, not dramatically, but present. You feel the mass.
+The flat-six sits behind the driver. On Old Pacific Highway, the weight over the rear axle is always apparent.
 
-The interior is tan leather and restrained. Sport seats, no carbon trim, no Alcantara. The Fuchs-style Heritage wheels are the single indulgence. They look right.
+The interior is tan leather, with sport seats and no carbon trim or Alcantara. The Fuchs-style Heritage wheels were the indulgence.
 
-## What grates
+## Screens and age
 
-The owner’s complaint is not with this car. It’s with the direction.
+He likes this car. He is less certain about what comes after it.
 
-The 992 dashboard is a sea of screens. The centre tachometer is analogue — the last holdout — flanked by digital panels. The physical buttons below the touchscreen feel like a concession to the people who complained when Porsche took them away, of whom he was one.
+The centre tachometer is analogue, flanked by digital panels. Physical buttons sit below the touchscreen. The owner wanted more of them.
 
-And this is the thing that keeps him up: he doesn't know what this car will look like at 50,000 kilometres. The old air-cooleds told you. Paint thinned, chrome pitted, leather cracked along the bolster seam. The LED light bar and the piano black trim keep their own counsel.
+He does not know how the car will look at 50,000 kilometres. On older cars, paint thinned, chrome pitted and leather cracked along the bolster seam. The LED light bar and piano-black trim will age differently.
 
 “The older cars aged like leather,” he says. “These age like a laptop.”
 
-## The base model
+## The base Carrera
 
-He drives a base Carrera. Not the S, not the GTS, not the Turbo. Three litres, twin-turbo, 283 kilowatts through the rear wheels and a PDK box. He’s aware this puts him outside the consensus, and seems to enjoy it there.
+The three-litre, twin-turbo engine sends 283 kilowatts through the rear wheels. He chose the base Carrera rather than the S, GTS or Turbo.
 
-His argument is simple: the base car weighs less, rides better, and has more than enough power for any road with a speed limit. The S adds 30 kilowatts you can’t legally use and wider rear tyres that make the ride harsher. The GTS adds theatre. The Turbo adds a second mortgage. (Your correspondent would have ticked the S box, and knows it.)
+His argument is that the base car weighs less, rides better and has enough power for public roads. (Your correspondent would have ticked the S box.)
 
-At 11,200 kilometres, the Carrera hasn’t asked for more. The ceramic brakes — his one extravagance — will outlast every set of iron rotors the S buyer grinds through. The car is fast, composed, comfortable enough for the school run, and narrow enough that the multi-storey at Westfield doesn’t require origami.
+At 11,200 kilometres, he has not wanted more. The car does the school run and fits through the multi-storey at Westfield. He specified ceramic brakes.
 
-## The thousand uses
+## The first mark
 
-He drives it every day. He parks it in the sun. He doesn’t cover it. Somewhere ahead of it is its first proper mark.
+He drives it every day, parks it in the sun and does not cover it. Somewhere ahead is its first proper mark.
 
 It’s enough car.

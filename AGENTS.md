@@ -12,7 +12,8 @@ a Python agent that drafts in the house voice. Lift that structure directly and 
 
 1. This file — stack, guardrails, milestones.
 2. `editorial/tusenbruk-editorial-constitution.md` — **the spine. Read before any content logic.**
-3. The `tusenbruk-editorial-voice` skill (installed) — the voice in operational detail.
+3. `editorial/tusenbruk-editorial-voice/SKILL.md` — the canonical voice skill. The `.skill`
+   archive beside it is generated from this file.
 4. `BUILD-PLAN.md` (this folder) — site map, content model, design system, agent spec, launch steps.
 5. `DECISIONS.md` — shared rationale, verification and rollback history for Claude and Codex.
 
@@ -54,4 +55,4 @@ the plate-white/ultramarine/specimen-red palette) with the existing portraits se
 agent run. Then stand up the drafting agent in draft-only mode, review against the Three Tests, and
 only then schedule it.
 
-_Earn the wear._
+_The pleasure of use._
