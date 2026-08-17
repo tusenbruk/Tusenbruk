@@ -35,17 +35,28 @@ None of it has stopped the camera working.
 
 It rides in a bag with no protective wrap: camera, strap and whatever fits around it.
 
+## Picking it up
+
+He can get technically sharper files from a Canon, a Nikon, a Fuji. He wouldn't argue the point. None of that changes what happens when he picks the Q2 up, and it hasn't changed since the day he bought it.
+
+![A child in a cap holds a Leica Q2 to his chin at an outdoor café table under a Portofino Gourmet awning.](/photos/leica-q2-portofino.jpg)
+*Portofino. The camera doesn't stay only in his hands.*
+
 ## Where it shows
 
 The bottom plate carries the deepest scratches — from being set on stone walls, restaurant tables, taxi seats. The top plate has a nick near the shutter button that came from somewhere forgotten. The strap lugs show brass where the black paint has worn through.
 
-## The lens cap
+## One battery, mostly
 
-Two batteries are needed for a full day. Three if video or frequent checking of the viewfinder is involved.
+One battery gets him through most days. He packs a second only if he's shooting into the evening. Video is the exception — the Q2 does it well, and he's used the mode maybe twice.
 
 The menu is functional but not intuitive. Eventually, muscle memory takes over.
 
+## The lens cap
+
 The metal lens cap is beautiful and useless. It falls off in bags and pockets. This owner replaced it with a friction-fit cap that stays put.
+
+Leica hasn't addressed it. It has kept the Q2's firmware current years past launch, and the support and community around the brand hold up — for anyone within reach of one of the physical stores.
 
 ## Out the door
 
