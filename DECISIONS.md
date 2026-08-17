@@ -256,3 +256,30 @@ shot — before it is drawn.
   before "The deal watch" carries a lead image again.
 - The About page and the homepage Notes section remain without illustration until an accurate
   reference exists for either.
+
+## 2026-08-17 — Instagram relaunch
+
+**Decision**
+
+- Update `@tusenbruk` with the prepared monogram avatar and the portraits-first bio.
+- Publish the five-slide manifesto carousel as the sole public launch post.
+- Archive the three earlier posts rather than deleting them.
+- Keep all article packs in `draft` and the Panerai pack on `hold` until each is reviewed.
+
+**Why**
+
+The account should introduce the publication before distributing individual stories. Archiving is
+reversible and preserves the earlier material while removing inconsistent crops, hashtags and the
+staged Panerai image from the public grid.
+
+**Verification**
+
+- The public profile shows the new avatar, new bio and one public post.
+- The manifesto is live at `https://www.instagram.com/tusenbruk/p/DcHvmiLH5aH/`.
+- The three previous posts appear in the archive and were not deleted.
+- `social/queue.json` records the manifesto as `published`; all other status gates remain intact.
+
+**Rollback**
+
+Restore individual posts from Instagram's archive. Revert the avatar or bio in Edit Profile. Do not
+change queue statuses without also recording what was restored or unpublished.
