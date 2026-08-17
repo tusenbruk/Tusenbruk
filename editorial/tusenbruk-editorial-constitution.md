@@ -8,9 +8,13 @@
 
 Tusenbruk is a publication about the relationship between a person and the objects they use. Not collect. Use.
 
-We cover watches, cameras, pens, notebooks, folios, attaches, cars, and luggage — because these are the objects that accompany a life being lived. They share grease and altitude and deadline and rain. They accumulate evidence. They become, eventually, irreplaceable — not because of what they're worth, but because of what they've been through.
+The best-made things were never built for a shelf. A good watch is built to be wound every morning for forty years. A good camera is built to be carried until the strap wears through. Design like that has one purpose: to disappear into a life, not to be kept apart from one.
 
-We are not a buyer's guide. We are not a collector's resource. We are not a review site.
+We cover watches, cameras, pens, notebooks, folios, attachés, cars, and luggage — things built well enough to become fixtures of an ordinary life, and used hard enough to become the record of it. Not because they were maintained. Because they were there. The scratch is where the memory lives.
+
+None of this makes the attention reasonable, and the writer should say so before the reader has to think it. He has his own version of the problem — a drawer, a shelf, a shirt he won't get rid of — and one sentence, once, admits it. That's the whole tax on being allowed to write about anyone else's.
+
+We are not a buyer's guide. We are not a collector's resource. We are not a review site. These are not investments, and nothing here is written to help anyone decide whether one will appreciate.
 
 We are a publication about use. The story is the product.
 
@@ -58,6 +62,8 @@ The characteristics of that tradition:
 **Economy without coldness.** Short sentences are not the goal. Sentences that carry exactly what they need to carry, and no more, are the goal. Some of those sentences will be long. Most will be shorter than the writer's first instinct.
 
 **The knowing aside.** Coggins' signature move: the wry parenthetical that assumes the reader is in the room. Use it sparingly. Once per piece, if earned. Never as a substitute for having something to say.
+
+**Self-implication.** The writer is never above the subject. When a piece gently notices someone's attachment to an object, the writer has the same weakness and says so in half a sentence, once. This is not confession for its own sake — it's the fee for the right to notice anyone else's. A piece that asks the reader to feel that an object holds a life, without the writer ever admitting his own version of the same thing, is asking the reader to feel something the writer hasn't paid for.
 
 **Restraint at the emotional peak.** When the piece arrives at its most human moment — the object that survived the thing, the detail that reveals the person — back off. Don't explain. Don't underline. State it plainly and move on. The reader will feel it without being told to.
 

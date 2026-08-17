@@ -323,3 +323,68 @@ queue, brand SVGs and generated cards.
 
 Revert this implementation commit and reinstall the prior `.skill` archive. The old manifesto can
 be restored from Instagram's archive, but doing so would also restore the retired tagline.
+
+## 2026-08-17 — fixtures of a life, and the self-implication that earns it
+
+**Decision**
+
+- Deepen the constitution's opening beyond "not a collector's resource" into a positive claim:
+  these are functional objects, designed to disappear into a life rather than be preserved apart
+  from one, and that use is what lets them end up holding a piece of it. "The scratch is where the
+  memory lives" replaces "they accumulate evidence" as the load-bearing line.
+- Restore, and make explicit, the self-implication principle that the source-rule and
+  anti-synthetic passes had thinned to a fragment. The writer's own complicity — one sentence,
+  once, admitting he has his own version of whatever attachment the piece is noticing — is now a
+  named, checkable requirement in both the constitution and the skill, not a residual trait of
+  "knowing restraint."
+- Restore two structural sections to the canonical skill that this morning's anti-synthetic
+  rewrite had dropped entirely: **The persona** (the writer as debonair, amused, quietly sad about
+  a receding world, never making a speech about it) and **The undertow** (who gets implicated,
+  never a complaint about other people, never nostalgia as an argument, never a prescription).
+  Restore **Design IQ** as the mechanical reason a well-made object earns fixture status.
+  Today's genuinely good additions — the non-negotiable source rule, the anti-synthetic pass, the
+  editing sequence — are kept as-is and merged in, not reverted.
+- Add one new anti-synthetic pattern: a "reverent memory-claim" (an object "holds" or "carries" a
+  life) with no self-implication anywhere in the piece to pay for it. Add one new editing-sequence
+  step to check for it.
+
+**Why**
+
+The morning's rewrite fixed a real problem — AI-tell scaffolding, slogan stacks, explained
+emotion — but in tidying that noise it also compressed the Coggins voice from five distinct moves
+to "exact objects, knowing restraint, no fuss," and dropped self-implication specifically. The
+effect showed up in a single line: "(Your correspondent would have ticked the S box, and knows
+it.)" survived the pass as "(Your correspondent would have ticked the S box.)" — the joke's shell
+kept, the self-implication that made it Coggins rather than a stray opinion cut. That's the
+mechanism this entry restores, and it matters more now than before the constitution's opening
+changed: "these objects hold the memory of a life" is one sentence away from a greeting card
+without it. Self-implication is the toll booth, not decoration.
+
+**Files**
+
+`editorial/tusenbruk-editorial-constitution.md` (opening section rewritten; self-implication added
+as a named Voice principle), `editorial/tusenbruk-editorial-voice/SKILL.md` (canonical source:
+persona, undertow and Design IQ restored and updated for the fixture framing; one new
+anti-synthetic pattern; one new editing-sequence step), `.claude/skills/tusenbruk-editorial-voice/SKILL.md`
+and `editorial/tusenbruk-editorial-voice.skill` (both regenerated from the canonical source via
+`scripts/package_editorial_skill.py`).
+
+**Verification**
+
+- `.claude/skills/tusenbruk-editorial-voice/SKILL.md` and the unzipped `.skill` archive both diff
+  clean against the canonical source.
+- `npm run validate:content`, `npm run validate:metadata` and `npm run build` all pass; no
+  published piece was touched, so no article needed re-drafting for this change.
+
+**Rollback**
+
+Revert this entry's implementation commit and regenerate the `.skill` archive from the reverted
+source. No published article content changes with this entry — a rollback affects only the
+constitution and the skill's guidance for future drafts.
+
+**Open work**
+
+- None of the seven published pieces were rewritten against the restored self-implication
+  principle. A light pass — not a full rewrite — would bring them in line: most already have the
+  observed-fact discipline the anti-synthetic pass wanted; what's missing in most is the one
+  admitting sentence.
