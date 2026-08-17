@@ -65,6 +65,10 @@ Body in markdown. First paragraph gets a drop cap automatically.
   descriptive identity. `photoAlt` is required whenever `photo` is present.
 - Ownerless catalogue studies may remain as `draft: true` research dossiers, but are never a
   publishable article type. `kind: field-note` is reserved for witnessed, observational scenes.
+- `kind: essay` is a publishable argument grounded in real, referenced examples — no single
+  subject or object, so `subject` and `object` are not required and it doesn't enter `/register`.
+  It's the only kind allowed to make a comparative case (a portrait never tells the reader what to
+  buy; an essay can argue, provided every claim is still real and sourced).
 - 18 migrated drafts already sit in `content/` waiting to be finished — each holds an
   interview brief; fill it with real detail and a session drafts the piece.
 

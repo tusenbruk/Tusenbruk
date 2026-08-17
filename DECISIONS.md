@@ -388,3 +388,61 @@ constitution and the skill's guidance for future drafts.
   principle. A light pass — not a full rewrite — would bring them in line: most already have the
   observed-fact discipline the anti-synthetic pass wanted; what's missing in most is the one
   admitting sentence.
+
+## 2026-08-17 — a fourth kind: the essay, and where prescription is allowed to live
+
+**Decision**
+
+- Add `kind: essay` as a fourth, publishable article kind alongside portrait, field-note and
+  (draft-only) study. An essay argues across real, referenced examples rather than following one
+  person's use of one object; it does not require `subject` or `object`, is not eligible for
+  `featured`, and is excluded from `/register`, which catalogues objects rather than arguments.
+- Publish the first one: "The watch you're supposed to buy," arguing that a Submariner bought as a
+  professional's default deserves the same consideration a GMT-Master or Sea-Dweller buyer already
+  gave their purchase — referencing the published "The Rolex you should have bought" as its worked
+  example, and drawing its Sea-Dweller 116600 facts from the existing draft study of the same
+  reference.
+
+**Why**
+
+Ryan asked to expand "The Rolex you should have bought" with a critical case against buying a
+Submariner by default — a real, worthwhile argument, but a direct prescription ("buy this instead")
+inside a portrait would have broken two rules this project hardened only hours earlier: "never a
+prescription" and "never a complaint about other people." A portrait's whole discipline is staying
+inside one person's real, sourced relationship with one object; grafting a category-wide argument
+onto it would have compromised both the piece and the rule.
+
+The right fix wasn't to bend the portrait rule — it was to notice that Tusenbruk didn't yet have a
+publishable format for an argument at all, and give it one with a narrower, explicit license: an
+essay is the only kind allowed to make a comparative case, provided every claim in it is still real
+and checkable, exactly as everywhere else on the site.
+
+**Files**
+
+`lib/content.ts` (kind type extended; Register excludes essays), `scripts/validate_content.mjs`
+(essay added to publishable kinds; `object` no longer required for it), `app/writing/[slug]/page.tsx`
+(dateline shows "· Essay"), `CLAUDE.md` (kind documented), `content/watches/the-watch-youre-supposed-to-buy.md`
+(new).
+
+**Verification**
+
+- `npm run validate:content`: 8 published pieces, 1 featured portrait.
+- `python3 scripts/make_cards.py`: text-only fallback card generated and reviewed — two-line title
+  wraps and centres correctly.
+- `npm run validate:metadata` and `npm run build` both pass; 30 static pages generated.
+- Checked locally: the essay does not appear in `/register`; it leads `/writing` and `/archive` on
+  date as normal; the homepage still features "The Rolex you should have bought" and does not pick
+  the essay as a secondary (same plate as the featured piece, by the existing secondary-selection
+  rule); both inline images (the reused GMT-Master photo, the reused Sea-Dweller reference photo)
+  load and link correctly; the cross-reference link to the Rolex piece resolves.
+
+**Rollback**
+
+Revert this entry's implementation commit. Removing `kind: essay` from the validator's allowed list
+would immediately fail `validate:content` on this piece, which is the intended trip-wire if the
+essay format is ever misused for something a portrait or study should have been instead.
+
+**Open work**
+
+- Only one essay exists so far. If more are written, the canonical skill should get its own short
+  section on the format once the pattern is clearer than a single example can show.

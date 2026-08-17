@@ -90,6 +90,7 @@ export default function PostPage({ params }: { params: { slug: string } }) {
         {formatDate(post.date)}
         {post.place ? ` · ${post.place}` : ""}
         {post.kind === "field-note" ? " · Field note" : ""}
+        {post.kind === "essay" ? " · Essay" : ""}
       </div>
       {post.subject && <div className="post-subject">Portrait — {post.subject}</div>}
       <div className="post-rule" />

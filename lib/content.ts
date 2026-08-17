@@ -13,7 +13,11 @@ export interface Post {
   summary: string;
   subject?: string; // named, initialled or descriptive; required for published portraits
   object?: string; // catalogue name, e.g. "Leica Q2" — groups pieces in the register
-  kind: "portrait" | "field-note" | "study";
+  // portrait: one person's use of one object. field-note: a witnessed, observational scene.
+  // study: an ownerless object history — draft-only, never published (see the constitution).
+  // essay: an argument grounded in real, referenced examples — no single subject or object;
+  // excluded from the Register, which catalogues objects, not arguments.
+  kind: "portrait" | "field-note" | "study" | "essay";
   photo?: string; // path under /public, e.g. /photos/defender-90.jpg
   photoAlt?: string;
   photoCaption?: string;
@@ -50,7 +54,14 @@ function parsePost(plate: PlateKey, filename: string): Post {
     summary: data.summary ?? "",
     subject: typeof data.subject === "string" ? data.subject : undefined,
     object: typeof data.object === "string" ? data.object : undefined,
-    kind: data.kind === "field-note" ? "field-note" : data.kind === "study" ? "study" : "portrait",
+    kind:
+      data.kind === "field-note"
+        ? "field-note"
+        : data.kind === "study"
+          ? "study"
+          : data.kind === "essay"
+            ? "essay"
+            : "portrait",
     photo: typeof data.photo === "string" ? data.photo : undefined,
     photoAlt: typeof data.photoAlt === "string" ? data.photoAlt : undefined,
     photoCaption: typeof data.photoCaption === "string" ? data.photoCaption : undefined,
@@ -160,9 +171,11 @@ export interface RegisterEntry {
 }
 
 // The register: every object written about, numbered in order of first appearance.
+// Essays argue across objects rather than catalogue one, so they don't enter it.
 export function getRegister(): RegisterEntry[] {
   const byObject = new Map<string, Post[]>();
   for (const p of getAllPosts()) {
+    if (p.kind === "essay") continue;
     const key = p.object ?? p.title;
     byObject.set(key, [...(byObject.get(key) ?? []), p]);
   }
