@@ -446,3 +446,85 @@ essay format is ever misused for something a portrait or study should have been 
 
 - Only one essay exists so far. If more are written, the canonical skill should get its own short
   section on the format once the pattern is clearer than a single example can show.
+
+## 2026-08-17 — the Rimowa Pilot study becomes a portrait
+
+**Decision**
+
+Converted `content/carry/stickers-on-a-pilot-case.md` from a draft, ownerless catalogue study
+(free-licensed reference photo, no real owner) into a published portrait, once Ryan supplied five
+real photographs of his own well-travelled Pilot and real detail: it goes everywhere, has become an
+unplanned record of every place it's been, the flip-top opening is specifically liked, and it works
+as a mobile office on the road. `kind: study` → `kind: portrait`; `draft: true` removed;
+`subject: "A frequent traveller"` added (descriptive, consistent with the anonymous-voice rule —
+the case carries a real monogrammed tag, but the subject field doesn't name it). The lead photo
+changed from the old CC-licensed reference shot to Ryan's own front-on photo of the case; the old
+file (`rimowa-pilot-stickers.jpg`) was deleted as it's no longer referenced anywhere. A second real
+photo (the case open, lid folded flat on its struts) supports the flip-top/mobile-office detail. The
+`## At a glance` table from the old study was removed; specs moved to frontmatter `details`, shown
+only in `/register`, per the existing rule.
+
+**Why**
+
+The whole reason this and four other objects were left as draft-only studies was the absence of a
+real owner — the constitution is explicit that catalogue studies "cannot lead the homepage or enter
+the public register" precisely because they're ownerless. That condition no longer held once real
+source material arrived. Converting in place, rather than publishing a second piece alongside the
+draft, avoids two entries for the same object and keeps the object's history — Rimowa's 1937
+aluminium trunk, the Junkers-derived grooves — as background rather than the center of the piece.
+
+**Files**
+
+`content/carry/stickers-on-a-pilot-case.md` (kind, frontmatter, and body rewritten),
+`public/photos/rimowa-pilot-front.jpg` and `public/photos/rimowa-pilot-open.jpg` (added, metadata
+stripped), `public/photos/rimowa-pilot-stickers.jpg` (deleted, no longer referenced),
+`public/cards/stickers-on-a-pilot-case.jpg` (regenerated against the new lead photo).
+
+**Verification**
+
+- `npm run validate:content`: 9 published pieces, 1 featured portrait.
+- `python3 scripts/make_cards.py`, `npm run validate:metadata`, `npm run build` all pass.
+- Checked locally: both images load and resolve; the dateline correctly reads
+  "Portrait — A frequent traveller"; no remaining reference anywhere to the deleted photo.
+
+**Rollback**
+
+Revert this entry's implementation commit. The four other draft studies (Rimowa Classic Flight, the
+Sea-Dweller 116600, the Royal Oak chronograph, the Smythson Panama) remain untouched — each converts
+the same way, in place, whenever real source material for its actual owner arrives.
+
+**Open work**
+
+- Two new photographs Ryan supplied of the Montblanc 149 Flexnib (a pen resting on a page with the
+  owner's own handwritten notes, and a close macro of the nib and section) are saved locally,
+  pending a light addition to the already-published Montblanc piece in a follow-up edit.
+
+## 2026-08-17 — a push landed on GitHub with no Vercel deployment
+
+**Decision**
+
+No decision was made — this records an infrastructure gap noticed during this session. The commit
+`ba89ecb` ("Add the essay kind, and publish the first one") pushed to `origin/main` and was
+confirmed present via the GitHub API, but Vercel's project record (`latestDeployment`) still pointed
+at the prior commit `2933a08` with no entry for `ba89ecb` anywhere in the deployment list — the
+GitHub → Vercel webhook did not fire for that one push, and tusenbruk.com 404'd on the new page as a
+result. Every other push this session and prior deployed normally. The fix applied was simply to
+push the next real commit (this entry's own) and confirm a fresh deployment picks up both commits
+at once, since `ba89ecb` is an ancestor of the new HEAD.
+
+**Why recorded**
+
+If tusenbruk.com is ever serving a page older than what `git log origin/main` shows, this is the
+known failure mode: check the Vercel project's `latestDeployment` commit SHA against
+`origin/main` directly, don't assume a successful `git push` implies a deployment was triggered.
+
+**Verification**
+
+Confirmed after this entry's push that a new deployment appears in Vercel for the new HEAD commit,
+and that `/writing/the-watch-youre-supposed-to-buy` (previously 404) and
+`/writing/stickers-on-a-pilot-case` both resolve on the live domain.
+
+**Open work**
+
+- If this recurs, it's worth checking the GitHub → Vercel integration's webhook delivery log
+  directly (Vercel dashboard → Project → Settings → Git) rather than assuming a one-off.

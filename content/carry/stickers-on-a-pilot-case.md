@@ -2,33 +2,30 @@
 title: "Stickers on a pilot case"
 slug: stickers-on-a-pilot-case
 object: "Rimowa Pilot"
+subject: "A frequent traveller"
 plate: carry
-kind: study
-draft: true
-date: 2026-08-14
-summary: "The cockpit case that civilians adopted, and one photographed example that has stopped pretending to be luggage."
-photo: /photos/rimowa-pilot-stickers.jpg
-photoCaption: "In the overhead bin, wearing its history. Photo: renaissancechambara, CC BY 2.0."
+date: 2026-08-17
+summary: "A Rimowa Pilot that goes everywhere, comes back wearing another sticker, and opens flat enough to work from."
+photo: /photos/rimowa-pilot-front.jpg
+photoAlt: "A silver aluminium Rimowa Pilot case densely covered in travel stickers, with a monogrammed leather luggage tag on top."
+details:
+  Model: "Rimowa Pilot (aluminium)"
+  Lineage: "First Rimowa aluminium trunk, Cologne, 1937 — grooves borrowed from Junkers aircraft skin"
+  Construction: "Riveted aluminium-magnesium shell, hinged flip-top lid"
+  Original brief: "Flight-crew cockpit case — charts, manuals, instruments"
 ---
 
-The example in the photograph has a Bathing Ape sticker on the lid, a Lufthansa crane beside the latch, and a FRAGILE label from Saudia that nobody believed. The aluminium underneath has gone matte where hands go and stayed bright where they don't. This is a Rimowa Pilot, photographed in an overhead bin, doing exactly what it was built for.
+He doesn't peel them off. That's the whole system.
 
-The Pilot is the odd one in the Rimowa catalogue. Most luggage is a box that stands upright and follows you; this is a satchel-proportioned trunk that sits flat, opens from the top like a toolbox, and was drawn around a working cockpit — charts, manuals, headset, the paperwork of flying, back when flying generated paperwork. Airline crews carried them because the case fit the job. Then the job went digital, the charts became an iPad, and the case that outlived its purpose found new ones. Photographers use them. People who buy one thing and keep it use them.
+The Rimowa Pilot was built as a flight-crew case — a satchel-shaped trunk that opens from the top like a toolbox, drawn around a working cockpit before cockpits went digital. His has done exactly the job it was built for, just never in a cockpit: it goes everywhere with him, and everywhere leaves something stuck to the lid.
 
-The grooves are older than the case. Rimowa built its first aluminium trunk in Cologne in 1937, and the parallel ridges that became the company's signature owe their look to the corrugated skin of the era's Junkers aircraft — a stiffening trick borrowed from aviation by a case that would spend its life in aircraft. Design IQ of a high order: the fluting is the strength, the strength is the look, and there is no third thing.
+Camel Trophy, Team Australia, from the off-road world his Land Rovers already put him in. A JR bullet-train sticker for Shin-Osaka, the Kyoto route still legible under it. Officine Universelle Buly — a two-hundred-year-old Paris apothecary that has nothing to do with luggage and everything to do with a shop he happened to walk into. Martini. Goyard. A black bear on yellow and red from a Swiss canton he'd have to check a map to spell correctly.
 
-Aluminium makes a particular bargain. It is heavier than polycarbonate and it dents, and both of these are the point. A dent stays. A scratch stays. The case files its own travel records and never loses them, which is why a decade-old Pilot looks less like a worn-out possession than a stamped passport.
+None of it was planned. A boarding pass gets thrown out, a hotel key gets deactivated, a photo gets buried three thousand deep in a camera roll — the case is the one thing a trip actually leaves a mark on, whether he means it to or not. Your correspondent keeps the same record in a shoebox of expired boarding passes he'll never look at again. The case does it better. It can't be lost in a move.
 
-The stickers are the civilian version of the same instinct. Nobody plans them. They accumulate the way the dents do, one route at a time, until the case is unrepeatable.
+![The Rimowa Pilot open, lid folded flat back on its struts, structured black interior and document pocket visible.](/photos/rimowa-pilot-open.jpg)
+*Open, it stops being luggage.*
 
-Somewhere under the Bathing Ape sticker is a case identical to thousands of others. There is no way back to it, which its owner presumably knows.
+That's the other half of it. The lid folds all the way back on two struts rather than unzipping into a flat sheet, so the inside stays a box with a lid instead of a bag that collapses the moment something's lifted out. A document pocket is built into the lid itself. He calls it a mobile office, and on the road that's mostly literal — everything stays upright and where he left it, which a soft bag has never once managed.
 
-## At a glance
-
-| Item | Details |
-|---|---|
-| Model | Rimowa Pilot (aluminium) |
-| Lineage | First Rimowa aluminium trunk 1937; grooved design 1950 |
-| Construction | Aluminium-magnesium shell, top-opening |
-| Original brief | Flight-crew cockpit case — charts, manuals, instruments |
-| Wear pattern | Dents, brightwork, stickers; all permanent |
+A small tracking disc rides clipped to the handle now. It's the only thing on the case that isn't a sticker.
