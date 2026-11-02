@@ -116,7 +116,8 @@ export default function Home() {
             <div className="mosaic">
               {drawer.slice(0, 8).map((ph, i) => {
                 const entry = bySlug.get(ph.slug);
-                const plate = entry ? getPlate(entry.plate) : undefined;
+                // Essays are not in the Register, so fall back to the piece's own plate.
+                const plate = getPlate(entry ? entry.plate : ph.plate);
                 return (
                   <Link key={`${ph.src}-${i}`} href={`/writing/${ph.slug}`} className="tile">
                     <span className="tile-inner">
@@ -129,14 +130,14 @@ export default function Home() {
                         />
                       </span>
                       <span className="tile-back">
-                        <span className={`plate ${plate?.color ?? "green"}`}>
-                          {entry ? plateLabel(entry.plate) : ""}
+                        <span className={`plate ${plate.color}`}>
+                          {plateLabel(entry ? entry.plate : ph.plate)}
                         </span>
                         <span className="tile-obj">
-                          {entry ? `Obj. ${String(entry.number).padStart(3, "0")}` : ""}
+                          {entry ? `Obj. ${String(entry.number).padStart(3, "0")}` : "Essay"}
                         </span>
-                        <span className="tile-name">{entry?.object}</span>
-                        <span className="tile-square" />
+                        <span className="tile-name">{entry?.object ?? ph.title}</span>
+                        <span className="tile-square" aria-hidden="true" />
                       </span>
                     </span>
                   </Link>

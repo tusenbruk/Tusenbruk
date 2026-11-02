@@ -1,8 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import Markdown from "@/components/Markdown";
 import { getAllPosts, getPost, formatDate } from "@/lib/content";
 import PlateLabel from "@/components/PlateLabel";
 import ShareLink from "@/components/ShareLink";
@@ -95,7 +94,7 @@ export default function PostPage({ params }: { params: { slug: string } }) {
       {post.subject && <div className="post-subject">Portrait — {post.subject}</div>}
       <div className="post-rule" />
       <div className="post-body post-lede">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{lede}</ReactMarkdown>
+        <Markdown>{lede}</Markdown>
       </div>
       {post.photo && (
         <figure className="post-photo">
@@ -113,7 +112,7 @@ export default function PostPage({ params }: { params: { slug: string } }) {
       )}
       {remainder && (
         <div className="post-body post-remainder">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{remainder}</ReactMarkdown>
+          <Markdown>{remainder}</Markdown>
         </div>
       )}
       <ShareLink title={post.title} path={`/writing/${post.slug}`} />
