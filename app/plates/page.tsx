@@ -9,7 +9,8 @@ export default function PlatesIndex() {
   return (
     <>
       <div className="plate red">The plates</div>
-      <p className="lead-summary" style={{ marginTop: 14 }}>
+      <h1 className="sr-only">The plates</h1>
+      <p className="lead-summary page-intro">
         Every piece carries a plate label in its category colour. Six plates; the whole publication.
       </p>
       {PLATES.map((p) => {
@@ -20,7 +21,7 @@ export default function PlatesIndex() {
             <h2 className="sec-title">
               <Link href={`/plates/${p.key}`}>{p.name}</Link>
             </h2>
-            <p className="lead-summary" style={{ fontSize: 15 }}>{p.description}</p>
+            <p className="lead-summary index-summary">{p.description}</p>
             <div className="post-meta">{count === 1 ? "1 piece" : `${count} pieces`}</div>
           </article>
         );

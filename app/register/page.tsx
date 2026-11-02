@@ -14,7 +14,7 @@ export default function RegisterPage() {
     <div>
       <div className="plate red">The register</div>
       <h1 className="post-title">Objects on record</h1>
-      <p className="lead-summary" style={{ marginTop: 14 }}>
+      <p className="lead-summary page-intro">
         Every object that has appeared in these pages, numbered in order of first
         appearance. The register grows; it does not shrink.
       </p>

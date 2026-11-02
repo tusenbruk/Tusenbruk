@@ -8,11 +8,12 @@ export default function NotesPage() {
   return (
     <>
       <div className="plate red">Notes</div>
-      <p className="lead-summary" style={{ marginTop: 14 }}>
+      <h1 className="sr-only">Notes</h1>
+      <p className="lead-summary page-intro">
         Short observations, dated, no titles.
       </p>
       {notes.length === 0 && (
-        <p className="lead-summary" style={{ fontStyle: "italic", color: "var(--muted)" }}>
+        <p className="lead-summary empty-note">
           Nothing yet.
         </p>
       )}

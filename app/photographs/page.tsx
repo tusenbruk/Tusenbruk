@@ -14,7 +14,7 @@ export default function PhotographsPage() {
     <div>
       <div className="plate red">The wall</div>
       <h1 className="post-title">Photographs</h1>
-      <p className="lead-summary" style={{ marginTop: 14 }}>
+      <p className="lead-summary page-intro">
         Objects in use, or after use. Never on white. The scratch is visible.
       </p>
       <div className="post-rule" />

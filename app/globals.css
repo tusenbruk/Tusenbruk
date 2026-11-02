@@ -90,24 +90,27 @@ strong { font-weight: 400; }
   display: flex; justify-content: space-between; align-items: center;
   gap: 16px; flex-wrap: wrap;
 }
-.ft-row div, .ft-row a {
+.ft-row div, .ft-row a, .ft-links span {
   font-family: var(--font-jost), sans-serif;
   font-weight: 300;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--muted);
 }
+.ft-row a { display: inline-flex; align-items: center; min-height: 32px; }
 .ft-row a:hover { color: var(--specimen-red); }
+.ft-links { display: flex; flex-wrap: wrap; align-items: center; gap: 0 22px; }
 
 /* ---------- Plate labels — the only decorative device on the site ---------- */
 .plate {
   font-family: var(--font-jost), sans-serif;
   font-weight: 400;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
+a.plate { display: inline-block; padding: 5px 0; margin: -5px 0; }
 .plate.red { color: var(--specimen-red); }
 .plate.green { color: var(--field-green); }
 
@@ -130,7 +133,7 @@ strong { font-weight: 400; }
 .post-meta {
   font-family: var(--font-jost), sans-serif;
   font-weight: 300;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--faint);
@@ -140,9 +143,9 @@ strong { font-weight: 400; }
 .hr-soft { height: 1px; background: var(--rule-soft); border: 0; margin: clamp(26px, 4vw, 36px) 0; }
 
 .secondaries {
-  display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 40px);
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 4vw, 40px);
 }
-@media (max-width: 640px) { .secondaries { grid-template-columns: 1fr; } }
+@media (max-width: 720px) { .secondaries { grid-template-columns: 1fr; } }
 .sec-title {
   font-family: var(--font-jost), sans-serif;
   font-weight: 400;
@@ -157,13 +160,13 @@ strong { font-weight: 400; }
 .note-date {
   font-family: var(--font-jost), sans-serif;
   font-weight: 300;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--faint);
   flex-shrink: 0;
   padding-top: 4px;
-  width: 52px;
+  width: 58px;
 }
 
 /* ---------- Index / plate pages ---------- */
@@ -196,7 +199,7 @@ strong { font-weight: 400; }
 .post-subject {
   font-family: var(--font-jost), sans-serif;
   font-weight: 300;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--muted);
@@ -240,7 +243,7 @@ strong { font-weight: 400; }
 .photo-caption {
   font-family: var(--font-jost), sans-serif;
   font-weight: 300;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.14em;
   color: var(--faint);
   margin: 8px 0 26px;
@@ -253,7 +256,7 @@ strong { font-weight: 400; }
 .endmark .tag {
   font-family: var(--font-jost), sans-serif;
   font-weight: 300;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--faint);
@@ -275,8 +278,6 @@ strong { font-weight: 400; }
 .lead-art img { object-fit: cover; }
 
 /* ---------- Secondaries with thumbnails ---------- */
-.secondaries { grid-template-columns: repeat(3, 1fr); }
-@media (max-width: 720px) { .secondaries { grid-template-columns: 1fr; } }
 .sec-thumb {
   display: block;
   position: relative;
@@ -294,7 +295,7 @@ strong { font-weight: 400; }
 /* ---------- The drawer — photographs that turn over ---------- */
 .drawer-head { display: flex; justify-content: space-between; align-items: baseline; }
 .drawer-hint {
-  font-family: var(--font-jost), sans-serif; font-weight: 300; font-size: 9px;
+  font-family: var(--font-jost), sans-serif; font-weight: 300; font-size: 10px;
   letter-spacing: 0.18em; text-transform: uppercase; color: var(--faint);
 }
 .drawer-hint-touch { display: none; }
@@ -321,7 +322,7 @@ strong { font-weight: 400; }
   gap: 7px; padding: 14px 16px;
 }
 .tile-obj {
-  font-family: var(--font-jost), sans-serif; font-weight: 300; font-size: 9px;
+  font-family: var(--font-jost), sans-serif; font-weight: 300; font-size: 10px;
   letter-spacing: 0.22em; text-transform: uppercase; color: var(--faint);
 }
 .tile-name {
@@ -354,7 +355,7 @@ strong { font-weight: 400; }
 .reg-piece { font-size: 14px; font-weight: 300; }
 .reg-piece:hover { color: var(--specimen-red); }
 .reg-date {
-  font-family: var(--font-jost), sans-serif; font-weight: 300; font-size: 9px;
+  font-family: var(--font-jost), sans-serif; font-weight: 300; font-size: 10px;
   letter-spacing: 0.12em; text-transform: uppercase; color: var(--faint);
 }
 .reg-plate { flex-shrink: 0; }
@@ -374,7 +375,7 @@ strong { font-weight: 400; }
 }
 .reg-detail dt {
   font-family: var(--font-jost), sans-serif;
-  font-size: 8.5px;
+  font-size: 10px;
   letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--muted);
@@ -400,7 +401,7 @@ strong { font-weight: 400; }
 .arch-search input:focus { border-bottom-color: var(--ultramarine); }
 .arch-search input::placeholder { color: var(--faint); font-style: italic; }
 .arch-count {
-  font-family: var(--font-jost), sans-serif; font-weight: 300; font-size: 9px;
+  font-family: var(--font-jost), sans-serif; font-weight: 300; font-size: 10px;
   letter-spacing: 0.18em; text-transform: uppercase; color: var(--faint); margin-top: 8px;
 }
 .arch-year { margin-top: 26px; }
@@ -415,8 +416,8 @@ strong { font-weight: 400; }
 }
 .arch-line:hover .arch-title { color: var(--specimen-red); }
 .arch-date {
-  font-family: var(--font-jost), sans-serif; font-weight: 300; font-size: 9px;
-  letter-spacing: 0.14em; color: var(--faint); flex-shrink: 0; width: 52px;
+  font-family: var(--font-jost), sans-serif; font-weight: 300; font-size: 10px;
+  letter-spacing: 0.14em; color: var(--faint); flex-shrink: 0; width: 58px;
   font-variant-numeric: tabular-nums;
 }
 .arch-plate { flex-shrink: 0; width: 38px; }
@@ -444,7 +445,7 @@ strong { font-weight: 400; }
 }
 .photo-cell:hover img { opacity: 0.92; }
 .photo-cell-caption {
-  font-family: var(--font-jost), sans-serif; font-weight: 300; font-size: 8.5px;
+  font-family: var(--font-jost), sans-serif; font-weight: 300; font-size: 10px;
   letter-spacing: 0.14em; text-transform: uppercase; color: var(--faint); margin-top: 7px;
 }
 .photo-cell:hover .photo-cell-caption { color: var(--specimen-red); }
@@ -480,7 +481,7 @@ strong { font-weight: 400; }
   background: transparent;
   color: var(--ultramarine);
   font-family: var(--font-jost), sans-serif;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 400;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -520,3 +521,12 @@ strong { font-weight: 400; }
     animation-iteration-count: 1 !important;
   }
 }
+
+/* ---------- Utilities ---------- */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+.page-intro { margin-top: 14px; }
+.index-summary { font-size: 15px; }
+.empty-note { font-style: italic; color: var(--muted); }
