@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
 import Markdown from "@/components/Markdown";
+import { pageMetadata } from "@/lib/seo";
 import { getPage } from "@/lib/pages";
 
-export const metadata: Metadata = { title: "About" };
+export const metadata: Metadata = pageMetadata({
+  title: "About",
+  description: "Tusenbruk begins after the wanting: portraits of people, seen through the things they use.",
+  path: "/about",
+});
 
 export default function AboutPage() {
   const page = getPage("about");

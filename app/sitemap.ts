@@ -1,8 +1,9 @@
 import { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/content";
 import { PLATES } from "@/lib/plates";
+import { SITE_URL } from "@/lib/site";
 
-const BASE = "https://tusenbruk.com";
+const BASE = SITE_URL;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts().map((p) => ({

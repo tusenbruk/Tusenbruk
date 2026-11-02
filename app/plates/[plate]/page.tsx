@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { PLATES, PlateKey, getPlate } from "@/lib/plates";
 import { getPostsByPlate, readingTime, formatDate } from "@/lib/content";
 
@@ -10,7 +11,9 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: { params: { plate: string } }): Metadata {
   const plate = PLATES.find((p) => p.key === params.plate);
-  return plate ? { title: plate.name, description: plate.description } : {};
+  return plate
+    ? pageMetadata({ title: plate.name, description: plate.description, path: `/plates/${plate.key}` })
+    : {};
 }
 
 export default function PlatePage({ params }: { params: { plate: string } }) {

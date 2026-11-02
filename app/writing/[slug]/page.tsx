@@ -5,6 +5,9 @@ import Markdown from "@/components/Markdown";
 import { getAllPosts, getPost, formatDate } from "@/lib/content";
 import PlateLabel from "@/components/PlateLabel";
 import ShareLink from "@/components/ShareLink";
+import { pageMetadata } from "@/lib/seo";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
+import { getPlate } from "@/lib/plates";
 
 function splitLede(body: string): { lede: string; remainder: string } {
   const rule = body.match(/\n---\s*\n/);
@@ -29,30 +32,15 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const post = getPost(params.slug);
   if (!post) return {};
-  const card = `/cards/${post.slug}.jpg`;
-  const canonical = `/writing/${post.slug}`;
-  const cardAlt = `Tusenbruk — ${post.title}`;
-  return {
+  return pageMetadata({
     title: post.title,
     description: post.summary,
-    alternates: { canonical },
-    openGraph: {
-      title: post.title,
-      description: post.summary,
-      url: canonical,
-      type: "article",
-      siteName: "Tusenbruk",
-      locale: "en_AU",
-      publishedTime: post.date,
-      images: [{ url: card, width: 1200, height: 630, alt: cardAlt }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: post.title,
-      description: post.summary,
-      images: [{ url: card, alt: cardAlt }],
-    },
-  };
+    path: `/writing/${post.slug}`,
+    image: `/cards/${post.slug}.jpg`,
+    imageAlt: `Tusenbruk — ${post.title}`,
+    type: "article",
+    publishedTime: post.date,
+  });
 }
 
 export default function PostPage({ params }: { params: { slug: string } }) {
@@ -60,21 +48,39 @@ export default function PostPage({ params }: { params: { slug: string } }) {
   if (!post) notFound();
   const { lede, remainder } = splitLede(post.body);
 
+  const url = `${SITE_URL}/writing/${post.slug}`;
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    description: post.summary,
-    datePublished: post.date,
-    image: {
-      "@type": "ImageObject",
-      url: `https://tusenbruk.com/cards/${post.slug}.jpg`,
-      width: 1200,
-      height: 630,
-    },
-    author: { "@type": "Organization", name: "Tusenbruk" },
-    publisher: { "@type": "Organization", name: "Tusenbruk", url: "https://tusenbruk.com" },
-    mainEntityOfPage: `https://tusenbruk.com/writing/${post.slug}`,
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `${url}#article`,
+        headline: post.title,
+        description: post.summary,
+        datePublished: post.date,
+        dateModified: post.date,
+        inLanguage: "en",
+        articleSection: getPlate(post.plate).name,
+        image: {
+          "@type": "ImageObject",
+          url: `${SITE_URL}/cards/${post.slug}.jpg`,
+          width: 1200,
+          height: 630,
+        },
+        // Tusenbruk is the visible author; there is no personal byline (DECISIONS.md).
+        author: { "@id": `${SITE_URL}/#organization` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        mainEntityOfPage: url,
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: SITE_NAME, item: SITE_URL },
+          { "@type": "ListItem", position: 2, name: "Writing", item: `${SITE_URL}/writing` },
+          { "@type": "ListItem", position: 3, name: post.title, item: url },
+        ],
+      },
+    ],
   };
 
   return (

@@ -1,12 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { getAllPhotos } from "@/lib/content";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Photographs",
   description: "Every photograph on the site. Objects in use, or after use. Never on white.",
-};
+  path: "/photographs",
+});
 
 export default function PhotographsPage() {
   const photos = getAllPhotos();

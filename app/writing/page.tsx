@@ -1,9 +1,14 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { getAllPosts, readingTime, formatDate } from "@/lib/content";
 import PlateLabel from "@/components/PlateLabel";
 
-export const metadata: Metadata = { title: "Writing" };
+export const metadata: Metadata = pageMetadata({
+  title: "Writing",
+  description: "Every portrait, field note and essay, newest first.",
+  path: "/writing",
+});
 
 export default function WritingIndex() {
   const posts = getAllPosts();

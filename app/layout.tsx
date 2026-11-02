@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Jost, Newsreader } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 
 const jost = Jost({
   subsets: ["latin"],
@@ -25,14 +26,14 @@ export const metadata: Metadata = {
     default: "Tusenbruk — The pleasure of use",
     template: "%s · Tusenbruk",
   },
-  description:
-    "A publication about the relationship between a person and the objects they use — watches, cameras, pens, cars, luggage. Not reviews. Portraits.",
-  metadataBase: new URL("https://tusenbruk.com"),
+  description: SITE_DESCRIPTION,
+  metadataBase: new URL(SITE_URL),
+  alternates: { canonical: "/", types: { "application/rss+xml": "/feed.xml" } },
   openGraph: {
     title: "Tusenbruk — The pleasure of use",
     description:
       "A publication about the relationship between a person and the objects they use. Not reviews. Portraits.",
-    url: "https://tusenbruk.com",
+    url: "/",
     type: "website",
     siteName: "Tusenbruk",
     locale: "en_AU",
@@ -52,15 +53,47 @@ export const metadata: Metadata = {
       "Portraits of people, seen through the things they use.",
     images: [{ url: "/og.png", alt: "Tusenbruk — The pleasure of use" }],
   },
-  alternates: {
-    types: { "application/rss+xml": "/feed.xml" },
-  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff",
+};
+
+// Site-level structured data: the publication itself, once, on every page.
+const siteJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: SITE_NAME,
+      url: SITE_URL,
+      slogan: SITE_TAGLINE,
+      logo: `${SITE_URL}/icon.svg`,
+      sameAs: ["https://www.instagram.com/tusenbruk/"],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: SITE_NAME,
+      description: SITE_DESCRIPTION,
+      inLanguage: "en",
+      publisher: { "@id": `${SITE_URL}/#organization` },
+    },
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${jost.variable} ${newsreader.variable}`}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+        />
         <Header />
         <main className="wrap page">{children}</main>
         <Footer />

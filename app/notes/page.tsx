@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { getNotes, formatDate } from "@/lib/content";
 
-export const metadata: Metadata = { title: "Notes" };
+export const metadata: Metadata = pageMetadata({
+  title: "Notes",
+  description: "Short observations, dated, no titles.",
+  path: "/notes",
+});
 
 export default function NotesPage() {
   const notes = getNotes();

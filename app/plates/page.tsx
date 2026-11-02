@@ -1,9 +1,14 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { PLATES } from "@/lib/plates";
 import { getPostsByPlate } from "@/lib/content";
 
-export const metadata: Metadata = { title: "Plates" };
+export const metadata: Metadata = pageMetadata({
+  title: "Plates",
+  description: "Six plates, the whole publication: photography, watches, motoring, writing, carry and travel.",
+  path: "/plates",
+});
 
 export default function PlatesIndex() {
   return (

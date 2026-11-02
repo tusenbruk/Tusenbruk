@@ -1,12 +1,14 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { getRegister, formatDate } from "@/lib/content";
 import { PLATES } from "@/lib/plates";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Register",
   description: "Every object written about in Tusenbruk, numbered in order of first appearance.",
-};
+  path: "/register",
+});
 
 export default function RegisterPage() {
   const entries = getRegister();
