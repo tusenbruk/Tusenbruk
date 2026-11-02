@@ -105,9 +105,9 @@ export default function Home() {
       {drawer.length > 0 && (
         <>
           <hr className="hr-soft" />
-          <section>
+          <section aria-labelledby="drawer-heading">
             <div className="drawer-head">
-              <div className="plate red">The drawer</div>
+              <h2 className="plate red" id="drawer-heading">The drawer</h2>
               <div className="drawer-hint">
                 <span className="drawer-hint-hover">Turn one over.</span>
                 <span className="drawer-hint-touch">Objects on record.</span>
@@ -151,8 +151,8 @@ export default function Home() {
       {notes.length > 0 && (
         <>
           <hr className="hr-soft" />
-          <section className="notes-section">
-            <div className="plate red">Notes</div>
+          <section className="notes-section" aria-labelledby="notes-heading">
+            <h2 className="plate red" id="notes-heading">Notes</h2>
             {notes.map((n) => (
               <div key={n.slug} className="note-line">
                 <span className="note-date">{formatDateShort(n.date)}</span>

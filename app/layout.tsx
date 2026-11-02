@@ -90,12 +90,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${jost.variable} ${newsreader.variable}`}>
       <body>
+        <a href="#main" className="skip-link">
+          Skip to content
+        </a>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
         />
         <Header />
-        <main className="wrap page">{children}</main>
+        <main id="main" tabIndex={-1} className="wrap page">{children}</main>
         <Footer />
         <Analytics />
       </body>
