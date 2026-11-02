@@ -2,28 +2,13 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Markdown from "@/components/Markdown";
+import { splitLede } from "@/lib/lede";
 import { getAllPosts, getPost, formatDate } from "@/lib/content";
 import PlateLabel from "@/components/PlateLabel";
 import ShareLink from "@/components/ShareLink";
 import { pageMetadata } from "@/lib/seo";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { getPlate } from "@/lib/plates";
-
-function splitLede(body: string): { lede: string; remainder: string } {
-  const rule = body.match(/\n---\s*\n/);
-  const heading = body.match(/\n(?=##\s)/);
-  const candidates = [
-    rule?.index == null ? null : { index: rule.index, end: rule.index + rule[0].length },
-    heading?.index == null ? null : { index: heading.index, end: heading.index + 1 },
-  ].filter((value): value is { index: number; end: number } => value !== null);
-
-  if (candidates.length === 0) return { lede: body, remainder: "" };
-  const first = candidates.sort((a, b) => a.index - b.index)[0];
-  return {
-    lede: body.slice(0, first.index).trim(),
-    remainder: body.slice(first.end).trim(),
-  };
-}
 
 export function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));

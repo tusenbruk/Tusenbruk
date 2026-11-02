@@ -45,7 +45,7 @@ for (const plate of plates) {
 
     if (kind !== "essay" && !data.object) error(file, "published writing requires an object");
     if (kind === "study") error(file, "catalogue studies must remain draft-only");
-    if (!['portrait', 'field-note', 'essay'].includes(kind)) error(file, `unsupported published kind ${kind}`);
+    if (!["portrait", "field-note", "essay"].includes(kind)) error(file, `unsupported published kind ${kind}`);
     if (kind === "portrait" && !data.subject) error(file, "published portraits require a subject");
     if (data.featured && kind !== "portrait") error(file, "only a portrait can be featured");
     if (data.photo && !data.photoAlt) error(file, "lead photographs require photoAlt");
