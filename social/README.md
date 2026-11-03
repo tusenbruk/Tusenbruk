@@ -37,6 +37,18 @@ Each publishable article receives:
 The manifesto is a five-slide carousel. Generated files live under `output/` and contain no camera
 metadata. Re-run the generator after changing queue copy or replacing photography.
 
+## One command per piece
+
+```bash
+python3 scripts/publish.py <slug>
+```
+
+Validates the piece, removes `draft: true`, builds its share card and social pack, then writes
+`instagram/<slug>/`: `carousel-NN.jpg` (1080 × 1080), `portrait-NN.jpg` (1080 × 1350),
+`story-NN.jpg` (1080 × 1920, plate label lower left), `caption.txt` (the piece's own opening
+sentence, link-in-bio line, 3–5 hashtags, no emoji), `alt_text.txt` and `post_notes.txt`.
+A `hold` in `queue.json` stops it before anything is written. `--dry-run` validates only.
+
 ## Publishing rule
 
 Review the pack, mark it `ready`, then publish by hand. Direct API publishing remains deferred until

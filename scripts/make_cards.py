@@ -5,7 +5,8 @@ card in the same typography, not an empty photographic layout. Helvetica
 fallback is spec-blessed. Run after adding a post, commit the output; Vercel
 never runs Python.
 
-    python3 scripts/make_cards.py
+    python3 scripts/make_cards.py            # every published piece, plus the site card
+    python3 scripts/make_cards.py --slug X   # one piece only (used by scripts/publish.py)
 """
 import os, re, sys
 
@@ -163,6 +164,8 @@ def make_site_card():
     tracked(dr, (start + square + 18, 364), tag, tag_f, 8, MUTED)
     card.save(os.path.join(PUBLIC, "og.png"), "PNG", optimize=True)
 
+ONLY = sys.argv[sys.argv.index("--slug") + 1] if "--slug" in sys.argv else None
+
 made = 0
 for plate_dir in sorted(os.listdir(CONTENT)):
     full = os.path.join(CONTENT, plate_dir)
@@ -175,6 +178,8 @@ for plate_dir in sorted(os.listdir(CONTENT)):
         if d.get("draft") == "true":
             continue
         slug, title = d.get("slug", f[:-3]), d.get("title", "Untitled")
+        if ONLY and slug != ONLY:
+            continue
         plate_label = PLATE_NAMES.get(d.get("plate", ""), "")
         card = Image.new("RGB", (W, H), (255, 255, 255))
         dr = ImageDraw.Draw(card)
@@ -190,5 +195,8 @@ for plate_dir in sorted(os.listdir(CONTENT)):
         made += 1
         print(f"card: {slug}")
 print(f"{made} cards")
-make_site_card()
-print("card: og")
+if ONLY and not made:
+    sys.exit(f"no published piece with slug {ONLY}")
+if not ONLY:
+    make_site_card()
+    print("card: og")

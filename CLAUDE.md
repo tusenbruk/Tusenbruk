@@ -81,6 +81,15 @@ npm run validate:social           # check every queued asset and its dimensions
 python3 agent/x_distributor.py    # legacy X draft; never posts automatically
 ```
 
+Or do the whole job for one finished piece in one command (validates first, removes `draft: true`,
+builds the card, the social pack and `social/instagram/<slug>/`; posts nothing):
+
+```bash
+python3 scripts/publish.py <slug> --dry-run   # validate only
+python3 scripts/publish.py <slug>
+python3 scripts/instagram_crop.py <images...> --out <dir> --plate <key>   # the crop tool on its own
+```
+
 Vercel never runs Python; cards and social packs must be generated locally and committed. Social
 approval lives in `social/queue.json`. A `hold` is a hard stop and must never be bypassed by an
 automated publisher.

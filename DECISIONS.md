@@ -528,3 +528,35 @@ and that `/writing/the-watch-youre-supposed-to-buy` (previously 404) and
 
 - If this recurs, it's worth checking the GitHub → Vercel integration's webhook delivery log
   directly (Vercel dashboard → Project → Settings → Git) rather than assuming a one-off.
+
+## 2026-11-03 — one command to publish a piece and prepare its Instagram package
+
+**Decision**
+
+- Add `scripts/publish.py <slug>`: validates frontmatter, photographs and alt text; removes
+  `draft: true`; runs `make_cards.py --slug`, `social:assets` and `validate:social`; builds
+  `social/instagram/<slug>/` (carousel, 4:5 portrait, story with plate label, caption, alt text,
+  posting notes). Add `scripts/instagram_crop.py` as the standalone crop tool it calls.
+- A `hold` in `social/queue.json` stops the run before any file changes. The script never posts.
+- The caption is the piece's own first sentence, unaltered. Hashtags are derived from `object`.
+- `make_cards.py` gains an optional `--slug`; with no argument it behaves as before.
+
+**Why**
+
+Publishing was five manual steps and an easy one to skip. Validation up front stops a piece with no
+photograph or alt text reaching the build. Lifting the caption from the piece keeps the no-invention
+rule intact.
+
+**Verification**
+
+Ran against published pieces (`mud-in-belgravia`, `enough-car`): dimensions, no EXIF, plate label
+clear of the story safe zone, hold refusal on `the-deal-watch`, dry-run refusal on a drafted brief.
+`make_cards.py` and the Node validator could not run in the Linux sandbox (macOS font path; no
+`node_modules`); run `python3 scripts/publish.py <slug>` once on the Mac before relying on it.
+
+**Rollback**
+
+Delete `scripts/publish.py` and `scripts/instagram_crop.py`; revert the `--slug` lines in
+`make_cards.py`. Remove `social/instagram/` if unwanted. A piece published by the script is
+reverted by restoring `draft: true`.
+
