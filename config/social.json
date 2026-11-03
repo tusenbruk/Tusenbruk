@@ -1,0 +1,11 @@
+{
+  "instagram": {
+    "default_hashtags": ["tusenbruk", "thepleasureofuse"],
+    "max_hashtags": 5,
+    "drive_sync_folder": ""
+  },
+  "defaults": {
+    "caption_style": "opening_line",
+    "image_quality": 85
+  }
+}
