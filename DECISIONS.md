@@ -529,6 +529,41 @@ and that `/writing/the-watch-youre-supposed-to-buy` (previously 404) and
 - If this recurs, it's worth checking the GitHub → Vercel integration's webhook delivery log
   directly (Vercel dashboard → Project → Settings → Git) rather than assuming a one-off.
 
+## 2026-11-03 — manual publishing pipeline: intake, publish, Instagram crops
+
+**Decision**
+
+Add a local, manual pipeline beside the existing social desk: `scripts/intake.py` scaffolds a draft
+from photographs and notes; `scripts/publish.py` validates a finished piece and writes
+`social/instagram/<slug>/` (square, portrait and story crops of every photograph, `caption.txt`,
+`alt.txt`); `scripts/instagram_crop.py` does the cropping; `scripts/sync_social.py` optionally copies
+packages to a Google Drive folder named in `config/social.json`. Posting stays manual.
+
+- Captions are assembled only from the piece itself (opening sentence, summary, title, hashtags).
+  The pipeline writes no prose, so it cannot invent lived experience.
+- `publish.py` checks `social/queue.json` before anything else and stops on `hold`, including under
+  `--dry-run`. `queue.json` is never written by these scripts.
+- Intake never overwrites; sync never deletes and is a dry run unless `--apply`.
+- The existing `social/output/` packs and `make_social_assets.py` are untouched. The new package
+  lives in `social/instagram/` because its sizes and file names differ.
+
+**Why**
+
+Shortens the path from raw photographs to a hand-posted carousel without any API, subscription or
+auto-publisher, and keeps the human approval gate intact.
+
+**Verification**
+
+`python3 -m unittest discover -s tests -t .` (44 tests). Run against the real
+`the-rolex-you-should-have-bought` piece in a scratch copy: dry run, full package build and
+`make_social_assets.py --check` pass; the held `the-deal-watch` exits 3 with nothing generated.
+`make_cards.py` needs macOS Helvetica and was not run in the Linux sandbox; `validate_content.mjs`
+needs `npm install` and was skipped there.
+
+**Rollback**
+
+Delete the new scripts, `config/`, `tests/` and `social/instagram/`, and revert the README section.
+No existing content, queue entry or generated pack was modified.
 ## 2026-11-02 — modernisation pass: performance, metadata, accessibility, tests
 
 **Decision**
