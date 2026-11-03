@@ -11,6 +11,7 @@
     "lint": "next lint",
     "validate:content": "node scripts/validate_content.mjs",
     "social:assets": "python3 scripts/make_social_assets.py",
+    "test:publishing": "python3 -m unittest discover -s tests -t .",
     "validate:social": "python3 scripts/make_social_assets.py --check",
     "validate:metadata": "python3 scripts/strip_metadata.py --check public/photos public/illustrations public/cards social/output social/brand"
   },
