@@ -27,6 +27,10 @@ export default function ShareLink({ title, path }: { title: string; path: string
       <button type="button" className="share-button" onClick={share}>
         {label}
       </button>
+      {/* Announces the copy result to screen readers; the button label alone is not re-read. */}
+      <span className="sr-only" role="status">
+        {label === "Share" ? "" : label}
+      </span>
     </div>
   );
 }

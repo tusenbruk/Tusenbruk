@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { getNotes, formatDate } from "@/lib/content";
 
-export const metadata: Metadata = { title: "Notes" };
+export const metadata: Metadata = pageMetadata({
+  title: "Notes",
+  description: "Short observations, dated, no titles.",
+  path: "/notes",
+});
 
 export default function NotesPage() {
   const notes = getNotes();
   return (
     <>
       <div className="plate red">Notes</div>
-      <p className="lead-summary" style={{ marginTop: 14 }}>
+      <h1 className="sr-only">Notes</h1>
+      <p className="lead-summary page-intro">
         Short observations, dated, no titles.
       </p>
       {notes.length === 0 && (
-        <p className="lead-summary" style={{ fontStyle: "italic", color: "var(--muted)" }}>
+        <p className="lead-summary empty-note">
           Nothing yet.
         </p>
       )}

@@ -125,6 +125,7 @@ export interface Photo {
   alt: string;
   caption?: string;
   slug: string; // post it belongs to
+  plate: PlateKey;
   title: string;
   date: string;
 }
@@ -139,6 +140,7 @@ export function getAllPhotos(): Photo[] {
         alt: p.photoAlt ?? p.title,
         caption: p.photoCaption,
         slug: p.slug,
+        plate: p.plate,
         title: p.title,
         date: p.date,
       });
@@ -152,6 +154,7 @@ export function getAllPhotos(): Photo[] {
           alt: m[1] || p.title,
           caption: m[1] || undefined,
           slug: p.slug,
+          plate: p.plate,
           title: p.title,
           date: p.date,
         });

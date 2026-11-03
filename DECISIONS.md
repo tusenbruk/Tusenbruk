@@ -564,3 +564,51 @@ needs `npm install` and was skipped there.
 
 Delete the new scripts, `config/`, `tests/` and `social/instagram/`, and revert the README section.
 No existing content, queue entry or generated pack was modified.
+## 2026-11-02 — modernisation pass: performance, metadata, accessibility, tests
+
+**Decision**
+
+- Serve photographs as AVIF/WebP through the Next image optimiser. The committed JPEGs are not
+  re-encoded; metadata-stripped originals remain the source of truth. Body-markdown images now use
+  `next/image` with dimensions read from the file header (`lib/imageSize.ts`).
+- Add revalidated (not immutable) cache headers for `/photos`, `/cards` and `/og.png`, and baseline
+  security headers. Not immutable, because files are re-edited under the same filename.
+- Build complete per-page metadata with `lib/seo.ts`. Next replaces `openGraph` wholesale, so pages
+  that set none were inheriting the home page's `og:title` and `og:url`.
+- Add Organization/WebSite JSON-LD site-wide and Article + BreadcrumbList on pieces. The author stays
+  the Tusenbruk organisation; no personal byline is introduced (see "anonymous house voice").
+- Raise the smallest caps (8.5/9px) to 10px. Palette untouched; every pair already passes WCAG AA.
+- **No dark mode.** The identity is plate white; a dark theme would be a separate design decision.
+- Add ESLint (`next/core-web-vitals`), `npm run typecheck`, and a Vitest suite covering content
+  invariants (one featured portrait, no studies, subjects, alt text), the Register, internal links
+  and assets, share cards, sitemap, feed and metadata. Add a GitHub Actions workflow running them.
+- Fix: the Drawer showed an empty catalogue card for essay photos, since essays are not in the
+  Register. It now shows the piece title and plate.
+
+**Why**
+
+The site was already lean and statically generated; the gaps were per-page metadata, missing h1s on
+four index pages, no keyboard affordances, no linting or tests, and unoptimised body images.
+
+**Files**
+
+`next.config.mjs`, `lib/{site,seo,imageSize,lede}.ts`, `components/{Markdown,MarkdownImage,NavLink}.tsx`,
+`app/layout.tsx`, `app/globals.css`, page metadata under `app/`, `tests/`, `.eslintrc.json`,
+`.github/workflows/ci.yml`.
+
+**Verification**
+
+`npm run lint`, `npm run typecheck`, `npm test` (30 tests; confirmed they fail on a seeded broken
+link and a missing card), `npm run build` (31 pages), `npm run validate:metadata`. Visual and
+overflow check at 375, 768 and 1024px; keyboard path checked in Chromium.
+
+**Rollback**
+
+Revert the PR as a unit, or per area: each area is its own commit. To drop AVIF alone, remove
+`images.formats` from `next.config.mjs`.
+
+**Open work**
+
+- `public/photos/panerai-8giorni.jpg` (1 MB) is unreferenced and fails the photography rule; left in
+  place (no deletions this pass). Ryan to decide.
+- Body images are only as sharp as the 1600px files; no change needed unless larger originals are used.

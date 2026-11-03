@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="ft-rule" />
       <div className="ft-row">
         <div>Tusenbruk · Sydney, Australia</div>
-        <div className="ft-row" style={{ gap: 22 }}>
+        <nav className="ft-links" aria-label="Footer">
           <Link href="/writing">Writing</Link>
           <Link href="/plates">Plates</Link>
           <Link href="/register">Register</Link>
@@ -17,8 +17,8 @@ export default function Footer() {
           <a href="https://www.instagram.com/tusenbruk/" rel="me">
             Instagram
           </a>
-          <div>The pleasure of use</div>
-        </div>
+          <span>The pleasure of use</span>
+        </nav>
       </div>
     </footer>
   );

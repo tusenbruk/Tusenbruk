@@ -105,9 +105,9 @@ export default function Home() {
       {drawer.length > 0 && (
         <>
           <hr className="hr-soft" />
-          <section>
+          <section aria-labelledby="drawer-heading">
             <div className="drawer-head">
-              <div className="plate red">The drawer</div>
+              <h2 className="plate red" id="drawer-heading">The drawer</h2>
               <div className="drawer-hint">
                 <span className="drawer-hint-hover">Turn one over.</span>
                 <span className="drawer-hint-touch">Objects on record.</span>
@@ -116,7 +116,8 @@ export default function Home() {
             <div className="mosaic">
               {drawer.slice(0, 8).map((ph, i) => {
                 const entry = bySlug.get(ph.slug);
-                const plate = entry ? getPlate(entry.plate) : undefined;
+                // Essays are not in the Register, so fall back to the piece's own plate.
+                const plate = getPlate(entry ? entry.plate : ph.plate);
                 return (
                   <Link key={`${ph.src}-${i}`} href={`/writing/${ph.slug}`} className="tile">
                     <span className="tile-inner">
@@ -129,14 +130,14 @@ export default function Home() {
                         />
                       </span>
                       <span className="tile-back">
-                        <span className={`plate ${plate?.color ?? "green"}`}>
-                          {entry ? plateLabel(entry.plate) : ""}
+                        <span className={`plate ${plate.color}`}>
+                          {plateLabel(entry ? entry.plate : ph.plate)}
                         </span>
                         <span className="tile-obj">
-                          {entry ? `Obj. ${String(entry.number).padStart(3, "0")}` : ""}
+                          {entry ? `Obj. ${String(entry.number).padStart(3, "0")}` : "Essay"}
                         </span>
-                        <span className="tile-name">{entry?.object}</span>
-                        <span className="tile-square" />
+                        <span className="tile-name">{entry?.object ?? ph.title}</span>
+                        <span className="tile-square" aria-hidden="true" />
                       </span>
                     </span>
                   </Link>
@@ -150,8 +151,8 @@ export default function Home() {
       {notes.length > 0 && (
         <>
           <hr className="hr-soft" />
-          <section className="notes-section">
-            <div className="plate red">Notes</div>
+          <section className="notes-section" aria-labelledby="notes-heading">
+            <h2 className="plate red" id="notes-heading">Notes</h2>
             {notes.map((n) => (
               <div key={n.slug} className="note-line">
                 <span className="note-date">{formatDateShort(n.date)}</span>

@@ -50,7 +50,7 @@ export default function ArchiveList({ years }: { years: { year: string; posts: L
 
   return (
     <div>
-      <div className="arch-search">
+      <div className="arch-search" role="search">
         <input
           type="search"
           value={q}
@@ -59,7 +59,7 @@ export default function ArchiveList({ years }: { years: { year: string; posts: L
           aria-label="Search the archive"
         />
         {needle && (
-          <div className="arch-count">
+          <div className="arch-count" role="status">
             {total} {total === 1 ? "piece" : "pieces"}
           </div>
         )}
@@ -79,7 +79,7 @@ export default function ArchiveList({ years }: { years: { year: string; posts: L
         </section>
       ))}
       {needle && total === 0 && (
-        <p className="arch-empty">Nothing on record. The register is patient.</p>
+        <p className="arch-empty" role="status">Nothing on record. The register is patient.</p>
       )}
     </div>
   );
