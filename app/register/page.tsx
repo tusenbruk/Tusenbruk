@@ -1,12 +1,14 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { getRegister, formatDate } from "@/lib/content";
 import { PLATES } from "@/lib/plates";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Register",
   description: "Every object written about in Tusenbruk, numbered in order of first appearance.",
-};
+  path: "/register",
+});
 
 export default function RegisterPage() {
   const entries = getRegister();
@@ -14,7 +16,7 @@ export default function RegisterPage() {
     <div>
       <div className="plate red">The register</div>
       <h1 className="post-title">Objects on record</h1>
-      <p className="lead-summary" style={{ marginTop: 14 }}>
+      <p className="lead-summary page-intro">
         Every object that has appeared in these pages, numbered in order of first
         appearance. The register grows; it does not shrink.
       </p>

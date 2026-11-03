@@ -2,7 +2,7 @@
   "name": "tusenbruk",
   "version": "1.0.0",
   "private": true,
-  "description": "Tusenbruk — the art of using things well crafted.",
+  "description": "Tusenbruk \u2014 the art of using things well crafted.",
   "scripts": {
     "dev": "next dev",
     "prebuild": "npm run validate:content",
@@ -12,7 +12,9 @@
     "validate:content": "node scripts/validate_content.mjs",
     "social:assets": "python3 scripts/make_social_assets.py",
     "validate:social": "python3 scripts/make_social_assets.py --check",
-    "validate:metadata": "python3 scripts/strip_metadata.py --check public/photos public/illustrations public/cards social/output social/brand"
+    "validate:metadata": "python3 scripts/strip_metadata.py --check public/photos public/illustrations public/cards social/output social/brand",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
@@ -27,6 +29,9 @@
     "@types/node": "^20.14.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "typescript": "^5.5.3"
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.5",
+    "typescript": "^5.5.3",
+    "vitest": "^2.1.9"
   }
 }

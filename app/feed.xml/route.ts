@@ -1,8 +1,9 @@
 import { getAllPosts } from "@/lib/content";
+import { SITE_DESCRIPTION, SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
 
-const BASE = "https://tusenbruk.com";
+const BASE = SITE_URL;
 
 function esc(s: string): string {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -23,12 +24,13 @@ export function GET() {
     .join("\n");
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tusenbruk</title>
     <link>${BASE}</link>
-    <description>A publication about the relationship between a person and the objects they use. Not reviews. Portraits.</description>
+    <description>${esc(SITE_DESCRIPTION)}</description>
     <language>en</language>
+    <atom:link href="${BASE}/feed.xml" rel="self" type="application/rss+xml" />
 ${items}
   </channel>
 </rss>`;

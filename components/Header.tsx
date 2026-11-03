@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NavLink from "./NavLink";
 
 export default function Header() {
   return (
@@ -8,10 +9,10 @@ export default function Header() {
           Tusenbruk
         </Link>
         <nav className="mh-nav" aria-label="Primary navigation">
-          <Link href="/writing">Writing</Link>
-          <Link href="/register">Register</Link>
-          <Link href="/photographs">Photographs</Link>
-          <Link href="/about">About</Link>
+          <NavLink href="/writing">Writing</NavLink>
+          <NavLink href="/register">Register</NavLink>
+          <NavLink href="/photographs">Photographs</NavLink>
+          <NavLink href="/about">About</NavLink>
         </nav>
       </div>
       <div className="mh-rule" />
