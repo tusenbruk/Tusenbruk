@@ -85,6 +85,18 @@ Vercel never runs Python; cards and social packs must be generated locally and c
 approval lives in `social/queue.json`. A `hold` is a hard stop and must never be bypassed by an
 automated publisher.
 
+## Scripts for new pieces
+
+```bash
+python3 scripts/new_piece.py notes.txt --plate watches --object "..." --subject "..." --place "..." --photos photos/<dir>
+python3 scripts/publish.py <slug> [--feature] [--dry-run] [--no-commit]
+```
+
+`new_piece.py` resizes photos into `public/photos/<slug>/` (sips, else Pillow; metadata stripped) and
+writes a `draft: true` file with the notes as marked source material; unanswered fields say `TODO`.
+`publish.py` refuses while any `TODO` or the draft block remains, runs every check and generator,
+restores the files on failure, commits, and asks before pushing. New social queue entries start as `hold`.
+
 ## Sections (all static, all derived from frontmatter)
 
 - `/register` — every object, numbered by first appearance (`object` field groups pieces)

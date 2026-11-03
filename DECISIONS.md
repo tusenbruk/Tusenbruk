@@ -528,3 +528,34 @@ and that `/writing/the-watch-youre-supposed-to-buy` (previously 404) and
 
 - If this recurs, it's worth checking the GitHub → Vercel integration's webhook delivery log
   directly (Vercel dashboard → Project → Settings → Git) rather than assuming a one-off.
+
+## 2026-11-03 — scaffold and publish scripts
+
+**Decision**
+
+`scripts/new_piece.py` scaffolds a draft from notes and photos; `scripts/publish.py` takes a draft
+through preflight, generators, validation, commit and (confirmed) push. Publish refuses placeholders,
+bold, exclamation marks and leftover draft source, and adds a `hold` social queue entry rather than
+approving copy.
+
+**Why**
+
+The manual sequence in CLAUDE.md is easy to get partly wrong. The scripts keep the hard stops
+(no invented detail, `hold`, one featured portrait) in code.
+
+**Files**
+
+`scripts/new_piece.py`, `scripts/publish.py`, `CLAUDE.md`.
+
+**Verification**
+
+Scaffold output, metadata stripping, dry-run refusal and rollback were exercised here. The card and
+social steps could not run on Linux (`make_cards.py` needs macOS Helvetica); first real run is on the Mac.
+
+**Rollback**
+
+Delete the two scripts and the CLAUDE.md section.
+
+**Open work**
+
+Run `publish.py` end to end on the Mac with a real piece. Confirm the script name `new_piece.py` suits Ryan.
